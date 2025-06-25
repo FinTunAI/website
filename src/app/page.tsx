@@ -153,15 +153,17 @@ export default function HomePage() {
                         <span className="font-semibold text-blue-800">AI Assistant</span>
                       </div>
                       <p className="text-sm text-gray-600">
-                        "Generate a React component for user authentication with form validation"
+                        &quot;Generate a React component for user authentication with form validation&quot;
                       </p>
                     </div>
                     <div className="bg-gray-50 p-4 rounded-lg font-mono text-sm">
-                      <div className="text-green-600">// AI Generated Code</div>
-                      <div className="text-blue-600">import {"{ useState }"} from 'react'</div>
+                      <div className="text-green-600">{/* AI Generated Code '
+
+*/}</div>
+                      <div className="text-blue-600">import {"{ useState }"} from &apos;react&apos;</div>
                       <div className="text-purple-600">export default function AuthForm() {"{"}</div>
-                      <div className="ml-4 text-gray-700">const [email, setEmail] = useState('')</div>
-                      <div className="ml-4 text-gray-700">// ... validation logic</div>
+                      <div className="ml-4 text-gray-700">const [email, setEmail] = useState(&apos;&apos;)</div>
+                      <div className="ml-4 text-gray-700">{/* ... validation logic */}</div>
                       <div className="text-purple-600">{"}"}</div>
                     </div>
                   </div>
@@ -204,7 +206,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Features Section */}
       {/* Build Software Faster Section */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -226,7 +227,7 @@ export default function HomePage() {
                     <h3 className="text-2xl font-bold text-gray-900 mb-2">10x Faster Development</h3>
                     <p className="text-gray-600 text-lg">
                       Generate entire functions, components, and modules from simple descriptions. Our AI writes
-                      production-ready code that follows your team's patterns.
+                      production-ready code that follows your team&apos;s patterns.
                     </p>
                   </div>
                 </div>
@@ -272,13 +273,13 @@ export default function HomePage() {
                 </div>
                 <div className="p-6 font-mono text-sm">
                   <div className="space-y-2">
-                    <div className="text-gray-500">// AI: Generate a user dashboard component</div>
-                    <div className="text-blue-400">import {"{ useState, useEffect }"} from 'react'</div>
-                    <div className="text-purple-400">import {"{ Card, Button }"} from '@/components'</div>
+                    <div className="text-gray-500">{/* AI: Generate a user dashboard component */}</div>
+                    <div className="text-blue-400">import {"{ useState, useEffect }"} from &apos;react&apos;</div>
+                    <div className="text-purple-400">import {"{ Card, Button }"} from &apos;@/components&apos;</div>
                     <div className="text-yellow-400">export default function UserDashboard() {"{"}</div>
                     <div className="ml-4 text-gray-300">const [user, setUser] = useState(null)</div>
                     <div className="ml-4 text-gray-300">const [analytics, setAnalytics] = useState([])</div>
-                    <div className="ml-4 text-green-400">// ✨ AI generated 47 lines of code</div>
+                    <div className="ml-4 text-green-400">{/* ✨ AI generated 47 lines of code */}</div>
                     <div className="text-yellow-400">{"}"}</div>
                   </div>
                   <div className="mt-4 flex items-center space-x-2 text-xs">
@@ -342,7 +343,7 @@ export default function HomePage() {
                   <h3 className="text-2xl font-bold text-gray-900 mb-3">Intelligent Code Generation</h3>
                   <p className="text-gray-600 mb-4 text-lg">
                     Generate entire functions, classes, and modules from natural language descriptions. Our AI
-                    understands your codebase context and follows your team's coding standards.
+                    understands your codebase context and follows your team&apos;s coding standards.
                   </p>
                   <ul className="space-y-2 text-gray-600">
                     <li className="flex items-center">
