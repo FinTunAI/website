@@ -624,6 +624,7 @@
 // }
 
 
+
 "use client"
 
 import {
@@ -700,7 +701,7 @@ export default function HomePage() {
               </h1>
 
               <p className="text-xl text-gray-600 mb-8 max-w-lg leading-relaxed">
-                Become a 10x developer on day one. FinTun AI combines AI and your dev team's knowledge in one fast,
+                Become a 10x developer on day one. FinTun AI combines AI and your dev team\'s knowledge in one fast,
                 intuitive coding environment.
               </p>
 
@@ -758,20 +759,20 @@ export default function HomePage() {
                   {/* AI Response */}
                   <div className="space-y-2">
                     <div className="text-green-600">✨ AI: What component would you like me to create?</div>
-                    <div className="text-gray-800">&gt; user authentication form with validation</div>
+                    <div className="text-gray-800"> user authentication form with validation</div>
                   </div>
 
                   {/* Generated Code Preview */}
                   <div className="bg-gray-50 rounded-lg p-4 space-y-1 border border-gray-200">
-                    <div className="text-gray-500">// Generated AuthForm.tsx</div>
-                    <div className="text-blue-600">import {"{ useState }"} from 'react'</div>
-                    <div className="text-purple-600">import {"{ validateEmail }"} from '../utils'</div>
-                    <div className="text-orange-600">export default function AuthForm() {"{"}</div>
+                    <div className="text-gray-500">{'// Generated AuthForm.tsx'}</div>
+                    <div className="text-blue-600">import {'{ useState }'} from {'react'}</div>
+                    <div className="text-purple-600">import {'{ validateEmail }'} from {'../utils'}</div>
+                    <div className="text-orange-600">export default function AuthForm() {'{'}</div>
                     <div className="ml-4 text-gray-700">const [email, setEmail] = useState('')</div>
                     <div className="ml-4 text-gray-700">const [password, setPassword] = useState('')</div>
                     <div className="ml-4 text-gray-700">const [errors, setErrors] = useState({})</div>
-                    <div className="ml-4 text-green-600">// ✨ 47 more lines generated...</div>
-                    <div className="text-orange-600">{"}"}</div>
+                    <div className="ml-4 text-green-600">{'// ✨ 47 more lines generated...'}</div>
+                    <div className="text-orange-600">{'}'}</div>
                   </div>
 
                   {/* Success Message */}
@@ -856,7 +857,7 @@ export default function HomePage() {
                     <h3 className="text-2xl font-bold text-gray-900 mb-2">10x Faster Development</h3>
                     <p className="text-gray-600 text-lg">
                       Generate entire functions, components, and modules from simple descriptions. Our AI writes
-                      production-ready code that follows your team's patterns.
+                      production-ready code that follows your team\'s patterns.
                     </p>
                   </div>
                 </div>
@@ -902,14 +903,14 @@ export default function HomePage() {
                 </div>
                 <div className="p-6 font-mono text-sm">
                   <div className="space-y-2">
-                    <div className="text-gray-500">// AI: Generate a user dashboard component</div>
-                    <div className="text-blue-400">import {"{ useState, useEffect }"} from 'react'</div>
-                    <div className="text-purple-400">import {"{ Card, Button }"} from '@/components'</div>
-                    <div className="text-yellow-400">export default function UserDashboard() {"{"}</div>
+                    <div className="text-gray-500">{'// AI: Generate a user dashboard component'}</div>
+                    <div className="text-blue-400">import {'{ useState, useEffect }'} from {'react'}</div>
+                    <div className="text-purple-400">import {'{ Card, Button }'} from {'@/components'}</div>
+                    <div className="text-yellow-400">export default function UserDashboard() {'{'}</div>
                     <div className="ml-4 text-gray-300">const [user, setUser] = useState(null)</div>
                     <div className="ml-4 text-gray-300">const [analytics, setAnalytics] = useState([])</div>
-                    <div className="ml-4 text-green-400">// ✨ AI generated 47 lines of code</div>
-                    <div className="text-yellow-400">{"}"}</div>
+                    <div className="ml-4 text-green-400">{'// ✨ AI generated 47 lines of code'}</div>
+                    <div className="text-yellow-400">{'}'}</div>
                   </div>
                   <div className="mt-4 flex items-center space-x-2 text-xs">
                     <div className="bg-green-500/20 text-green-400 px-2 py-1 rounded">Generated in 2.3s</div>
@@ -972,7 +973,7 @@ export default function HomePage() {
                   <h3 className="text-2xl font-bold text-gray-900 mb-3">Intelligent Code Generation</h3>
                   <p className="text-gray-600 mb-4 text-lg">
                     Generate entire functions, classes, and modules from natural language descriptions. Our AI
-                    understands your codebase context and follows your team's coding standards.
+                    understands your codebase context and follows your team\'s coding standards.
                   </p>
                   <ul className="space-y-2 text-gray-600">
                     <li className="flex items-center">
@@ -1118,8 +1119,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* TRY Now Section */}
-      {/* Testimonials Section - Replace TRY Now */}
+      {/* Testimonials Section */}
       <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -1139,8 +1139,7 @@ export default function HomePage() {
                   </div>
                 </div>
                 <p className="text-gray-700 mb-4">
-                  "FinTun AI has completely transformed how I write code. The AI suggestions are incredibly accurate
-                  and save me hours every day."
+                  {'"FinTun AI has completely transformed how I write code. The AI suggestions are incredibly accurate and save me hours every day."'}
                 </p>
                 <div className="flex items-center">
                   <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center text-white font-bold text-sm">
@@ -1162,8 +1161,7 @@ export default function HomePage() {
                   </div>
                 </div>
                 <p className="text-gray-700 mb-4">
-                  "The context awareness is mind-blowing. It understands our entire codebase and generates code that
-                  fits perfectly with our patterns."
+                  {'"The context awareness is mind-blowing. It understands our entire codebase and generates code that fits perfectly with our patterns."'}
                 </p>
                 <div className="flex items-center">
                   <div className="w-10 h-10 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center text-white font-bold text-sm">
@@ -1185,8 +1183,7 @@ export default function HomePage() {
                   </div>
                 </div>
                 <p className="text-gray-700 mb-4">
-                  "I've tried many AI coding tools, but FinTun AI is in a league of its own. The quality of generated
-                  code is production-ready."
+                  {'"I\'ve tried many AI coding tools, but FinTun AI is in a league of its own. The quality of generated code is production-ready."'}
                 </p>
                 <div className="flex items-center">
                   <div className="w-10 h-10 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center text-white font-bold text-sm">
@@ -1211,8 +1208,7 @@ export default function HomePage() {
                   </div>
                 </div>
                 <p className="text-gray-700 mb-4">
-                  "Our team's productivity has increased by 85% since adopting FinTun AI. It's like having a senior
-                  developer pair programming with you."
+                  {'"Our team\'s productivity has increased by 85% since adopting FinTun AI. It\'s like having a senior developer pair programming with you."'}
                 </p>
                 <div className="flex items-center">
                   <div className="w-10 h-10 bg-gradient-to-r from-orange-500 to-red-500 rounded-full flex items-center justify-center text-white font-bold text-sm">
@@ -1234,8 +1230,7 @@ export default function HomePage() {
                   </div>
                 </div>
                 <p className="text-gray-700 mb-4">
-                  "The AI-powered code reviews have caught so many potential bugs before they made it to production.
-                  It's a game-changer."
+                  {'"The AI-powered code reviews have caught so many potential bugs before they made it to production. It\'s a game-changer."'}
                 </p>
                 <div className="flex items-center">
                   <div className="w-10 h-10 bg-gradient-to-r from-teal-500 to-cyan-500 rounded-full flex items-center justify-center text-white font-bold text-sm">
@@ -1257,8 +1252,7 @@ export default function HomePage() {
                   </div>
                 </div>
                 <p className="text-gray-700 mb-4">
-                  "FinTun AI understands our coding standards better than some of our junior developers. The
-                  consistency is amazing."
+                  {'"FinTun AI understands our coding standards better than some of our junior developers. The consistency is amazing."'}
                 </p>
                 <div className="flex items-center">
                   <div className="w-10 h-10 bg-gradient-to-r from-indigo-500 to-blue-500 rounded-full flex items-center justify-center text-white font-bold text-sm">
@@ -1283,8 +1277,7 @@ export default function HomePage() {
                   </div>
                 </div>
                 <p className="text-gray-700 mb-4">
-                  "The security features give us peace of mind. Our code never leaves our environment, yet we get all
-                  the AI benefits."
+                  {'"The security features give us peace of mind. Our code never leaves our environment, yet we get all the AI benefits."'}
                 </p>
                 <div className="flex items-center">
                   <div className="w-10 h-10 bg-gradient-to-r from-pink-500 to-rose-500 rounded-full flex items-center justify-center text-white font-bold text-sm">
@@ -1306,8 +1299,7 @@ export default function HomePage() {
                   </div>
                 </div>
                 <p className="text-gray-700 mb-4">
-                  "From junior to senior developers, everyone on our team loves FinTun AI. It adapts to each person's
-                  skill level perfectly."
+                  {'"From junior to senior developers, everyone on our team loves FinTun AI. It adapts to each person\'s skill level perfectly."'}
                 </p>
                 <div className="flex items-center">
                   <div className="w-10 h-10 bg-gradient-to-r from-violet-500 to-purple-500 rounded-full flex items-center justify-center text-white font-bold text-sm">
@@ -1329,8 +1321,7 @@ export default function HomePage() {
                   </div>
                 </div>
                 <p className="text-gray-700 mb-4">
-                  "The ROI is incredible. We've reduced development time by 60% while improving code quality. Best
-                  investment we've made."
+                  {'"The ROI is incredible. We\'ve reduced development time by 60% while improving code quality. Best investment we\'ve made."'}
                 </p>
                 <div className="flex items-center">
                   <div className="w-10 h-10 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full flex items-center justify-center text-white font-bold text-sm">
