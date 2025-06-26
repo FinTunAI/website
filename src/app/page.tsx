@@ -643,12 +643,15 @@ import {
 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
+import SalesforceHero from "@/components/homepage/salesforce-hero"
+import NavBar from "@/components/homepage/Navbar"
+import Footer from "@/components/homepage/Footer"
 
 export default function HomePage() {
   return (
     <div className="min-h-screen bg-white">
       {/* Navigation - Warp Style */}
-      <nav className="border-b border-gray-200 bg-white sticky top-0 z-50">
+      {/* <nav className="border-b border-gray-200 bg-white sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center space-x-2">
@@ -659,11 +662,11 @@ export default function HomePage() {
             </div>
 
             <div className="hidden md:flex items-center space-x-8">
-              <a href="#features" className="text-gray-700 hover:text-gray-900 transition-colors font-medium">
-                Features
+              <a href="/" className="text-gray-700 hover:text-gray-900 transition-colors font-medium">
+                Home
               </a>
-              <a href="/pricing" className="text-gray-700 hover:text-gray-900 transition-colors font-medium">
-                Pricing
+              <a href="/about" className="text-gray-700 hover:text-gray-900 transition-colors font-medium">
+                About
               </a>
               <a href="/about" className="text-gray-700 hover:text-gray-900 transition-colors font-medium">
                 About
@@ -680,17 +683,18 @@ export default function HomePage() {
               <Button variant="ghost" className="text-gray-700 hover:text-gray-900 font-medium">
                 Contact sales
               </Button>
-              <Button className="bg-gray-900 hover:bg-gray-800 text-white font-medium">Download for Mac</Button>
+              <Button className="bg-gray-900 hover:bg-gray-800 text-white font-medium">Join the Waitlist </Button>
             </div>
           </div>
         </div>
-      </nav>
+      </nav> */}
+      <NavBar />
 
       {/* Hero Section - Warp Style with Light Theme */}
-      <section className="relative overflow-hidden pt-20 pb-32 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">
+      {/* <section className="relative overflow-hidden pt-20 pb-32 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            {/* Left side - Content */}
+           
             <div className="animate-fade-in-up">
               <h1 className="text-6xl md:text-7xl font-bold text-gray-900 mb-8 leading-tight">
                 The intelligent
@@ -719,18 +723,18 @@ export default function HomePage() {
                 </Button>
               </div>
 
-              {/* Command line preview */}
+              
               <div className="bg-gray-100 rounded-lg p-4 font-mono text-sm text-gray-700 border border-gray-200">
                 <span className="text-gray-500">$</span>{" "}
                 <span className="text-blue-600">npm install -g codeai-pro</span>
               </div>
             </div>
 
-            {/* Right side - Product Demo */}
+            
             <div className="relative animate-slide-in-right">
-              {/* Terminal Window */}
+              
               <div className="bg-white rounded-2xl shadow-2xl border border-gray-200 overflow-hidden">
-                {/* Terminal Header */}
+                
                 <div className="bg-gray-50 px-6 py-4 border-b border-gray-200">
                   <div className="flex items-center space-x-2">
                     <div className="w-3 h-3 bg-red-500 rounded-full"></div>
@@ -744,9 +748,9 @@ export default function HomePage() {
                   </div>
                 </div>
 
-                {/* Terminal Content */}
+               
                 <div className="p-6 font-mono text-sm space-y-4">
-                  {/* Command 1 */}
+                  
                   <div className="space-y-2">
                     <div className="text-gray-500">
                       <span className="text-blue-600">~/my-project</span> <span className="text-gray-400">(main)</span>
@@ -756,13 +760,13 @@ export default function HomePage() {
                     </div>
                   </div>
 
-                  {/* AI Response */}
+                 
                   <div className="space-y-2">
                     <div className="text-green-600">✨ AI: What component would you like me to create?</div>
                     <div className="text-gray-800"> user authentication form with validation</div>
                   </div>
 
-                  {/* Generated Code Preview */}
+                  
                   <div className="bg-gray-50 rounded-lg p-4 space-y-1 border border-gray-200">
                     <div className="text-gray-500">{'// Generated AuthForm.tsx'}</div>
                     <div className="text-blue-600">import {'{ useState }'} from {'react'}</div>
@@ -775,7 +779,7 @@ export default function HomePage() {
                     <div className="text-orange-600">{'}'}</div>
                   </div>
 
-                  {/* Success Message */}
+                 
                   <div className="space-y-1">
                     <div className="text-green-600">✅ Component created successfully!</div>
                     <div className="text-gray-500 text-xs">
@@ -783,7 +787,7 @@ export default function HomePage() {
                     </div>
                   </div>
 
-                  {/* Cursor */}
+                  
                   <div className="flex items-center">
                     <span className="text-blue-600">~/my-project</span>
                     <span className="text-gray-400"> (main)</span>
@@ -793,7 +797,7 @@ export default function HomePage() {
                 </div>
               </div>
 
-              {/* Floating badges */}
+              
               <div className="absolute -top-4 -right-4 bg-green-500 text-white px-3 py-1 rounded-full text-xs font-medium animate-bounce-subtle">
                 Generated in 2.3s
               </div>
@@ -803,7 +807,8 @@ export default function HomePage() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
+      <SalesforceHero />
 
       {/* Trust Indicators */}
       <section className="py-16 bg-white border-t border-gray-100">
@@ -1120,226 +1125,298 @@ export default function HomePage() {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50 overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-5xl font-bold text-gray-900 mb-6">Loved by developers worldwide</h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">See what developers are saying about FinTun AI</p>
-          </div>
+     <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50 overflow-hidden">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="text-center mb-16">
+      <h2 className="text-5xl font-bold text-gray-900 mb-6">Loved by developers worldwide</h2>
+      <p className="text-xl text-gray-600 max-w-2xl mx-auto">See what developers are saying about FinTun AI</p>
+    </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 h-96 overflow-hidden">
-            {/* Column 1 */}
-            <div className="space-y-6 animate-scroll-up">
-              <Card className="p-6 bg-white/80 backdrop-blur-sm border-0 shadow-lg">
-                <div className="flex items-center mb-4">
-                  <div className="flex text-yellow-400">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="w-4 h-4 fill-current" />
-                    ))}
-                  </div>
-                </div>
-                <p className="text-gray-700 mb-4">
-                  {'"FinTun AI has completely transformed how I write code. The AI suggestions are incredibly accurate and save me hours every day."'}
-                </p>
-                <div className="flex items-center">
-                  <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center text-white font-bold text-sm">
-                    SJ
-                  </div>
-                  <div className="ml-3">
-                    <p className="font-semibold text-gray-900">Sarah Johnson</p>
-                    <p className="text-sm text-gray-600">Senior Developer at Stripe</p>
-                  </div>
-                </div>
-              </Card>
-
-              <Card className="p-6 bg-white/80 backdrop-blur-sm border-0 shadow-lg">
-                <div className="flex items-center mb-4">
-                  <div className="flex text-yellow-400">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="w-4 h-4 fill-current" />
-                    ))}
-                  </div>
-                </div>
-                <p className="text-gray-700 mb-4">
-                  {'"The context awareness is mind-blowing. It understands our entire codebase and generates code that fits perfectly with our patterns."'}
-                </p>
-                <div className="flex items-center">
-                  <div className="w-10 h-10 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center text-white font-bold text-sm">
-                    MR
-                  </div>
-                  <div className="ml-3">
-                    <p className="font-semibold text-gray-900">Mike Rodriguez</p>
-                    <p className="text-sm text-gray-600">Tech Lead at Airbnb</p>
-                  </div>
-                </div>
-              </Card>
-
-              <Card className="p-6 bg-white/80 backdrop-blur-sm border-0 shadow-lg">
-                <div className="flex items-center mb-4">
-                  <div className="flex text-yellow-400">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="w-4 h-4 fill-current" />
-                    ))}
-                  </div>
-                </div>
-                <p className="text-gray-700 mb-4">
-                  {'"I\'ve tried many AI coding tools, but FinTun AI is in a league of its own. The quality of generated code is production-ready."'}
-                </p>
-                <div className="flex items-center">
-                  <div className="w-10 h-10 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center text-white font-bold text-sm">
-                    AL
-                  </div>
-                  <div className="ml-3">
-                    <p className="font-semibold text-gray-900">Alex Liu</p>
-                    <p className="text-sm text-gray-600">Full Stack Developer</p>
-                  </div>
-                </div>
-              </Card>
+    <div className="relative grid grid-cols-1 md:grid-cols-3 gap-8 h-[600px] overflow-hidden">
+      {/* Column 1 */}
+      <div className="space-y-6 flex flex-col">
+        <div className="animate-continuous-scroll flex flex-col space-y-6">
+          <Card className="p-6 bg-white/80 backdrop-blur-sm border-0 shadow-lg">
+            <div className="flex items-center mb-4">
+              <div className="flex text-yellow-400">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="w-4 h-4 fill-current" />
+                ))}
+              </div>
             </div>
-
-            {/* Column 2 */}
-            <div className="space-y-6 animate-scroll-up-delayed">
-              <Card className="p-6 bg-white/80 backdrop-blur-sm border-0 shadow-lg">
-                <div className="flex items-center mb-4">
-                  <div className="flex text-yellow-400">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="w-4 h-4 fill-current" />
-                    ))}
-                  </div>
-                </div>
-                <p className="text-gray-700 mb-4">
-                  {'"Our team\'s productivity has increased by 85% since adopting FinTun AI. It\'s like having a senior developer pair programming with you."'}
-                </p>
-                <div className="flex items-center">
-                  <div className="w-10 h-10 bg-gradient-to-r from-orange-500 to-red-500 rounded-full flex items-center justify-center text-white font-bold text-sm">
-                    EP
-                  </div>
-                  <div className="ml-3">
-                    <p className="font-semibold text-gray-900">Emily Parker</p>
-                    <p className="text-sm text-gray-600">Engineering Manager at Uber</p>
-                  </div>
-                </div>
-              </Card>
-
-              <Card className="p-6 bg-white/80 backdrop-blur-sm border-0 shadow-lg">
-                <div className="flex items-center mb-4">
-                  <div className="flex text-yellow-400">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="w-4 h-4 fill-current" />
-                    ))}
-                  </div>
-                </div>
-                <p className="text-gray-700 mb-4">
-                  {'"The AI-powered code reviews have caught so many potential bugs before they made it to production. It\'s a game-changer."'}
-                </p>
-                <div className="flex items-center">
-                  <div className="w-10 h-10 bg-gradient-to-r from-teal-500 to-cyan-500 rounded-full flex items-center justify-center text-white font-bold text-sm">
-                    DK
-                  </div>
-                  <div className="ml-3">
-                    <p className="font-semibold text-gray-900">David Kim</p>
-                    <p className="text-sm text-gray-600">Senior Engineer at Netflix</p>
-                  </div>
-                </div>
-              </Card>
-
-              <Card className="p-6 bg-white/80 backdrop-blur-sm border-0 shadow-lg">
-                <div className="flex items-center mb-4">
-                  <div className="flex text-yellow-400">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="w-4 h-4 fill-current" />
-                    ))}
-                  </div>
-                </div>
-                <p className="text-gray-700 mb-4">
-                  {'"FinTun AI understands our coding standards better than some of our junior developers. The consistency is amazing."'}
-                </p>
-                <div className="flex items-center">
-                  <div className="w-10 h-10 bg-gradient-to-r from-indigo-500 to-blue-500 rounded-full flex items-center justify-center text-white font-bold text-sm">
-                    RT
-                  </div>
-                  <div className="ml-3">
-                    <p className="font-semibold text-gray-900">Rachel Thompson</p>
-                    <p className="text-sm text-gray-600">CTO at Shopify</p>
-                  </div>
-                </div>
-              </Card>
+            <p className="text-gray-700 mb-4">
+              {"FinTun AI has completely transformed how I write code. The AI suggestions are incredibly accurate and save me hours every day."}
+            </p>
+            <div className="flex items-center">
+              <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center text-white font-bold text-sm">
+                SJ
+              </div>
+              <div className="ml-3">
+                <p className="font-semibold text-gray-900">Sarah Johnson</p>
+                <p className="text-sm text-gray-600">Senior Developer at Stripe</p>
+              </div>
             </div>
-
-            {/* Column 3 */}
-            <div className="space-y-6 animate-scroll-up-slow">
-              <Card className="p-6 bg-white/80 backdrop-blur-sm border-0 shadow-lg">
-                <div className="flex items-center mb-4">
-                  <div className="flex text-yellow-400">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="w-4 h-4 fill-current" />
-                    ))}
-                  </div>
-                </div>
-                <p className="text-gray-700 mb-4">
-                  {'"The security features give us peace of mind. Our code never leaves our environment, yet we get all the AI benefits."'}
-                </p>
-                <div className="flex items-center">
-                  <div className="w-10 h-10 bg-gradient-to-r from-pink-500 to-rose-500 rounded-full flex items-center justify-center text-white font-bold text-sm">
-                    JW
-                  </div>
-                  <div className="ml-3">
-                    <p className="font-semibold text-gray-900">James Wilson</p>
-                    <p className="text-sm text-gray-600">Security Engineer at GitHub</p>
-                  </div>
-                </div>
-              </Card>
-
-              <Card className="p-6 bg-white/80 backdrop-blur-sm border-0 shadow-lg">
-                <div className="flex items-center mb-4">
-                  <div className="flex text-yellow-400">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="w-4 h-4 fill-current" />
-                    ))}
-                  </div>
-                </div>
-                <p className="text-gray-700 mb-4">
-                  {'"From junior to senior developers, everyone on our team loves FinTun AI. It adapts to each person\'s skill level perfectly."'}
-                </p>
-                <div className="flex items-center">
-                  <div className="w-10 h-10 bg-gradient-to-r from-violet-500 to-purple-500 rounded-full flex items-center justify-center text-white font-bold text-sm">
-                    LM
-                  </div>
-                  <div className="ml-3">
-                    <p className="font-semibold text-gray-900">Lisa Martinez</p>
-                    <p className="text-sm text-gray-600">VP Engineering at Slack</p>
-                  </div>
-                </div>
-              </Card>
-
-              <Card className="p-6 bg-white/80 backdrop-blur-sm border-0 shadow-lg">
-                <div className="flex items-center mb-4">
-                  <div className="flex text-yellow-400">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="w-4 h-4 fill-current" />
-                    ))}
-                  </div>
-                </div>
-                <p className="text-gray-700 mb-4">
-                  {'"The ROI is incredible. We\'ve reduced development time by 60% while improving code quality. Best investment we\'ve made."'}
-                </p>
-                <div className="flex items-center">
-                  <div className="w-10 h-10 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full flex items-center justify-center text-white font-bold text-sm">
-                    CB
-                  </div>
-                  <div className="ml-3">
-                    <p className="font-semibold text-gray-900">Chris Brown</p>
-                    <p className="text-sm text-gray-600">Founder at TechStartup</p>
-                  </div>
-                </div>
-              </Card>
+          </Card>
+          {/* Duplicate cards for seamless looping */}
+          <Card className="p-6 bg-white/80 backdrop-blur-sm border-0 shadow-lg">
+            <div className="flex items-center mb-4">
+              <div className="flex text-yellow-400">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="w-4 h-4 fill-current" />
+                ))}
+              </div>
             </div>
-          </div>
+            <p className="text-gray-700 mb-4">
+              {"The context awareness is mind-blowing. It understands our entire codebase and generates code that fits perfectly with our patterns."}
+            </p>
+            <div className="flex items-center">
+              <div className="w-10 h-10 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center text-white font-bold text-sm">
+                MR
+              </div>
+              <div className="ml-3">
+                <p className="font-semibold text-gray-900">Mike Rodriguez</p>
+                <p className="text-sm text-gray-600">Tech Lead at Airbnb</p>
+              </div>
+            </div>
+          </Card>
+          {/* Add more cards as needed */}
         </div>
-      </section>
+        {/* Duplicate the content for infinite scroll */}
+        <div className="animate-continuous-scroll flex flex-col space-y-6" aria-hidden="true">
+          <Card className="p-6 bg-white/80 backdrop-blur-sm border-0 shadow-lg">
+            <div className="flex items-center mb-4">
+              <div className="flex text-yellow-400">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="w-4 h-4 fill-current" />
+                ))}
+              </div>
+            </div>
+            <p className="text-gray-700 mb-4">
+              {"FinTun AI has completely transformed how I write code. The AI suggestions are incredibly accurate and save me hours every day."}
+            </p>
+            <div className="flex items-center">
+              <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center text-white font-bold text-sm">
+                SJ
+              </div>
+              <div className="ml-3">
+                <p className="font-semibold text-gray-900">Sarah Johnson</p>
+                <p className="text-sm text-gray-600">Senior Developer at Stripe</p>
+              </div>
+            </div>
+          </Card>
+          <Card className="p-6 bg-white/80 backdrop-blur-sm border-0 shadow-lg">
+            <div className="flex items-center mb-4">
+              <div className="flex text-yellow-400">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="w-4 h-4 fill-current" />
+                ))}
+              </div>
+            </div>
+            <p className="text-gray-700 mb-4">
+              {"The context awareness is mind-blowing. It understands our entire codebase and generates code that fits perfectly with our patterns."}
+            </p>
+            <div className="flex items-center">
+              <div className="w-10 h-10 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center text-white font-bold text-sm">
+                MR
+              </div>
+              <div className="ml-3">
+                <p className="font-semibold text-gray-900">Mike Rodriguez</p>
+                <p className="text-sm text-gray-600">Tech Lead at Airbnb</p>
+              </div>
+            </div>
+          </Card>
+        </div>
+      </div>
+
+      {/* Column 2 */}
+      <div className="space-y-6 flex flex-col">
+        <div className="animate-continuous-scroll flex flex-col space-y-6">
+          <Card className="p-6 bg-white/80 backdrop-blur-sm border-0 shadow-lg">
+            <div className="flex items-center mb-4">
+              <div className="flex text-yellow-400">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="w-4 h-4 fill-current" />
+                ))}
+              </div>
+            </div>
+            <p className="text-gray-700 mb-4">
+              {"Our team's productivity has increased by 85% since adopting FinTun AI. It's like having a senior developer pair programming with you."}
+            </p>
+            <div className="flex items-center">
+              <div className="w-10 h-10 bg-gradient-to-r from-orange-500 to-red-500 rounded-full flex items-center justify-center text-white font-bold text-sm">
+                EP
+              </div>
+              <div className="ml-3">
+                <p className="font-semibold text-gray-900">Emily Parker</p>
+                <p className="text-sm text-gray-600">Engineering Manager at Uber</p>
+              </div>
+            </div>
+          </Card>
+          <Card className="p-6 bg-white/80 backdrop-blur-sm border-0 shadow-lg">
+            <div className="flex items-center mb-4">
+              <div className="flex text-yellow-400">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="w-4 h-4 fill-current" />
+                ))}
+              </div>
+            </div>
+            <p className="text-gray-700 mb-4">
+              {"The AI-powered code reviews have caught so many potential bugs before they made it to production. It's a game-changer."}
+            </p>
+            <div className="flex items-center">
+              <div className="w-10 h-10 bg-gradient-to-r from-teal-500 to-cyan-500 rounded-full flex items-center justify-center text-white font-bold text-sm">
+                DK
+              </div>
+              <div className="ml-3">
+                <p className="font-semibold text-gray-900">David Kim</p>
+                <p className="text-sm text-gray-600">Senior Engineer at Netflix</p>
+              </div>
+            </div>
+          </Card>
+        </div>
+        <div className="animate-continuous-scroll flex flex-col space-y-6" aria-hidden="true">
+          <Card className="p-6 bg-white/80 backdrop-blur-sm border-0 shadow-lg">
+            <div className="flex items-center mb-4">
+              <div className="flex text-yellow-400">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="w-4 h-4 fill-current" />
+                ))}
+              </div>
+            </div>
+            <p className="text-gray-700 mb-4">
+              {"Our team's productivity has increased by 85% since adopting FinTun AI. It's like having a senior developer pair programming with you."}
+            </p>
+            <div className="flex items-center">
+              <div className="w-10 h-10 bg-gradient-to-r from-orange-500 to-red-500 rounded-full flex items-center justify-center text-white font-bold text-sm">
+                EP
+              </div>
+              <div className="ml-3">
+                <p className="font-semibold text-gray-900">Emily Parker</p>
+                <p className="text-sm text-gray-600">Engineering Manager at Uber</p>
+              </div>
+            </div>
+          </Card>
+          <Card className="p-6 bg-white/80 backdrop-blur-sm border-0 shadow-lg">
+            <div className="flex items-center mb-4">
+              <div className="flex text-yellow-400">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="w-4 h-4 fill-current" />
+                ))}
+              </div>
+            </div>
+            <p className="text-gray-700 mb-4">
+              {"The AI-powered code reviews have caught so many potential bugs before they made it to production. It's a game-changer."}
+            </p>
+            <div className="flex items-center">
+              <div className="w-10 h-10 bg-gradient-to-r from-teal-500 to-cyan-500 rounded-full flex items-center justify-center text-white font-bold text-sm">
+                DK
+              </div>
+              <div className="ml-3">
+                <p className="font-semibold text-gray-900">David Kim</p>
+                <p className="text-sm text-gray-600">Senior Engineer at Netflix</p>
+              </div>
+            </div>
+          </Card>
+        </div>
+      </div>
+
+      {/* Column 3 */}
+      <div className="space-y-6 flex flex-col">
+        <div className="animate-continuous-scroll flex flex-col space-y-6">
+          <Card className="p-6 bg-white/80 backdrop-blur-sm border-0 shadow-lg">
+            <div className="flex items-center mb-4">
+              <div className="flex text-yellow-400">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="w-4 h-4 fill-current" />
+                ))}
+              </div>
+            </div>
+            <p className="text-gray-700 mb-4">
+              {"The security features give us peace of mind. Our code never leaves our environment, yet we get all the AI benefits."}
+            </p>
+            <div className="flex items-center">
+              <div className="w-10 h-10 bg-gradient-to-r from-pink-500 to-rose-500 rounded-full flex items-center justify-center text-white font-bold text-sm">
+                JW
+              </div>
+              <div className="ml-3">
+                <p className="font-semibold text-gray-900">James Wilson</p>
+                <p className="text-sm text-gray-600">Security Engineer at GitHub</p>
+              </div>
+            </div>
+          </Card>
+          <Card className="p-6 bg-white/80 backdrop-blur-sm border-0 shadow-lg">
+            <div className="flex items-center mb-4">
+              <div className="flex text-yellow-400">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="w-4 h-4 fill-current" />
+                ))}
+              </div>
+            </div>
+            <p className="text-gray-700 mb-4">
+              {"From junior to senior developers, everyone on our team loves FinTun AI. It adapts to each person's skill level perfectly."}
+            </p>
+            <div className="flex items-center">
+              <div className="w-10 h-10 bg-gradient-to-r from-violet-500 to-purple-500 rounded-full flex items-center justify-center text-white font-bold text-sm">
+                LM
+              </div>
+              <div className="ml-3">
+                <p className="font-semibold text-gray-900">Lisa Martinez</p>
+                <p className="text-sm text-gray-600">VP Engineering at Slack</p>
+              </div>
+            </div>
+          </Card>
+        </div>
+        <div className="animate-continuous-scroll flex flex-col space-y-6" aria-hidden="true">
+          <Card className="p-6 bg-white/80 backdrop-blur-sm border-0 shadow-lg">
+            <div className="flex items-center mb-4">
+              <div className="flex text-yellow-400">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="w-4 h-4 fill-current" />
+                ))}
+              </div>
+            </div>
+            <p className="text-gray-700 mb-4">
+              {"The security features give us peace of mind. Our code never leaves our environment, yet we get all the AI benefits."}
+            </p>
+            <div className="flex items-center">
+              <div className="w-10 h-10 bg-gradient-to-r from-pink-500 to-rose-500 rounded-full flex items-center justify-center text-white font-bold text-sm">
+                JW
+              </div>
+              <div className="ml-3">
+                <p className="font-semibold text-gray-900">James Wilson</p>
+                <p className="text-sm text-gray-600">Security Engineer at GitHub</p>
+              </div>
+            </div>
+          </Card>
+          <Card className="p-6 bg-white/80 backdrop-blur-sm border-0 shadow-lg">
+            <div className="flex items-center mb-4">
+              <div className="flex text-yellow-400">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="w-4 h-4 fill-current" />
+                ))}
+              </div>
+            </div>
+            <p className="text-gray-700 mb-4">
+              {"From junior to senior developers, everyone on our team loves FinTun AI. It adapts to each person's skill level perfectly."}
+            </p>
+            <div className="flex items-center">
+              <div className="w-10 h-10 bg-gradient-to-r from-violet-500 to-purple-500 rounded-full flex items-center justify-center text-white font-bold text-sm">
+                LM
+              </div>
+              <div className="ml-3">
+                <p className="font-semibold text-gray-900">Lisa Martinez</p>
+                <p className="text-sm text-gray-600">VP Engineering at Slack</p>
+              </div>
+            </div>
+          </Card>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
       {/* Footer */}
-      <footer className="bg-gray-900 border-t border-gray-800">
+      {/* <footer className="bg-gray-900 border-t border-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div className="col-span-1 md:col-span-2">
@@ -1434,7 +1511,8 @@ export default function HomePage() {
             </div>
           </div>
         </div>
-      </footer>
+      </footer> */}
+      <Footer />
     </div>
   )
 }

@@ -187,108 +187,21 @@
     opacity: 0.8;
   }
 }
+@layer utilities {
+  .animate-continuous-scroll {
+    animation: scroll 20s linear infinite;
+  }
 
-/* Add these new animations for testimonials */
-@keyframes scrollUp {
-  0% {
-    transform: translateY(100%);
-    opacity: 0;
+  .animate-continuous-scroll:hover {
+    animation-play-state: paused;
   }
-  10% {
-    opacity: 1;
-  }
-  90% {
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(-100%);
-    opacity: 0;
-  }
-}
 
-@keyframes scrollUpDelayed {
-  0% {
-    transform: translateY(100%);
-    opacity: 0;
-  }
-  10% {
-    opacity: 1;
-  }
-  90% {
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(-100%);
-    opacity: 0;
+  @keyframes scroll {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(-50%);
+    }
   }
 }
-
-@keyframes scrollUpSlow {
-  0% {
-    transform: translateY(100%);
-    opacity: 0;
-  }
-  10% {
-    opacity: 1;
-  }
-  90% {
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(-100%);
-    opacity: 0;
-  }
-}
-
-.animate-fade-in-up {
-  animation: fadeInUp 0.8s ease-out;
-}
-
-.animate-slide-in-left {
-  animation: slideInLeft 0.8s ease-out;
-}
-
-.animate-slide-in-right {
-  animation: slideInRight 0.8s ease-out;
-}
-
-.animate-slide-in-up {
-  animation: slideInUp 0.8s ease-out;
-}
-
-.animate-bounce-subtle {
-  animation: bounceSubtle 2s ease-in-out infinite;
-}
-
-.animate-pulse-subtle {
-  animation: pulseSubtle 2s ease-in-out infinite;
-}
-
-.animate-scroll-up {
-  animation: scrollUp 20s linear infinite;
-}
-
-.animate-scroll-up-delayed {
-  animation: scrollUpDelayed 25s linear infinite;
-  animation-delay: -5s;
-}
-
-.animate-scroll-up-slow {
-  animation: scrollUpSlow 30s linear infinite;
-  animation-delay: -10s;
-}
-
-/* Staggered animations */
-.animate-slide-in-left {
-  animation-delay: 0.1s;
-}
-
-.animate-slide-in-up {
-  animation-delay: 0.2s;
-}
-
-.animate-slide-in-right {
-  animation-delay: 0.3s;
-}
-
-
