@@ -646,6 +646,10 @@ import { Card } from "@/components/ui/card"
 import SalesforceHero from "@/components/homepage/salesforce-hero"
 import NavBar from "@/components/homepage/Navbar"
 import Footer from "@/components/homepage/Footer"
+import StackedSlider from "@/components/homepage/StackedSlider"
+import SlidingLogos from "@/components/homepage/SlidingLogos"
+import ServiceCards from "@/components/homepage/ServiceCards"
+import DevWorkspace from "@/components/homepage/DevWorkspace"
 
 export default function HomePage() {
   return (
@@ -1128,7 +1132,7 @@ export default function HomePage() {
      <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50 overflow-hidden">
   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div className="text-center mb-16">
-      <h2 className="text-5xl font-bold text-gray-900 mb-6">Loved by developers worldwide</h2>
+      <h2 className="text-5xl font-bold text-gray-900 mb-6">Trusted by Salesforce developers worldwide</h2>
       <p className="text-xl text-gray-600 max-w-2xl mx-auto">See what developers are saying about FinTun AI</p>
     </div>
 
@@ -1414,7 +1418,10 @@ export default function HomePage() {
     </div>
   </div>
 </section>
-
+<SlidingLogos />
+<DevWorkspace />
+    <StackedSlider />
+    <ServiceCards />
       {/* Footer */}
       {/* <footer className="bg-gray-900 border-t border-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
