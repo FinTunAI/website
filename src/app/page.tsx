@@ -647,9 +647,10 @@ import SalesforceHero from "@/components/homepage/salesforce-hero"
 import NavBar from "@/components/homepage/Navbar"
 import Footer from "@/components/homepage/Footer"
 import StackedSlider from "@/components/homepage/StackedSlider"
-import SlidingLogos from "@/components/homepage/SlidingLogos"
+import { LogoMarqueeSection } from "@/components/homepage/SlidingLogos"
 import ServiceCards from "@/components/homepage/ServiceCards"
 import DevWorkspace from "@/components/homepage/DevWorkspace"
+import DevinUIPreview from "@/components/homepage/DevUI"
 
 export default function HomePage() {
   return (
@@ -815,7 +816,7 @@ export default function HomePage() {
       <SalesforceHero />
 
       {/* Trust Indicators */}
-      <section className="py-16 bg-white border-t border-gray-100">
+      {/* <section className="py-16 bg-white border-t border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <p className="text-gray-500 text-lg">Trusted by over half a million developers at leading companies</p>
@@ -842,11 +843,11 @@ export default function HomePage() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Features Section */}
       {/* Build Software Faster Section */}
-      <section className="py-20 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">
+      {/* <section className="py-20 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-5xl font-bold text-gray-900 mb-6">Build software faster</h2>
@@ -930,7 +931,7 @@ export default function HomePage() {
             </div>
           </div>
 
-          {/* Stats */}
+ 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div>
               <div className="text-4xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-2">
@@ -958,10 +959,10 @@ export default function HomePage() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
-      {/* Enhanced Features Section */}
-      <section id="features" className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
+
+      {/* <section id="features" className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-5xl font-bold text-gray-900 mb-6">Powerful Features for Modern Teams</h2>
@@ -972,7 +973,7 @@ export default function HomePage() {
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
-            {/* Feature 1 */}
+
             <Card className="p-8 border-0 shadow-xl bg-white/80 backdrop-blur-sm hover:shadow-2xl transition-all duration-300 hover:scale-105 transition-transform duration-300">
               <div className="flex items-start space-x-6">
                 <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center flex-shrink-0">
@@ -1002,7 +1003,7 @@ export default function HomePage() {
               </div>
             </Card>
 
-            {/* Feature 2 */}
+
             <Card className="p-8 border-0 shadow-xl bg-white/80 backdrop-blur-sm hover:shadow-2xl transition-all duration-300 hover:scale-105 transition-transform duration-300">
               <div className="flex items-start space-x-6">
                 <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center flex-shrink-0">
@@ -1032,7 +1033,7 @@ export default function HomePage() {
               </div>
             </Card>
 
-            {/* Feature 3 */}
+
             <Card className="p-8 border-0 shadow-xl bg-white/80 backdrop-blur-sm hover:shadow-2xl transition-all duration-300 hover:scale-105 transition-transform duration-300">
               <div className="flex items-start space-x-6">
                 <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-green-600 rounded-2xl flex items-center justify-center flex-shrink-0">
@@ -1062,7 +1063,7 @@ export default function HomePage() {
               </div>
             </Card>
 
-            {/* Feature 4 */}
+
             <Card className="p-8 border-0 shadow-xl bg-white/80 backdrop-blur-sm hover:shadow-2xl transition-all duration-300 hover:scale-105 transition-transform duration-300">
               <div className="flex items-start space-x-6">
                 <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-orange-600 rounded-2xl flex items-center justify-center flex-shrink-0">
@@ -1093,7 +1094,6 @@ export default function HomePage() {
             </Card>
           </div>
 
-          {/* Additional Features Grid */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <Card className="p-6 border-0 shadow-lg bg-white/60 backdrop-blur-sm text-center">
               <div className="w-12 h-12 bg-gradient-to-r from-indigo-500 to-indigo-600 rounded-xl flex items-center justify-center mx-auto mb-4">
@@ -1126,10 +1126,18 @@ export default function HomePage() {
             </Card>
           </div>
         </div>
-      </section>
+      </section> */}
 
-      {/* Testimonials Section */}
-     <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50 overflow-hidden">
+ 
+   
+
+
+    <StackedSlider />
+    <ServiceCards />
+    <DevWorkspace />
+    <DevinUIPreview />
+    <LogoMarqueeSection />
+         <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50 overflow-hidden">
   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div className="text-center mb-16">
       <h2 className="text-5xl font-bold text-gray-900 mb-6">Trusted by Salesforce developers worldwide</h2>
@@ -1137,7 +1145,7 @@ export default function HomePage() {
     </div>
 
     <div className="relative grid grid-cols-1 md:grid-cols-3 gap-8 h-[600px] overflow-hidden">
-      {/* Column 1 */}
+  
       <div className="space-y-6 flex flex-col">
         <div className="animate-continuous-scroll flex flex-col space-y-6">
           <Card className="p-6 bg-white/80 backdrop-blur-sm border-0 shadow-lg">
@@ -1161,7 +1169,7 @@ export default function HomePage() {
               </div>
             </div>
           </Card>
-          {/* Duplicate cards for seamless looping */}
+  
           <Card className="p-6 bg-white/80 backdrop-blur-sm border-0 shadow-lg">
             <div className="flex items-center mb-4">
               <div className="flex text-yellow-400">
@@ -1183,9 +1191,9 @@ export default function HomePage() {
               </div>
             </div>
           </Card>
-          {/* Add more cards as needed */}
+
         </div>
-        {/* Duplicate the content for infinite scroll */}
+
         <div className="animate-continuous-scroll flex flex-col space-y-6" aria-hidden="true">
           <Card className="p-6 bg-white/80 backdrop-blur-sm border-0 shadow-lg">
             <div className="flex items-center mb-4">
@@ -1232,7 +1240,7 @@ export default function HomePage() {
         </div>
       </div>
 
-      {/* Column 2 */}
+
       <div className="space-y-6 flex flex-col">
         <div className="animate-continuous-scroll flex flex-col space-y-6">
           <Card className="p-6 bg-white/80 backdrop-blur-sm border-0 shadow-lg">
@@ -1324,7 +1332,7 @@ export default function HomePage() {
         </div>
       </div>
 
-      {/* Column 3 */}
+
       <div className="space-y-6 flex flex-col">
         <div className="animate-continuous-scroll flex flex-col space-y-6">
           <Card className="p-6 bg-white/80 backdrop-blur-sm border-0 shadow-lg">
@@ -1418,10 +1426,6 @@ export default function HomePage() {
     </div>
   </div>
 </section>
-<SlidingLogos />
-<DevWorkspace />
-    <StackedSlider />
-    <ServiceCards />
       {/* Footer */}
       {/* <footer className="bg-gray-900 border-t border-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">

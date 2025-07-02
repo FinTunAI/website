@@ -3,7 +3,7 @@
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import Image from "next/image"
-
+import { Marquee } from "@/components/magicui/marquee";
 const workflowSteps = [
   {
     id: 1,
@@ -31,6 +31,20 @@ const workflowSteps = [
   },
 ]
 
+const logos = [
+  { src: '/lt-logo.png', name: 'LT Logo' },
+  { src: '/hg-logo.png', name: 'Hg Logo' },
+  { src: '/wevnal-logo.png', name: 'Wevnal Logo' },
+  { src: '/cloud-ace-logo.png', name: 'Cloud Ace Logo' },
+  { src: '/origin-logo.png', name: 'Origin Logo' },
+];
+
+const LogoCard = ({ src, name }) => (
+  <div className="flex flex-col items-center min-w-[150px] sm:min-w-[180px] lg:min-w-[200px] text-center opacity-70 hover:opacity-100 transition-opacity duration-300">
+   
+    <span className="text-2xl font-semibold text-gray-500">{name}</span>
+  </div>
+);
 export default function SalesforceHero() {
   const [activeStep, setActiveStep] = useState<number | null>(null)
   const [defaultImage] = useState("images/placeholder.svg?height=400&width=600&text=AI+Software+Engineer")
@@ -42,7 +56,7 @@ export default function SalesforceHero() {
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl" />
       <div className="absolute top-0 right-0 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl" />
 
-      <div className="relative z-10 container mx-auto px-4 py-20">
+      <div className="relative z-10 container mx-auto px-4 pt-20">
         <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[80vh]">
           {/* Left Content */}
           <div className="space-y-8">
@@ -123,6 +137,21 @@ export default function SalesforceHero() {
           </div>
         </div>
       </div>
+  <div className="relative">
+        {/* ✅ Edge gradient fades */}
+        <div className="pointer-events-none absolute inset-y-0 left-0 w-20 bg-gradient-to-r from-gray-900 to-transparent z-10" />
+        <div className="pointer-events-none absolute inset-y-0 right-0 w-20 bg-gradient-to-l from-gray-900 to-transparent z-10" />
+  
+        {/* ✅ Marquee */}
+        <Marquee
+          pauseOnHover
+          className="[--duration:30s] px-4 sm:px-8"
+        >
+          {logos.map((logo, index) => (
+            <LogoCard key={index} {...logo} />
+          ))}
+        </Marquee>
+        </div>
     </section>
   )
 }
