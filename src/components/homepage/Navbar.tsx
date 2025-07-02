@@ -208,7 +208,7 @@ export default function Navbar() {
   )
 
   return (
-    <div className="fixed top-10 left-0 right-0 z-60 px-4 w-full">
+    <div className="fixed top-7 left-0 right-0 z-60 px-4 w-full">
       <div className="max-w-7xl mx-auto flex items-center gap-2">
         {/* Logo */}
         <div className="flex items-center">

@@ -390,9 +390,9 @@ export default function StackedSlider(): React.JSX.Element {
   }, [currentSlide])
 
   return (
-    <div className="w-full max-w-7xl mx-auto p-4 py-20">
-      <h1 className="text-7xl font-semibold">Use cases</h1>
-      <p className="mt-4 text-xl mb-10 max-w-md">
+    <div className="w-full max-w-7xl mx-auto px-10 pt-30">
+      <h1 className="text-7xl ">Use cases</h1>
+      <p className="mt-10 text-xl mb-20 max-w-md">
         From implementing new features to fixing thousands of lint errors, Devin can clear your backlog,
         modernize your codebase, and help you build more.
       </p>
@@ -441,7 +441,7 @@ export default function StackedSlider(): React.JSX.Element {
               aria-label={`${isActive ? "Current slide" : "Go to slide"}: ${slide.title}`}
             >
               {isActive ? (
-                <div className="p-8 lg:p-12 h-full flex items-center relative">
+                <div className="  h-full flex items-center relative">
                   <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
                     <div className="text-white space-y-6">
                       <h2 className="text-3xl lg:text-4xl font-light leading-tight">

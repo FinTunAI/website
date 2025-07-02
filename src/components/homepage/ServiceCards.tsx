@@ -35,10 +35,10 @@ const services = [
 
 export default function ServiceCards() {
   return (
-    <div className="w-full max-w-7xl mx-auto p-4 mt-8">
+    <div className="w-full max-w-7xl mx-auto px-10 py-4 ">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {services.map((service) => (
-          <div key={service.id} className="bg-gray-50 rounded-2xl p-6 relative">
+          <div key={service.id} className="bg-gray-50 rounded-md p-10 relative">
             {/* Icon */}
             <div className="absolute top-6 right-6">
               <div
@@ -49,10 +49,10 @@ export default function ServiceCards() {
             </div>
 
             {/* Title */}
-            <h3 className="text-xl font-medium text-gray-900 mb-6 pr-16">{service.title}</h3>
+            <h3 className="text-2xl text-gray-900  pr-16 w-4/5">{service.title}</h3>
 
             {/* Items List */}
-            <ul className="space-y-3">
+            <ul className="space-y-3 mt-20">
               {service.items.map((item, index) => (
                 <li key={index} className="flex items-start space-x-3">
                   <div className={`w-2 h-2 ${service.dotColor} rounded-full flex-shrink-0 mt-2`} />

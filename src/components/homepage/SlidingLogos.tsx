@@ -83,7 +83,7 @@ const LogoCard = ({ src, name }) => (
 
 export function LogoMarqueeSection() {
   return (
-    <section className="relative w-full overflow-hidden py-20 mt-10 ">
+    <section className="relative w-full overflow-hidden py-20 mt-30 ">
       {/* ✅ Header over the Marquee */}
       <div className="text-center mb-12 px-4">
         <p className="text-gray-400 text-lg sm:text-2xl mb-2">
@@ -99,10 +99,10 @@ export function LogoMarqueeSection() {
           Hear from our customers
         </button>
       </div>
-<div className="relative">
+<div className="relative mt-20 mb-10">
       {/* ✅ Edge gradient fades */}
-      <div className="pointer-events-none absolute inset-y-0 left-0 w-20 bg-gradient-to-r from-white to-transparent z-10" />
-      <div className="pointer-events-none absolute inset-y-0 right-0 w-20 bg-gradient-to-l from-white to-transparent z-10" />
+      <div className="pointer-events-none absolute inset-y-0 left-0 w-30 bg-gradient-to-r from-white to-white z-10" />
+      <div className="pointer-events-none absolute inset-y-0 right-0 w-30 bg-gradient-to-l from-white to-white z-10" />
 
       {/* ✅ Marquee */}
       <Marquee

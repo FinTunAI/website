@@ -104,7 +104,7 @@ import React from "react";
 import { BorderBeam } from "../magicui/border-beam";
 export default function DevinBentoExactLayout() {
   return (
-    <section className="bg-[#0b0d13] text-white py-20 px-4 md:px-8">
+    <section className="bg-[#0b0d13] text-white py-20 mt-30 px-4 md:px-8">
       <div className="w-full p-[3vw]  gap-12">
         <div className="grid grid-cols-12">
          <div className="col-span-5 col-start-2">
@@ -125,12 +125,12 @@ export default function DevinBentoExactLayout() {
         <div className="grid grid-cols-12 relative ">
           
           {/* Card 1 */}
-          <div className=" absolute top-1/3 bg-gray-900 rounded-2xl pt-[4vw] pl-[4vw] flex flex-col gap-5 col-span-5 col-start-2 w-full ">
-          <div className="flex justify-between w-full relative ">
-<h3 className="text-xl md:text-4xl max-w-md">
+          <div className=" absolute top-1/3 bg-gray-900 rounded-2xl pt-[4vw] pl-[4vw] flex flex-col gap-5 col-span-5 col-start-2 w-full right-4 ">
+          <div className=" w-full relative ">
+<h3 className="text-xl md:text-4xl w-4/5">
               Devin learns your codebase & picks up tribal knowledge
             </h3>
-            <Image src='/images/card01.png' alt="image1" width={130} height={70} className="absolute right-0 -top-20"/>
+            <Image src='/images/card01.png' alt="image1" width={90} height={60} className="absolute right-0 -top-20"/>
           </div>
         <div className="mt-13 ">
   <Image
@@ -152,7 +152,7 @@ export default function DevinBentoExactLayout() {
               <Image src='/images/card02-line.png' alt="mage2 " width={100} height={100}/>
             </div>
             <div className="flex lg:flex-row flex-col item-start pl-[4vw]">
-              <div className="mt-20">
+              <div className="mt-10">
             <h3 className="text-xl md:text-3xl ">
               Code on the go
             </h3>

@@ -42,7 +42,7 @@ const logos = [
 const LogoCard = ({ src, name }) => (
   <div className="flex flex-col items-center min-w-[150px] sm:min-w-[180px] lg:min-w-[200px] text-center opacity-70 hover:opacity-100 transition-opacity duration-300">
    
-    <span className="text-2xl font-semibold text-gray-500">{name}</span>
+    <span className="text-3xl font-semibold text-gray-500">{name}</span>
   </div>
 );
 export default function SalesforceHero() {
@@ -50,7 +50,7 @@ export default function SalesforceHero() {
   const [defaultImage] = useState("images/placeholder.svg?height=400&width=600&text=AI+Software+Engineer")
 
   return (
-    <section className="min-h-screen bg-slate-900 text-white relative overflow-hidden">
+    <section className="min-h-screen bg-slate-900 text-white relative overflow-hidden pt-10 px-10">
       {/* Background decorative elements */}
       <div className="absolute inset-0 bg-gradient-to-br from-slate-800 to-slate-900" />
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl" />
@@ -137,7 +137,7 @@ export default function SalesforceHero() {
           </div>
         </div>
       </div>
-  <div className="relative">
+  <div className="relative my-10">
         {/* ✅ Edge gradient fades */}
         <div className="pointer-events-none absolute inset-y-0 left-0 w-20 bg-gradient-to-r from-gray-900 to-transparent z-10" />
         <div className="pointer-events-none absolute inset-y-0 right-0 w-20 bg-gradient-to-l from-gray-900 to-transparent z-10" />
