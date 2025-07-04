@@ -626,21 +626,8 @@
 
 
 "use client"
-
-import {
-  Code,
-  Zap,
-  Brain,
-  Users,
-  Shield,
-  Sparkles,
-  Check,
-  Github,
-  Twitter,
-  Linkedin,
-  Download,
-  Star,
-} from "lucide-react"
+import React from "react"
+import {Star} from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
 import SalesforceHero from "@/components/homepage/salesforce-hero"
@@ -651,8 +638,23 @@ import { LogoMarqueeSection } from "@/components/homepage/SlidingLogos"
 import ServiceCards from "@/components/homepage/ServiceCards"
 import DevWorkspace from "@/components/homepage/DevWorkspace"
 import DevinUIPreview from "@/components/homepage/DevUI"
-
+import { useScroll, useTransform } from "motion/react";
+import { GoogleGeminiEffect } from "@/components/homepage/google-gemini-effect"
 export default function HomePage() {
+  const ref = React.useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start start", "end start"],
+  });
+
+  const pathLengthFirst = useTransform(scrollYProgress, [0, 0.8], [0.2, 1.2]);
+  const pathLengthSecond = useTransform(scrollYProgress, [0, 0.8], [0.15, 1.2]);
+  const pathLengthThird = useTransform(scrollYProgress, [0, 0.8], [0.1, 1.2]);
+  const pathLengthFourth = useTransform(scrollYProgress, [0, 0.8], [0.05, 1.2]);
+  const pathLengthFifth = useTransform(scrollYProgress, [0, 0.8], [0, 1.2]);
+  const pathLengthSixth = useTransform(scrollYProgress, [0, 0.8], [-0.05, 1.2]);
+
+
   return (
     <div className="min-h-screen bg-white">
       {/* Navigation - Warp Style */}
@@ -813,7 +815,24 @@ export default function HomePage() {
           </div>
         </div>
       </section> */}
-      <SalesforceHero />
+     
+          <div
+      className="h-[400vh] bg-black w-full dark:border dark:border-white/[0.1] rounded-md relative pt-40 overflow-clip"
+      ref={ref}
+    >
+      
+      <GoogleGeminiEffect
+        pathLengths={[
+          pathLengthFirst,
+          pathLengthSecond,
+          pathLengthThird,
+          pathLengthFourth,
+          pathLengthFifth,
+          pathLengthSixth,
+        ]}
+      />
+    </div>
+ 
 
       {/* Trust Indicators */}
       {/* <section className="py-16 bg-white border-t border-gray-100">
