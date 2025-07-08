@@ -154,23 +154,23 @@ import { Button } from "@/components/ui/button"
 
 const leftNavItems = [
   { name: "Home", href: "/", active: true },
-  { name: "Enterprise", href: "/enterprise" },
+  { name: "About us", href: "/about" },
   { name: "Pricing", href: "/pricing" },
   { name: "Customers", href: "/customers" },
 ]
 
-const centerNavItems = [
-  { name: "About us", href: "/about", hasDropdown: true },
-  { name: "Careers", href: "/careers", hasDropdown: true },
-  { name: "Blog", href: "/blog", hasDropdown: true },
-  { name: "Contact", href: "/contact", hasDropdown: true },
-  { name: "Docs", href: "/docs", hasDropdown: true },
-]
+// const centerNavItems = [
+//   { name: "About us", href: "/about", hasDropdown: true },
+//   { name: "Careers", href: "/careers", hasDropdown: true },
+//   { name: "Blog", href: "/blog", hasDropdown: true },
+//   { name: "Contact", href: "/contact", hasDropdown: true },
+//   { name: "Docs", href: "/docs", hasDropdown: true },
+// ]
 
-const rightNavItems = [
-  { name: "Login", href: "/login", hasDropdown: true },
-  { name: "Get Started", href: "/get-started", isButton: true },
-]
+// const rightNavItems = [
+//   { name: "Login", href: "/login", hasDropdown: true },
+//   { name: "Get Started", href: "/get-started", isButton: true },
+// ]
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -249,13 +249,13 @@ export default function Navbar() {
                 {leftNavItems.map(renderNavItem)}
               </div>
               {/* Center group */}
-              <div className="flex items-center space-x-1">
+              {/* <div className="flex items-center space-x-1">
                 {centerNavItems.map(renderNavItem)}
-              </div>
+              </div> */}
               {/* Right group */}
-              <div className="flex items-center space-x-1">
+              {/* <div className="flex items-center space-x-1">
                 {rightNavItems.map(renderNavItem)}
-              </div>
+              </div> */}
             </div>
 
             {/* Mobile Menu Button */}
@@ -275,12 +275,12 @@ export default function Navbar() {
           {isMobileMenuOpen && (
             <div className="md:hidden px-6 pb-4 border-t border-gray-200 dark:border-gray-700 mt-2">
               <div className="flex flex-col space-y-4 pt-4">
-                {[leftNavItems, centerNavItems, rightNavItems].map((group, idx) => (
+                {/* {[leftNavItems, centerNavItems, rightNavItems].map((group, idx) => (
                   <div key={idx} className="flex flex-col space-y-2">
                     {group.map(renderNavItem)}
                     {idx < 2 && <hr className="my-3 border-gray-200 dark:border-gray-700" />}
                   </div>
-                ))}
+                ))} */}
               </div>
             </div>
           )}

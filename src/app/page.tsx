@@ -816,21 +816,8 @@ export default function HomePage() {
         </div>
       </section> */}
      
-          <div
-      className="h-[400vh] bg-black w-full dark:border dark:border-white/[0.1] rounded-md relative pt-40 overflow-clip"
-      ref={ref}
-    >
-      
-      <GoogleGeminiEffect
-        pathLengths={[
-          pathLengthFirst,
-          pathLengthSecond,
-          pathLengthThird,
-          pathLengthFourth,
-          pathLengthFifth,
-          pathLengthSixth,
-        ]}
-      />
+           <div className="min-h-screen bg-black w-full dark:border dark:border-white/[0.1] rounded-md relative pt-40 overflow-clip">
+      <GoogleGeminiEffect />
     </div>
  
 
