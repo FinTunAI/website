@@ -1,37 +1,73 @@
-import { Sparkles } from "lucide-react"
+import { Sparkles } from "lucide-react";
 
 const services = [
   {
     id: 1,
-    title: "Application development",
+    title: "Zero-Friction Developer Experience",
     icon: "sparkles",
     iconColor: "text-blue-500",
     dotColor: "bg-blue-500",
-    items: ["Frontend bugs and edge cases", "Unit and E2E testing", "Building SaaS integrations"],
+    items: [
+      "Seamless integration with existing workflows",
+      "Intuitive AI-powered interfaces",
+    ],
   },
   {
     id: 2,
-    title: "Bug & issue triage",
+    title: "Advanced Agentic AI Architecture",
     icon: "sparkles",
     iconColor: "text-cyan-500",
     dotColor: "bg-cyan-500",
-    items: ["Automated on-call response", "Ticket resolution", "CI/CD autotriage"],
+    items: [
+      "Multi-agent systems for complex modernization tasks",
+      "Intelligent automation across the development lifecycle",
+    ],
   },
   {
     id: 3,
-    title: "And many others",
+    title: "Deep Domain Expertise",
     icon: "sparkles",
     iconColor: "text-emerald-500",
     dotColor: "bg-emerald-500",
     items: [
-      "Technical debt",
-      "Performance optimization",
-      "Scraping",
-      "New repo onboarding",
-      "Maintaining documentation",
+      "20+ years of Salesforce and enterprise system experience",
+      "Proven track record with 600+ successful project deliveries",
     ],
   },
-]
+  {
+    id: 4,
+    title: "Digital Twin Simulation Capability",
+    icon: "sparkles",
+    iconColor: "text-purple-500",
+    dotColor: "bg-purple-500",
+    items: [
+      "Risk-free testing of modernization strategies",
+      "Predictive analysis for system performance",
+    ],
+  },
+  {
+    id: 5,
+    title: "Enterprise Design Philosophy",
+    icon: "sparkles",
+    iconColor: "text-yellow-500",
+    dotColor: "bg-yellow-500",
+    items: [
+      "Built for Fortune 500 compliance requirements",
+      "Scalable architecture for global deployments",
+    ],
+  },
+  {
+    id: 6,
+    title: "Enterprise-Grade Compliance Foundation",
+    icon: "sparkles",
+    iconColor: "text-red-500",
+    dotColor: "bg-red-500",
+    items: [
+      "Security-first approach to AI modernization",
+      "Industry-standard compliance frameworks",
+    ],
+  },
+];
 
 export default function ServiceCards() {
   return (
@@ -49,13 +85,17 @@ export default function ServiceCards() {
             </div>
 
             {/* Title */}
-            <h3 className="text-2xl text-gray-900  pr-16 w-4/5">{service.title}</h3>
+            <h3 className="text-2xl text-gray-900  pr-16 w-4/5">
+              {service.title}
+            </h3>
 
             {/* Items List */}
             <ul className="space-y-3 mt-20">
               {service.items.map((item, index) => (
                 <li key={index} className="flex items-start space-x-3">
-                  <div className={`w-2 h-2 ${service.dotColor} rounded-full flex-shrink-0 mt-2`} />
+                  <div
+                    className={`w-2 h-2 ${service.dotColor} rounded-full flex-shrink-0 mt-2`}
+                  />
                   <span className="text-gray-700 leading-relaxed">{item}</span>
                 </li>
               ))}
@@ -64,5 +104,5 @@ export default function ServiceCards() {
         ))}
       </div>
     </div>
-  )
+  );
 }

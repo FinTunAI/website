@@ -13,7 +13,7 @@
 //               <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg flex items-center justify-center">
 //                 <Brain className="w-5 h-5 text-white" />
 //               </div>
-//               <span className="text-xl font-bold text-white">FinTun AI</span>
+//               <span className="text-xl font-bold text-white">nCoder.ai</span>
 //             </div>
 //             <p className="text-gray-400 mb-4 max-w-sm">
 //               Accelerate your team’s innovation with our AI-driven development tools.
@@ -53,7 +53,7 @@
 
 //         {/* Bottom Legal */}
 //         <div className="border-t border-gray-800 mt-10 pt-6 flex flex-col md:flex-row justify-between items-center text-sm text-gray-400">
-//           <p>© 2025 FinTun AI. All rights reserved.</p>
+//           <p>© 2025 nCoder.ai. All rights reserved.</p>
 //           <div className="flex space-x-6 mt-4 md:mt-0">
 //             <a href="#" className="hover:text-white transition-colors">Privacy</a>
 //             <a href="#" className="hover:text-white transition-colors">Terms</a>
@@ -66,6 +66,8 @@
 // };
 
 // export default Footer;
+
+
 import React from 'react';
 import Link from 'next/link';
 import { ArrowRight, Mail, Phone } from 'lucide-react';
@@ -80,8 +82,8 @@ const Footer = () => {
           <h2 className="text-3xl md:text-4xl font-extrabold leading-tight tracking-tight mb-4">
             Be the first <br />
             to build with <br />
-            <span className="inline-block mt-2 text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-teal-400">
-              FinTune AI
+            <span className="inline-block mt-2 text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 to-fuchsia-600">
+              nCoder.ai 
             </span>
           </h2>
         </div>
@@ -91,7 +93,7 @@ const Footer = () => {
           <div className="relative bg-gradient-to-br from-gray-100 to-white p-[1px] rounded-xl shadow-sm">
             <div className="bg-white rounded-xl p-6 md:p-8">
               <p className="text-gray-700 text-lg mb-6">
-                Join the waitlist to access FinTune AI before anyone else and unlock the future of autonomous software engineering.
+                Join the waitlist to access nCoder.ai  before anyone else and unlock the future of autonomous software engineering.
               </p>
               <form className="flex flex-col sm:flex-row items-center gap-4">
                 <input
@@ -148,8 +150,8 @@ const Footer = () => {
         <div className="flex flex-col items-center md:items-end space-y-1 text-sm">
           <div className="flex items-center gap-2">
             <Mail size={16} className="text-gray-400" />
-            <a href="mailto:support@fintune.ai" className="hover:underline">
-              support@fintune.ai
+            <a href="mailto:support@ncoder.ai" className="hover:underline">
+              support@ncoder.ai
             </a>
             <Phone size={16} className="text-gray-400" />
             <a href="tel:+1234567890" className="hover:underline">

@@ -1,4 +1,3 @@
-
 "use client";
 
 import { cn } from "@/lib/utils";
@@ -6,10 +5,11 @@ import { motion } from "framer-motion";
 import React from "react";
 import { Slack } from "lucide-react";
 import { Button } from "../ui/button";
+import { BorderBeam } from "../magicui/border-beam";
 const transitionBase = {
   duration: 8,
   ease: "linear",
-  repeat: Infinity
+  repeat: Infinity,
 };
 
 export const GoogleGeminiEffect = ({
@@ -22,43 +22,47 @@ export const GoogleGeminiEffect = ({
   className?: string;
 }) => {
   return (
- <div className={cn("sticky lg:top-1/5 xl:top-1/5", className)}>
+    <div className={cn("sticky md:top-1/3 xl:top-1/5", className)}>
       <div className="text-lg md:text-4xl font-normal pb-4 text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-100 to-neutral-300 ">
-      <h1 className="text-4xl md:text-6xl  text-center leading-tight">
-  <span class="bg-gradient-to-r from-[#446dcd] via-[#4bb6d3] to-[#6ef2cc] bg-clip-text text-transparent">
-    Devin,
-  </span>
-  the AI <br /> software engineer
-</h1>
-       <div className="flex gap-6 w-full justify-center mt-10 ">
-        <Button className="text-xl bg-white text-black ">
-          Demo
-        </Button>
-        <Button className="text-xl bg-white text-black ">
-          Signup
-        </Button>
-       </div>
-      </div>
-     
-     <div className="flex flex-col items-center justify-center w-full py-16 absolute md:top-48 2xl:top-87">
-  <button className="font-bold bg-white rounded-full md:py-2 px-2 py-1 md:mt-8 mt-4 z-30 md:text-base text-black text-xs w-fit mx-auto">
-    <Slack />
-  </button>
+        <h1 className="text-4xl md:text-6xl  text-center leading-tight">
+          <span className="bg-gradient-to-r from-[#446dcd] via-[#4bb6d3] to-[#6ef2cc] bg-clip-text text-transparent">
+            Transform Legacy Systems with AI-Driven Modernization
+          </span>
+          <br />
+        </h1>
+        <div className="flex gap-6 w-full justify-center mt-10">
+          <div className="relative inline-block">
+            <Button className="text-xl bg-gray-200 text-black relative z-10 px-6 py-3">
+              Schedule a Demo
+            </Button>
 
-  <div className="mt-4 max-w-2xl text-center text-neutral-300">
-    <p className="text-base md:text-lg">
-     Transform the way you build on Salesforce
-    </p>
-    
-  </div>
-</div>
+            {/* BorderBeam positioned to match the button */}
+            {/* <div className="absolute inset-0 rounded-lg pointer-events-none z-0">
+              <BorderBeam duration={8} size={100} />
+            </div> */}
+          </div>
+        </div>
+      </div>
+
+      <div className="flex flex-col items-center justify-center w-full py-16 absolute md:top-48 2xl:top-68">
+        <button className="font-bold bg-white rounded-full md:py-2 px-2 py-1 md:mt-8 mt-4 z-30 md:text-base text-black text-xs w-fit mx-auto">
+          <Slack />
+        </button>
+
+        <div className="mt-20 max-w-2xl text-center text-neutral-300">
+          <p className="text-base md:text-lg">
+            From Salesforce to Enterprise Applications - Unlock the Future of
+            Your Business
+          </p>
+        </div>
+      </div>
 
       <svg
         width="1440"
         height="600"
         viewBox="0 0 1440 890"
         xmlns="http://www.w3.org/2000/svg"
-        className=" absolute 2xl:top-30 -top-10 w-full"
+        className=" absolute 2xl:top-10  -top-10 w-full"
       >
         {/* Auto-animated main paths */}
         {[
@@ -91,7 +95,7 @@ export const GoogleGeminiEffect = ({
             fill="none"
             initial={{ pathLength: 0 }}
             animate={{ pathLength: 1 }}
-            transition={{ ...transitionBase}}
+            transition={{ ...transitionBase }}
           />
         ))}
 
@@ -135,52 +139,151 @@ export const GoogleGeminiEffect = ({
           pathLength={1}
           filter="url(#blurMe)"
         />
-   <g id="start-labels">
-   <g>
-     <rect x={-130} y={635} width={130} height={50} rx={10} strokeWidth="2" stroke="#fff"  />
-     <text x={-125} y={666} fontSize="25" fill="#FFF">S-controls</text>
-   </g>
-   <g>
-     <rect x={-130} y={560} width={130} height={50} rx={10} strokeWidth="2" stroke="#fff" />
-     <text x={-120} y={590} fontSize="25" fill="#FFF">VF pages</text>
-   </g>
-   <g>
-     <rect x={-190} y={490} width={190} height={50} rx={10} strokeWidth="2" stroke="#fff" />
-     <text x={-180} y={520} fontSize="25" fill="#FFF">Workflow Rules</text>
-   </g>
-   <g>
-     <rect x={-190} y={406} width={190} height={50} rx={10} strokeWidth="2" stroke="#fff"  />
-     <text x={-180} y={438} fontSize="25" fill="#FFF">Error Messages</text>
-   </g>
-   <g>
-     <rect x={-190} y={332} width={190} height={50} rx={10} strokeWidth="2" stroke="#fff"  />
-     <text x={-180} y={365} fontSize="25" fill="#FFF">Formula Errors</text>
-   </g>
- 
- </g>
+        <g id="start-labels">
+          <g>
+            <rect
+              x={-130}
+              y={635}
+              width={130}
+              height={50}
+              rx={10}
+              strokeWidth="2"
+              stroke="#fff"
+            />
+            <text x={-125} y={666} fontSize="25" fill="#FFF">
+              S-controls
+            </text>
+          </g>
+          <g>
+            <rect
+              x={-130}
+              y={560}
+              width={130}
+              height={50}
+              rx={10}
+              strokeWidth="2"
+              stroke="#fff"
+            />
+            <text x={-120} y={590} fontSize="25" fill="#FFF">
+              VF pages
+            </text>
+          </g>
+          <g>
+            <rect
+              x={-190}
+              y={490}
+              width={190}
+              height={50}
+              rx={10}
+              strokeWidth="2"
+              stroke="#fff"
+            />
+            <text x={-180} y={520} fontSize="25" fill="#FFF">
+              Workflow Rules
+            </text>
+          </g>
+          <g>
+            <rect
+              x={-190}
+              y={406}
+              width={190}
+              height={50}
+              rx={10}
+              strokeWidth="2"
+              stroke="#fff"
+            />
+            <text x={-180} y={438} fontSize="25" fill="#FFF">
+              Error Messages
+            </text>
+          </g>
+          <g>
+            <rect
+              x={-190}
+              y={332}
+              width={190}
+              height={50}
+              rx={10}
+              strokeWidth="2"
+              stroke="#fff"
+            />
+            <text x={-180} y={365} fontSize="25" fill="#FFF">
+              Formula Errors
+            </text>
+          </g>
+        </g>
 
- <g id="end-labels">
-   <g>
-     <rect x={1404} y={630} width={140} height={50}  rx={10} strokeWidth="2" stroke="#fff" />
-     <text x={1424} y={660} fontSize="25" fill="#FFF">Lightning</text>
-   </g>
-   <g>
-     <rect x={1404} y={555} width={90} height={50} rx={10} strokeWidth="2" stroke="#fff"  />
-     <text x={1424} y={588} fontSize="25" fill="#FFF">LWC</text>
-   </g>
-   <g>
-     <rect x={1404} y={481} width={220} height={50} rx={10} strokeWidth="2" stroke="#fff"  />
-     <text x={1424} y={510} fontSize="25" fill="#FFF">Process Builders</text>
-   </g>
-   <g>
-     <rect x={1404} y={406} width={240} height={50} rx={10} strokeWidth="2" stroke="#fff"  />     <text x={1415} y={438} fontSize="25" fill="#FFF">Trigger Frameworks</text>
-   </g>
-   <g>
-     <rect x={1410} y={332} width={190} height={50} rx={10} strokeWidth="2" stroke="#fff"  />
-     <text x={1420} y={365} fontSize="25" fill="#FFF">Documentation</text>
-  </g>
-  
-</g>
+        <g id="end-labels">
+          <g>
+            <rect
+              x={1404}
+              y={630}
+              width={140}
+              height={50}
+              rx={10}
+              strokeWidth="2"
+              stroke="#fff"
+            />
+            <text x={1424} y={660} fontSize="25" fill="#FFF">
+              Lightning
+            </text>
+          </g>
+          <g>
+            <rect
+              x={1404}
+              y={555}
+              width={90}
+              height={50}
+              rx={10}
+              strokeWidth="2"
+              stroke="#fff"
+            />
+            <text x={1424} y={588} fontSize="25" fill="#FFF">
+              LWC
+            </text>
+          </g>
+          <g>
+            <rect
+              x={1404}
+              y={481}
+              width={220}
+              height={50}
+              rx={10}
+              strokeWidth="2"
+              stroke="#fff"
+            />
+            <text x={1424} y={510} fontSize="25" fill="#FFF">
+              Process Builders
+            </text>
+          </g>
+          <g>
+            <rect
+              x={1404}
+              y={406}
+              width={240}
+              height={50}
+              rx={10}
+              strokeWidth="2"
+              stroke="#fff"
+            />{" "}
+            <text x={1415} y={438} fontSize="25" fill="#FFF">
+              Trigger Frameworks
+            </text>
+          </g>
+          <g>
+            <rect
+              x={1410}
+              y={332}
+              width={190}
+              height={50}
+              rx={10}
+              strokeWidth="2"
+              stroke="#fff"
+            />
+            <text x={1420} y={365} fontSize="25" fill="#FFF">
+              Documentation
+            </text>
+          </g>
+        </g>
         <defs>
           <filter id="blurMe">
             <feGaussianBlur in="SourceGraphic" stdDeviation="5" />

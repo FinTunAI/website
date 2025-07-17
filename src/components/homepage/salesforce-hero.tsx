@@ -14,13 +14,13 @@ const workflowSteps = [
   {
     id: 2,
     title: "Plan",
-    description: "Devin can ask for more info",
+    description: "nCoder.ai  can ask for more info",
     image: "images/placeholder.svg?height=400&width=600&text=Planning+Interface",
   },
   {
     id: 3,
     title: "Test",
-    description: "Devin makes sure the changes work",
+    description: "nCoder.ai  makes sure the changes work",
     image: "images/placeholder.svg?height=400&width=600&text=Testing+Dashboard",
   },
   {
@@ -62,7 +62,7 @@ export default function SalesforceHero() {
           <div className="space-y-8">
             <div className="space-y-6">
               <h1 className="text-5xl lg:text-6xl font-bold leading-tight">
-                <span className="text-blue-400">Devin</span>, the AI
+                <span className="text-blue-400">nCoder.ai </span>, the AI
                 <br />
                 software engineer
               </h1>

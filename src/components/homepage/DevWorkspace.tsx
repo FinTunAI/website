@@ -90,7 +90,7 @@
 //                 <button className="text-gray-400 hover:text-gray-300 text-sm">Editor</button>
 //                 <button className="text-gray-400 hover:text-gray-300 text-sm">Planner</button>
 //               </div>
-             
+
 //             </div>
 //           </div>
 //         </div>
@@ -107,92 +107,117 @@ export default function DevinBentoExactLayout() {
     <section className="bg-[#0b0d13] text-white py-20 mt-30 px-4 md:px-8">
       <div className="w-full p-[3vw]  gap-12">
         <div className="grid grid-cols-12">
-         <div className="col-span-5 col-start-2">
-          <h2 className="text-5xl md:text-7xl  mb-4">
-            Learn & work <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-teal-400">
-              together
-            </span>
-          </h2>
-          <p className="text-lg text-gray-400 max-w-[30ch]">
-            Devin is built for collaboration and can learn to fit into your unique workflow.
-          </p>
+          <div className="col-span-5 col-start-2">
+            <h2 className="text-5xl md:text-7xl  mb-4">
+              Learn & work <br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-teal-400">
+                together
+              </span>
+            </h2>
+            <p className="text-lg text-gray-400 max-w-[30ch]">
+              nCoder.ai is built for collaboration and can learn to fit into
+              your unique workflow.
+            </p>
+          </div>
         </div>
-        </div>
-       
 
         {/* Right Column: 3 stacked cards */}
         <div className="grid grid-cols-12 relative ">
-          
           {/* Card 1 */}
           <div className=" absolute top-1/3 bg-gray-900 rounded-2xl pt-[4vw] pl-[4vw] flex flex-col gap-5 col-span-5 col-start-2 w-full right-4 ">
-          <div className=" w-full relative ">
-<h3 className="text-xl md:text-4xl w-4/5">
-              Devin learns your codebase & picks up tribal knowledge
-            </h3>
-            <Image src='/images/card01.png' alt="image1" width={90} height={60} className="absolute right-0 -top-20"/>
-          </div>
-        <div className="mt-13 ">
-  <Image
-    src="/images/bento01.png"
-    alt="bento1"
-    width={1200}
-    height={600}
-    className="w-full h-auto"
-  />
-</div>
- 
-           <BorderBeam duration={8} size={100} />
+            <div className=" w-full relative ">
+              <h3 className="text-xl md:text-4xl w-4/5">
+                nCoder.ai learns your codebase & picks up tribal knowledge
+              </h3>
+              <Image
+                src="/images/card01.png"
+                alt="image1"
+                width={90}
+                height={60}
+                className="absolute right-0 -top-20"
+              />
+            </div>
+            <div className="mt-13 ">
+              <Image
+                src="/images/bento01.png"
+                alt="bento1"
+                width={1200}
+                height={600}
+                className="w-full h-auto"
+              />
+            </div>
+
+            <BorderBeam duration={8} size={100} />
           </div>
 
           {/* Card 2 */}
           <div className="col-span-5 col-start-7 space-y-4 ">
-          <div className="bg-gray-900 rounded-2xl p-6 flex flex-col gap-4 relative">
-            <div>
-              <Image src='/images/card02-line.png' alt="mage2 " width={100} height={100}/>
-            </div>
-            <div className="flex lg:flex-row flex-col item-start pl-[4vw]">
-              <div className="mt-10">
-            <h3 className="text-xl md:text-3xl ">
-              Code on the go
-            </h3>
-            
-            <p className="text-gray-400 text-sm mt-2 max-w-sm">
-              Write code using natural language instructions with Devin on mobile.
-            </p>
-            </div>
-          <div className="relative ">
-<Image src='/images/bento02.png' alt="bento2" width={200} height={200} className="w-full h-auto"/>
-          </div>
-            </div>
-      <BorderBeam duration={8} size={100} />
-          </div>
+            <div className="bg-gray-900 rounded-2xl p-6 flex flex-col gap-4 relative">
+              <div>
+                <Image
+                  src="/images/card02-line.png"
+                  alt="mage2 "
+                  width={100}
+                  height={100}
+                />
+              </div>
+              <div className="flex lg:flex-row flex-col item-start pl-[4vw]">
+                <div className="mt-10">
+                  <h3 className="text-xl md:text-3xl ">Code on the go</h3>
 
-          {/* Card 3 */}
-          
-          <div className="bg-gray-900 rounded-2xl p-6 flex flex-col gap-4 pt-[4vw] pl-[4vw]  relative">
-            <div className="relative ">
-              <span className="bg-gray-700 text-xs uppercase px-2 py-1 rounded">
-                Collaborate
-              </span>
-               <Image src='/images/card03-line.png' alt="image1" width={100} height={50} className="absolute right-0 -top-20"/>
+                  <p className="text-gray-400 text-sm mt-2 max-w-sm">
+                    Write code using natural language instructions with
+                    nCoder.ai on mobile.
+                  </p>
+                </div>
+                <div className="relative ">
+                  <Image
+                    src="/images/bento02.png"
+                    alt="bento2"
+                    width={200}
+                    height={200}
+                    className="w-full h-auto"
+                  />
+                </div>
+              </div>
+              <BorderBeam duration={8} size={100} />
             </div>
-            <h3 className="text-xl md:text-3xl  max-w-md">
-              Use Devin's editor, shell and browser
-            </h3>
-            <p className="text-gray-400 text-sm max-w-md">
-              Take over and run commands, edit code, or use the browser for Devin at any time.
-            </p>
-            <div className="relative">
-            <Image src='/images/bento03.png' alt="bento2" width={200} height={200} className="w-full h-auto"/>
+
+            {/* Card 3 */}
+
+            <div className="bg-gray-900 rounded-2xl p-6 flex flex-col gap-4 pt-[4vw] pl-[4vw]  relative">
+              <div className="relative ">
+                <span className="bg-gray-700 text-xs uppercase px-2 py-1 rounded">
+                  Collaborate
+                </span>
+                <Image
+                  src="/images/card03-line.png"
+                  alt="image1"
+                  width={100}
+                  height={50}
+                  className="absolute right-0 -top-20"
+                />
+              </div>
+              <h3 className="text-xl md:text-3xl  max-w-md">
+                Use nCoder.ai's editor, shell and browser
+              </h3>
+              <p className="text-gray-400 text-sm max-w-md">
+                Take over and run commands, edit code, or use the browser for
+                nCoder.ai at any time.
+              </p>
+              <div className="relative">
+                <Image
+                  src="/images/bento03.png"
+                  alt="bento2"
+                  width={200}
+                  height={200}
+                  className="w-full h-auto"
+                />
+              </div>
+              <BorderBeam duration={8} size={100} />
             </div>
-         <BorderBeam duration={8} size={100} />
           </div>
-              
-          </div>
-     
         </div>
-
       </div>
     </section>
   );

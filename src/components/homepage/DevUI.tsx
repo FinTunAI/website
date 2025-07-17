@@ -32,7 +32,7 @@ const slides = [
     gradient: "from-blue-500 to-teal-400",
     placeholder: {
       title: "Price Visualization + Analysis",
-      user: "Devin",
+      user: "nCoder.ai",
       time: "Aug 21, 2024, 7:01 AM",
       message: "I have completed the requested visualizations",
       avatar: "D",
@@ -46,7 +46,7 @@ const slides = [
     gradient: "from-blue-600 to-blue-400",
     placeholder: {
       title: "Invalid auto-triage link",
-      user: "Devin",
+      user: "nCoder.ai",
       time: "May 28, 2024, 10:23 AM",
       message: "Got it, I'll look into the exception in run_auto and the invalid auto-triage link format issue.",
       avatar: "D",
