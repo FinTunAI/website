@@ -3,9 +3,10 @@
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
 import React from "react";
-import { Slack } from "lucide-react";
+import { ArrowRight, Play, Slack, Sparkles } from "lucide-react";
 import { Button } from "../ui/button";
 import { BorderBeam } from "../magicui/border-beam";
+import { Badge } from "../ui/badge";
 const transitionBase = {
   duration: 8,
   ease: "linear",
@@ -23,27 +24,26 @@ export const GoogleGeminiEffect = ({
 }) => {
   return (
     <div className={cn("sticky md:top-1/3 xl:top-1/5", className)}>
-      <div className="text-lg md:text-4xl font-normal pb-4 text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-100 to-neutral-300 ">
-        <h1 className="text-4xl md:text-6xl  text-center leading-tight">
-          <span className="bg-gradient-to-r from-[#446dcd] via-[#4bb6d3] to-[#6ef2cc] bg-clip-text text-transparent">
-            Transform Legacy Systems with AI-Driven Modernization
-          </span>
-          <br />
-        </h1>
-        <div className="flex gap-6 w-full justify-center mt-10">
-          <div className="relative inline-block">
-            <Button className="text-xl bg-gray-200 text-black relative z-10 px-6 py-3">
-              Schedule a Demo
-            </Button>
-
-            {/* BorderBeam positioned to match the button */}
-            {/* <div className="absolute inset-0 rounded-lg pointer-events-none z-0">
-              <BorderBeam duration={8} size={100} />
-            </div> */}
-          </div>
-        </div>
-      </div>
-
+      <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 text-center">
+              <div className="space-y-3">
+                {/* Floating Badge */}
+                <div className="flex justify-center animate-float">
+                  <Badge className="bg-white/10 backdrop-blur-sm text-white border border-white/20 px-8 py-4 text-base font-medium shadow-2xl rounded-full">
+                    <Sparkles className="w-4 h-4 mr-2" />
+                    AI-Powered Transformation
+                  </Badge>
+                </div>
+      
+                {/* Main Headline */}
+                <h1 className="text-5xl md:text-7xl font-black leading-[0.9] tracking-tight">
+                  <span className="block text-white mb-4 animate-fade-in-up">Transform Legacy Systems</span>
+                  <span className="block bg-gradient-to-r from-[#446dcd] via-[#4bb6d3] to-[#6ef2cc] bg-clip-text text-transparent animate-fade-in-up animation-delay-200">
+                    with AI-Driven Modernization
+                  </span>
+                </h1>
+      
+              </div>
+            </div>
       <div className="flex flex-col items-center justify-center w-full py-16 absolute md:top-48 2xl:top-68">
         <button className="font-bold bg-white rounded-full md:py-2 px-2 py-1 md:mt-8 mt-4 z-30 md:text-base text-black text-xs w-fit mx-auto">
           <Slack />
