@@ -342,7 +342,7 @@ export default function EnhancedAboutUs() {
                 size="lg"
                 className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-bold px-12 py-6 text-xl rounded-2xl shadow-2xl shadow-gray-900/50 hover:shadow-gray-800/50 transition-all duration-300 hover:scale-110 border-0"
               >
-                Get Started Today
+                Contact Our Sales
                 <ArrowRight className="w-6 h-6 ml-3" />
               </Button>
               <Button

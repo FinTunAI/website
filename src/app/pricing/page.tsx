@@ -1940,7 +1940,7 @@ export default function Pricing() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-32 px-6 lg:px-8 relative overflow-hidden bg-gray-900">
+      {/* <section className="py-32 px-6 lg:px-8 relative overflow-hidden bg-gray-900">
         <div className="absolute inset-0 bg-gradient-to-r from-gray-800/50 to-gray-900/50" />
         <div className="max-w-5xl mx-auto text-center relative z-10">
           <div className="space-y-12">
@@ -2007,7 +2007,99 @@ export default function Pricing() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
+      <section className="py-32 px-6 lg:px-8 relative overflow-hidden bg-gray-900">
+      <div className="absolute inset-0 bg-gradient-to-r from-gray-800/50 to-gray-900/50" />
+      
+      {/* Background decoration */}
+      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-purple-600/10 rounded-full blur-3xl" />
+      <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue-600/10 rounded-full blur-3xl" />
+      
+      <div className="max-w-6xl mx-auto text-center relative z-10">
+        <div className="space-y-16">
+          {/* Header Section */}
+          <div className="flex flex-col md:flex-row items-center justify-center mb-12 gap-6">
+            <div className="relative group">
+              <Sparkles className="w-20 h-20 text-white group-hover:scale-110 transition-transform duration-300" />
+              <div className="absolute inset-0 bg-white blur-lg opacity-20 group-hover:opacity-30 transition-opacity duration-300" />
+            </div>
+            <h2 className="text-5xl md:text-7xl font-bold text-white leading-tight">
+              Ready to Transform?
+            </h2>
+          </div>
+          
+          <p className="text-2xl text-gray-300 font-light leading-relaxed max-w-4xl mx-auto">
+            Join the future of legacy modernization with nCoder.ai's AI-native platform and experience transformation
+            like never before.
+          </p>
+          
+          {/* Two Card Grid - Optimized Layout */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            {[
+              {
+                icon: <Users className="w-14 h-14 text-white" />,
+                title: "Schedule a Demo",
+                description: "See how nCoder.ai can transform your legacy systems with personalized insights and real-world examples",
+                cta: "Book Demo",
+                buttonStyle: "border-2 border-white text-white hover:bg-white hover:text-gray-900 bg-transparent",
+                highlight: "bg-gradient-to-br from-purple-600/20 to-blue-600/20",
+              },
+              {
+                icon: <Building className="w-14 h-14 text-white" />,
+                title: "Enterprise Consultation",
+                description: "Get custom pricing, implementation strategies, and dedicated support for your organization",
+                cta: "Contact Sales",
+                buttonStyle: "bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white shadow-lg",
+                highlight: "bg-gradient-to-br from-blue-600/20 to-purple-600/20",
+              },
+            ].map((item, index) => (
+              <div
+                key={index}
+                className="group relative animate-fade-in-up"
+                style={{ animationDelay: `${index * 200}ms` }}
+              >
+                {/* Glow effect */}
+                <div className="absolute inset-0 bg-white rounded-3xl blur-3xl opacity-0 group-hover:opacity-10 transition-all duration-700" />
+                
+                {/* Card */}
+                <Card className={`relative p-10 ${item.highlight} backdrop-blur-sm border border-white/30 hover:border-white/50 transition-all duration-700 hover:scale-105 hover:-translate-y-3 shadow-2xl shadow-gray-900/50 hover:shadow-gray-800/60 rounded-3xl h-full`}>
+                  <CardContent className="p-0 text-center flex flex-col h-full">
+                    {/* Icon */}
+                    <div className="relative mx-auto mb-8">
+                      <div className="p-4 rounded-2xl bg-white/10 backdrop-blur-sm">
+                        {item.icon}
+                      </div>
+                      <div className="absolute inset-0 bg-white blur-lg opacity-20 group-hover:opacity-40 transition-opacity duration-300 rounded-2xl" />
+                    </div>
+                    
+                    {/* Content */}
+                    <h3 className="text-2xl font-bold text-white mb-6">{item.title}</h3>
+                    <p className="text-gray-300 font-light mb-8 leading-relaxed flex-grow text-lg">
+                      {item.description}
+                    </p>
+                    
+                    {/* Button */}
+                    <Button
+                      className={`w-full text-lg font-semibold ${item.buttonStyle} py-4 px-8 rounded-2xl transform hover:scale-105 transition-all duration-300 hover:shadow-xl`}
+                      variant={item.buttonStyle.includes("border-") ? "outline" : "default"}
+                    >
+                      {item.cta}
+                    </Button>
+                  </CardContent>
+                </Card>
+              </div>
+            ))}
+          </div>
+          
+          {/* Bottom accent */}
+          <div className="flex justify-center pt-8">
+            <div className="w-24 h-1 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full"></div>
+          </div>
+        </div>
+      </div>
+      
+      
+    </section>
 
       {/* Add required CSS animations */}
       <style jsx>{`

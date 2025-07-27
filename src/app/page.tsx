@@ -15,6 +15,7 @@ import DevinUIPreview from "@/components/homepage/DevUI";
 import { useScroll, useTransform } from "motion/react";
 import { GoogleGeminiEffect } from "@/components/homepage/google-gemini-effect";
 import CompetitiveAdvantages from "@/components/homepage/adv";
+import TestimonialSection from "@/components/homepage/testimonials";
 export default function HomePage() {
   const ref = React.useRef(null);
   const { scrollYProgress } = useScroll({
@@ -48,7 +49,8 @@ export default function HomePage() {
       <DevWorkspace />
       {/* <CompetitiveAdvantages /> */}
       <DevinUIPreview />
-      <LogoMarqueeSection />
+      {/* <LogoMarqueeSection /> */}
+      <TestimonialSection />
       
       
       

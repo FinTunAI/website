@@ -366,6 +366,7 @@ import { motion, AnimatePresence, useScroll, useTransform } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
+import { useMemo } from 'react';
 
 // Reordered slides data to match the requested order
 const slides = [
@@ -449,21 +450,47 @@ export function StackedText({ containerRef }) {
         pointer-events-none max-w-xl mx-auto
       "
     >
-      Able to work with hundreds of tools
+      Tools we work with
     </h1>
   )
 }
 
 function GridCards({ triggerRef, revealed }) {
-  const icons = [
-    <Code key="1" className="w-12 h-12" />,
-    <Database key="2" className="w-12 h-12" />,
-    <Bug key="3" className="w-12 h-12" />,
-    <Cpu key="4" className="w-12 h-12" />,
-    <Layers key="5" className="w-12 h-12" />,
-    <Cloud key="6" className="w-12 h-12" />,
-    <Shield key="7" className="w-12 h-12" />,
-  ]
+  const imageUrls = [
+  "images/ibm.png",
+  "images/microsoft.png", 
+  "images/oracle.png",
+  "images/react.png",
+  "images/SAP.png",
+  "images/Sun_Microsystems.png",
+  "images/typescript.png",
+];
+
+  // const icons = [
+  //   <Code key="1" className="w-12 h-12" />,
+  //   <Database key="2" className="w-12 h-12" />,
+  //   <Bug key="3" className="w-12 h-12" />,
+  //   <Cpu key="4" className="w-12 h-12" />,
+  //   <Layers key="5" className="w-12 h-12" />,
+  //   <Cloud key="6" className="w-12 h-12" />,
+  //   <Shield key="7" className="w-12 h-12" />,
+  // ]
+  const icons = imageUrls.map((url, index) => (
+  <img 
+    key={index} 
+    src={url} 
+    alt={`Icon ${index + 1}`} 
+    className="w-12 h-12 object-contain" 
+  />
+));
+const shuffledIcons = useMemo(() => {
+  const shuffled = [...icons];
+  for (let i = shuffled.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+  }
+  return shuffled;
+}, []); 
 
   const containerRef = useRef(null)
 
@@ -474,59 +501,97 @@ function GridCards({ triggerRef, revealed }) {
         {Array.from({ length: 7 }).map((_, colIdx) => {
           const isSwapColumn = colIdx === 2 || colIdx === 3 || colIdx === 4
           return (
+            // <div
+            //   key={colIdx}
+            //   className={`relative flex flex-col gap-2 ${
+            //     [2, 4].includes(colIdx)
+            //       ? "mt-100"
+            //       : [1, 5].includes(colIdx)
+            //         ? "mt-60"
+            //         : [3].includes(colIdx)
+            //           ? "mt-94"
+            //           : ""
+            //   }`}
+            // >
+            //   {isSwapColumn ? (
+            //     <>
+            //       <div
+            //         className="h-[150px] group flex items-center justify-center border border-white rounded-md shadow-sm
+            //         bg-slate-100 hover:bg-gradient-to-r hover:from-blue-500 hover:to-teal-400 transition-all duration-500"
+            //       >
+            //         {icons[colIdx]}
+            //       </div>
+            //       {!revealed && (
+            //         <div
+            //           className="h-[300px] group flex items-center justify-center border border-white rounded-md shadow-sm
+            //           bg-slate-100 hover:bg-gradient-to-r hover:from-blue-500 hover:to-teal-400 transition-all duration-500"
+            //         >
+            //           {icons[colIdx]}
+            //         </div>
+            //       )}
+            //       {colIdx === 3 && <div ref={triggerRef} className="h-[50px] bg-transparent" />}
+            //     </>
+            //   ) : (
+            //     <>
+            //       <div
+            //         className="h-[300px] group flex items-center justify-center border border-white rounded-md shadow-sm
+            //         bg-slate-100 hover:bg-gradient-to-r hover:from-blue-500 hover:to-teal-400 transition-all duration-500"
+            //       >
+            //         {icons[colIdx]}
+            //       </div>
+            //       <div
+            //         className="h-[150px] group flex items-center justify-center border border-white rounded-md shadow-sm
+            //         bg-slate-100 hover:bg-gradient-to-r hover:from-blue-500 hover:to-teal-400 transition-all duration-500"
+            //       >
+            //         {icons[colIdx]}
+            //       </div>
+            //       <div
+            //         className="h-[300px] group flex items-center justify-center border border-white rounded-md shadow-sm
+            //         bg-slate-100 hover:bg-gradient-to-r hover:from-blue-500 hover:to-teal-400 transition-all duration-500"
+            //       >
+            //         {icons[colIdx]}
+            //       </div>
+            //     </>
+            //   )}
+            // </div>
             <div
-              key={colIdx}
-              className={`relative flex flex-col gap-2 ${
-                [2, 4].includes(colIdx)
-                  ? "mt-100"
-                  : [1, 5].includes(colIdx)
-                    ? "mt-60"
-                    : [3].includes(colIdx)
-                      ? "mt-94"
-                      : ""
-              }`}
-            >
-              {isSwapColumn ? (
-                <>
-                  <div
-                    className="h-[150px] group flex items-center justify-center border border-white rounded-md shadow-sm
-                    bg-slate-100 hover:bg-gradient-to-r hover:from-blue-500 hover:to-teal-400 transition-all duration-500"
-                  >
-                    {icons[colIdx]}
-                  </div>
-                  {!revealed && (
-                    <div
-                      className="h-[300px] group flex items-center justify-center border border-white rounded-md shadow-sm
-                      bg-slate-100 hover:bg-gradient-to-r hover:from-blue-500 hover:to-teal-400 transition-all duration-500"
-                    >
-                      {icons[colIdx]}
-                    </div>
-                  )}
-                  {colIdx === 3 && <div ref={triggerRef} className="h-[50px] bg-transparent" />}
-                </>
-              ) : (
-                <>
-                  <div
-                    className="h-[300px] group flex items-center justify-center border border-white rounded-md shadow-sm
-                    bg-slate-100 hover:bg-gradient-to-r hover:from-blue-500 hover:to-teal-400 transition-all duration-500"
-                  >
-                    {icons[colIdx]}
-                  </div>
-                  <div
-                    className="h-[150px] group flex items-center justify-center border border-white rounded-md shadow-sm
-                    bg-slate-100 hover:bg-gradient-to-r hover:from-blue-500 hover:to-teal-400 transition-all duration-500"
-                  >
-                    {icons[colIdx]}
-                  </div>
-                  <div
-                    className="h-[300px] group flex items-center justify-center border border-white rounded-md shadow-sm
-                    bg-slate-100 hover:bg-gradient-to-r hover:from-blue-500 hover:to-teal-400 transition-all duration-500"
-                  >
-                    {icons[colIdx]}
-                  </div>
-                </>
-              )}
-            </div>
+  key={colIdx}
+  className={`relative flex flex-col gap-2 ${
+    [2, 4].includes(colIdx)
+      ? "mt-100"
+      : [1, 5].includes(colIdx)
+      ? "mt-60"
+      : [3].includes(colIdx)
+      ? "mt-94"
+      : ""
+  }`}
+>
+  {isSwapColumn ? (
+    <>
+      <div className="h-[150px] group flex items-center justify-center border border-white rounded-md shadow-sm bg-slate-100 hover:bg-gradient-to-r hover:from-blue-500 hover:to-teal-400 transition-all duration-500">
+        {shuffledIcons[colIdx]}
+      </div>
+      {!revealed && (
+        <div className="h-[300px] group flex items-center justify-center border border-white rounded-md shadow-sm bg-slate-100 hover:bg-gradient-to-r hover:from-blue-500 hover:to-teal-400 transition-all duration-500">
+          {shuffledIcons[(colIdx + 1) % shuffledIcons.length]}
+        </div>
+      )}
+      {colIdx === 3 && <div ref={triggerRef} className="h-[50px] bg-transparent" />}
+    </>
+  ) : (
+    <>
+      <div className="h-[300px] group flex items-center justify-center border border-white rounded-md shadow-sm bg-slate-100 hover:bg-gradient-to-r hover:from-blue-500 hover:to-teal-400 transition-all duration-500">
+        {shuffledIcons[colIdx]}
+      </div>
+      <div className="h-[150px] group flex items-center justify-center border border-white rounded-md shadow-sm bg-slate-100 hover:bg-gradient-to-r hover:from-blue-500 hover:to-teal-400 transition-all duration-500">
+        {shuffledIcons[(colIdx + 2) % shuffledIcons.length]}
+      </div>
+      <div className="h-[300px] group flex items-center justify-center border border-white rounded-md shadow-sm bg-slate-100 hover:bg-gradient-to-r hover:from-blue-500 hover:to-teal-400 transition-all duration-500">
+        {shuffledIcons[(colIdx + 3) % shuffledIcons.length]}
+      </div>
+    </>
+  )}
+</div>
           )
         })}
       </div>
