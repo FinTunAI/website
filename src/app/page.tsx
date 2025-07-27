@@ -45,9 +45,9 @@ export default function HomePage() {
 
       <StackedSlider />
       <ServiceCards />
-      {/* <DevWorkspace /> */}
-      <CompetitiveAdvantages />
-      {/* <DevinUIPreview /> */}
+      <DevWorkspace />
+      {/* <CompetitiveAdvantages /> */}
+      <DevinUIPreview />
       <LogoMarqueeSection />
       
       

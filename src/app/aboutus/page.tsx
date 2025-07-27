@@ -178,7 +178,7 @@ export default function EnhancedAboutUs() {
       </section>
 
       {/* Team Section with Enhanced Cards */}
-      <section className="py-32 px-6 lg:px-8 relative">
+      {/* <section className="py-32 px-6 lg:px-8 relative">
         <div className="max-w-7xl mx-auto relative">
           <div className="text-center mb-20">
             <div className="flex items-center justify-center mb-8">
@@ -192,7 +192,7 @@ export default function EnhancedAboutUs() {
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {/* Vivek Reddy Card */}
+            
             <div className="group relative animate-fade-in-up">
               <div className="absolute inset-0 bg-gray-900 rounded-3xl blur-3xl opacity-0 group-hover:opacity-5 transition-all duration-700"></div>
               <Card className="relative p-10 bg-white/80 backdrop-blur-xl border border-gray-200/80 hover:border-gray-300 transition-all duration-700 hover:scale-105 hover:-translate-y-2 h-full shadow-xl shadow-gray-200/50 hover:shadow-2xl hover:shadow-gray-300/50 rounded-3xl">
@@ -234,7 +234,7 @@ export default function EnhancedAboutUs() {
               </Card>
             </div>
 
-            {/* Srini Pendala Card */}
+            
             <div className="group relative animate-fade-in-up animation-delay-200">
               <div className="absolute inset-0 bg-gray-900 rounded-3xl blur-3xl opacity-0 group-hover:opacity-5 transition-all duration-700"></div>
               <Card className="relative p-10 bg-white/80 backdrop-blur-xl border border-gray-200/80 hover:border-gray-300 transition-all duration-700 hover:scale-105 hover:-translate-y-2 h-full shadow-xl shadow-gray-200/50 hover:shadow-2xl hover:shadow-gray-300/50 rounded-3xl">
@@ -276,7 +276,7 @@ export default function EnhancedAboutUs() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Enhanced Differentiators Section */}
       <section className="py-32 px-6 lg:px-8 relative bg-gradient-to-br from-gray-50 via-white to-gray-50">
