@@ -309,7 +309,7 @@ const navigationItems: NavigationItem[] = [
 
 type ScrollState = "dark" | "white"
 
-export default function EnhancedNavbar() {
+export default function Navbar() {
   const [scrollState, setScrollState] = useState<ScrollState>("dark")
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
@@ -318,15 +318,135 @@ export default function EnhancedNavbar() {
   const lastScrollY = useRef(0)
   const ticking = useRef(false)
 
+  const [activeTheme, setActiveTheme] = useState<"white" | "dark">("dark");
+/* useEffect(() => {
+  function checkVisibleSectionsAndSetTheme() {
+    const sections = document.querySelectorAll("section[data-nav-theme]");
+
+    for (const section of sections) {
+      const rect = section.getBoundingClientRect();
+
+      if (
+        rect.top >= window.innerHeight * 0.3 &&
+        rect.top <= window.innerHeight * 0.7
+      ) {
+        const theme = section.getAttribute("data-nav-theme") as "white" | "dark";
+        console.log('theme',section,theme)
+        setActiveTheme(theme); // ✅ Update state
+        break; // Stop at the first matching section
+      }
+    }
+  }
+
+  function onScroll() {
+    checkVisibleSectionsAndSetTheme();
+  }
+
+  window.addEventListener("scroll", onScroll, { passive: true });
+  checkVisibleSectionsAndSetTheme(); // Run once on mount
+
+  return () => {
+    window.removeEventListener("scroll", onScroll);
+  };
+}, []); */
+
+/* useEffect(() => {
+  function checkVisibleSectionsAndSetTheme() {
+    const sections = document.querySelectorAll("section[data-nav-theme]");
+
+    for (const section of sections) {
+      const rect = section.getBoundingClientRect();
+
+      // Check if the section top is near the top of the viewport (within 50px)
+      if (rect.top >= 0 && rect.top <= 50) {
+        const theme = section.getAttribute("data-nav-theme") as "white" | "dark";
+        setActiveTheme(theme);
+        break; // Stop after the first match
+      }
+    }
+  }
+
+  function onScroll() {
+    checkVisibleSectionsAndSetTheme();
+  }
+
+  window.addEventListener("scroll", onScroll, { passive: true });
+  checkVisibleSectionsAndSetTheme(); // Initial check on mount
+
+  return () => {
+    window.removeEventListener("scroll", onScroll);
+  };
+}, []); */
+
+
+useEffect(() => {
+  let lastScrollY = window.scrollY;
+
+  function checkVisibleSectionsAndSetTheme() {
+    const sections = document.querySelectorAll("section[data-nav-theme]");
+    const scrollDown = window.scrollY > lastScrollY;
+    lastScrollY = window.scrollY;
+
+    for (const section of sections) {
+      const rect = section.getBoundingClientRect();
+
+      const topTouchesTop = rect.top >= 0 && rect.top <= 50;
+      const bottomTouchesTop = rect.bottom >= 0 && rect.bottom <= 50;
+
+      if (scrollDown && topTouchesTop) {
+        const theme = section.getAttribute("data-nav-theme") as "white" | "dark";
+        setActiveTheme(theme);
+        break;
+      }
+
+      if (!scrollDown && bottomTouchesTop) {
+        const theme = section.getAttribute("data-nav-theme") as "white" | "dark";
+        setActiveTheme(theme);
+        break;
+      }
+    }
+  }
+
+  function onScroll() {
+    checkVisibleSectionsAndSetTheme();
+  }
+
+  window.addEventListener("scroll", onScroll, { passive: true });
+  checkVisibleSectionsAndSetTheme(); // Initial call
+
+  return () => {
+    window.removeEventListener("scroll", onScroll);
+  };
+}, []);
+
+
+
+
+
   // Replace the handleScroll function with this cleaner version:
   const handleScroll = useCallback(() => {
     if (!ticking.current) {
       requestAnimationFrame(() => {
         const scrollY = window.scrollY
         const boundaries = getSectionBoundaries()
+        /* console.log(scrollY,boundaries)
+         if (scrollY >= boundaries.hero.start && scrollY < boundaries.hero.end) {
+          setScrollState("white")
+        } else if (scrollY >= boundaries.stackedSlider.start && scrollY < boundaries.stackedSlider.end) {
+         setScrollState("dark")
+        } else if (scrollY >= boundaries.serviceCards.start && scrollY < boundaries.serviceCards.end) {
+          setScrollState("dark")
+        } else if (
+          scrollY >= boundaries.competitiveAdvantages.start &&
+          scrollY < boundaries.competitiveAdvantages.end
+        ) {
+          setScrollState("white")
+        } else {
+         setScrollState("white")
+        } */
 
         // Determine navbar state based on current scroll position
-        if (scrollY >= boundaries.hero.start && scrollY < boundaries.hero.end) {
+        /* if (scrollY >= boundaries.hero.start && scrollY < boundaries.hero.end) {
           setScrollState(SECTION_CONFIG.hero.navbarState)
         } else if (scrollY >= boundaries.stackedSlider.start && scrollY < boundaries.stackedSlider.end) {
           setScrollState(SECTION_CONFIG.stackedSlider.navbarState)
@@ -339,7 +459,7 @@ export default function EnhancedNavbar() {
           setScrollState(SECTION_CONFIG.competitiveAdvantages.navbarState)
         } else {
           setScrollState(SECTION_CONFIG.logoMarquee.navbarState)
-        }
+        } */
 
         setIsScrolled(scrollY > 20)
         lastScrollY.current = scrollY
@@ -414,7 +534,10 @@ export default function EnhancedNavbar() {
     }
   }, [])
 
-  const isDark = scrollState === "dark"
+  // const isDark = scrollState === "dark";
+    const isDark = activeTheme == "dark";
+console.log(activeTheme,isDark)
+  
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen)
@@ -493,25 +616,25 @@ export default function EnhancedNavbar() {
             <a
               href="/"
               className={cn(
-                "relative w-12 h-12 bg-gradient-to-br from-purple-600 via-blue-600 to-indigo-600 rounded-2xl flex items-center justify-center shadow-xl transition-all duration-500 group-hover:shadow-2xl group-hover:scale-110",
+                "relative w-12 h-12 bg-white rounded-2xl flex items-center justify-center shadow-xl transition-all duration-500 group-hover:shadow-2xl group-hover:scale-110",
                 "focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-transparent",
                 isScrolled ? "shadow-2xl" : "shadow-xl",
               )}
               aria-label="NCoderAI Home"
             >
               <Image
-                src="/images/ncoderai_icon.png?height=28&width=28&text=AI"
+                src="/images/ncodericon.jpg?height=48&width=48&text=AI"
                 alt="NCoderAI"
-                width={28}
-                height={28}
-                className="relative z-10 transition-transform duration-300 group-hover:scale-110"
+                width={64}
+                height={64}
+                className="relative z-10 transition-transform duration-300 group-hover:scale-110 rounded-2xl"
               />
 
               {/* Animated background */}
-              <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-all duration-300" />
+              <div className="absolute inset-0 bg-white rounded-2xl opacity-0 group-hover:opacity-100 transition-all duration-300" />
 
               {/* Glow effect */}
-              <div className="absolute inset-0 bg-gradient-to-br from-purple-400 to-blue-400 rounded-2xl blur-xl opacity-0 group-hover:opacity-30 transition-opacity duration-500 -z-10" />
+              <div className="absolute inset-0 bg-white rounded-2xl blur-xl opacity-0 group-hover:opacity-30 transition-opacity duration-500 -z-10" />
             </a>
           </div>
 
@@ -532,6 +655,7 @@ export default function EnhancedNavbar() {
               {/* Desktop Navigation */}
               <div className="hidden md:flex items-center justify-between w-full">
                 <div className="flex items-center space-x-1">
+                  {/* {activeTheme} */}
                   {navigationItems.map((item) => (
                     <NavItem key={item.name} item={item} />
                   ))}

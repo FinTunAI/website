@@ -99,16 +99,162 @@
 //   );
 // }
 
+// import Image from "next/image";
+// import React from "react";
+// import { BorderBeam } from "../magicui/border-beam";
+// export default function DevinBentoExactLayout() {
+//   return (
+//     <section className="bg-[#0b0d13] text-white py-20 mt-30 px-4 md:px-8">
+//       <div className="w-full p-[3vw]  gap-12">
+//         <div className="grid grid-cols-12">
+//           <div className="col-span-5 col-start-2">
+//             <h2 className="text-5xl md:text-7xl  mb-4">
+//               Learn & work <br />
+//               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-teal-400">
+//                 together
+//               </span>
+//             </h2>
+//             <p className="text-lg text-gray-400 max-w-[30ch]">
+//               nCoder.ai is built for collaboration and can learn to fit into
+//               your unique workflow.
+//             </p>
+//           </div>
+//         </div>
+
+//         {/* Right Column: 3 stacked cards */}
+//         <div className="grid grid-cols-12 relative ">
+//           {/* Card 1 */}
+//           <div className=" absolute top-1/3 bg-gray-900 rounded-2xl pt-[4vw] pl-[4vw] flex flex-col gap-5 col-span-5 col-start-2 w-full right-4 ">
+//             <div className=" w-full relative ">
+//              <h3 className="text-xl md:text-3xl ">Smart Codebase Intelligence</h3>
+
+//                   <p className="text-gray-400 text-sm mt-2 max-w-sm">
+//                     AI analyzes your project structure, learns your patterns, and suggests context-aware solutions instantly.
+//                   </p>
+//               <Image
+//                 src="/images/card01.png"
+//                 alt="image1"
+//                 width={90}
+//                 height={60}
+//                 className="absolute right-0 -top-20"
+//               />
+//             </div>
+//             <div className="mt-13 ">
+//               <Image
+//                 src="/images/bento01.png"
+//                 alt="bento1"
+//                 width={1200}
+//                 height={600}
+//                 className="w-full h-auto"
+//               />
+//             </div>
+
+//             <BorderBeam duration={8} size={100} />
+//           </div>
+
+//           {/* Card 2 */}
+//           <div className="col-span-5 col-start-7 space-y-4 ">
+//             <div className="bg-gray-900 rounded-2xl p-6 flex flex-col gap-4 relative">
+//               <div>
+//                 <Image
+//                   src="/images/card02-line.png"
+//                   alt="mage2 "
+//                   width={100}
+//                   height={100}
+//                 />
+//               </div>
+//               <div className="flex lg:flex-row flex-col item-start pl-[4vw]">
+//                 <div className="mt-10">
+//                   <h3 className="text-xl md:text-3xl ">Code on the go</h3>
+
+//                   <p className="text-gray-400 text-sm mt-2 max-w-sm">
+//                     Write code using natural language instructions with nCoder.ai on mobile.
+//                   </p>
+//                 </div>
+//                 <div className="relative ">
+//                   <Image
+//                     src="/images/bento02.png"
+//                     alt="bento2"
+//                     width={200}
+//                     height={200}
+//                     className="w-full h-auto"
+//                   />
+//                 </div>
+//               </div>
+//               <BorderBeam duration={8} size={100} />
+//             </div>
+
+//             {/* Card 3 */}
+
+//             <div className="bg-gray-900 rounded-2xl p-6 flex flex-col gap-4 pt-[4vw] pl-[4vw]  relative">
+//               <div className="relative ">
+//                 <span className="bg-gray-700 text-xs uppercase px-2 py-1 rounded">
+//                   Collaborate
+//                 </span>
+//                 <Image
+//                   src="/images/card03-line.png"
+//                   alt="image1"
+//                   width={100}
+//                   height={50}
+//                   className="absolute right-0 -top-20"
+//                 />
+//               </div>
+//               <h3 className="text-xl md:text-3xl  max-w-md">
+//                 Use nCoder.ai's editor, shell and browser
+//               </h3>
+//               <p className="text-gray-400 text-sm max-w-md">
+//                 Full development environment with real-time editing, terminal access, and instant preview - all in one platform.
+//               </p>
+//               <div className="relative">
+//                 <Image
+//                   src="/images/bento03.png"
+//                   alt="bento2"
+//                   width={200}
+//                   height={200}
+//                   className="w-full h-auto"
+//                 />
+//               </div>
+//               <BorderBeam duration={8} size={100} />
+//             </div>
+//           </div>
+//         </div>
+//       </div>
+//     </section>
+//   );
+// }
+
+
+
 import Image from "next/image";
 import React from "react";
-import { BorderBeam } from "../magicui/border-beam";
-export default function DevinBentoExactLayout() {
+
+// Simplified BorderBeam component since the original isn't available
+const BorderBeam = ({ duration = 8, size = 100 }) => (
+  <div className="absolute inset-0 rounded-2xl overflow-hidden pointer-events-none">
+    <div 
+      className="absolute inset-0 rounded-2xl border-2 border-transparent bg-gradient-to-r from-blue-400 via-teal-400 to-blue-400 opacity-50"
+      style={{
+        background: 'linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.3), transparent)',
+        animation: `beam ${duration}s linear infinite`,
+      }}
+    />
+    <style jsx>{`
+      @keyframes beam {
+        0% { transform: translateX(-100%); }
+        100% { transform: translateX(100%); }
+      }
+    `}</style>
+  </div>
+);
+
+export default function MobileResponsiveBento() {
   return (
     <section className="bg-[#0b0d13] text-white py-20 mt-30 px-4 md:px-8">
-      <div className="w-full p-[3vw]  gap-12">
+      <div className="w-full p-[3vw] gap-12">
+        {/* Header Section */}
         <div className="grid grid-cols-12">
-          <div className="col-span-5 col-start-2">
-            <h2 className="text-5xl md:text-7xl  mb-4">
+          <div className="col-span-12 md:col-span-5 md:col-start-2">
+            <h2 className="text-4xl md:text-5xl lg:text-7xl mb-4">
               Learn & work <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-teal-400">
                 together
@@ -121,100 +267,198 @@ export default function DevinBentoExactLayout() {
           </div>
         </div>
 
-        {/* Right Column: 3 stacked cards */}
-        <div className="grid grid-cols-12 relative ">
-          {/* Card 1 */}
-          <div className=" absolute top-1/3 bg-gray-900 rounded-2xl pt-[4vw] pl-[4vw] flex flex-col gap-5 col-span-5 col-start-2 w-full right-4 ">
-            <div className=" w-full relative ">
-              <h3 className="text-xl md:text-4xl w-4/5">
-                nCoder.ai learns your codebase & picks up tribal knowledge
-              </h3>
-              <Image
-                src="/images/card01.png"
-                alt="image1"
-                width={90}
-                height={60}
-                className="absolute right-0 -top-20"
-              />
-            </div>
-            <div className="mt-13 ">
-              <Image
-                src="/images/bento01.png"
-                alt="bento1"
-                width={1200}
-                height={600}
-                className="w-full h-auto"
-              />
+        {/* Cards Section - Mobile: Stack, Desktop: Original Layout */}
+        <div className="mt-16">
+          {/* Mobile Layout: Single Column Stack */}
+          <div className="block md:hidden space-y-6">
+            {/* Card 1 - Mobile */}
+            <div className="bg-gray-900 rounded-2xl p-6 flex flex-col gap-5 relative">
+              <div className="w-full relative">
+                <h3 className="text-xl md:text-3xl">Smart Codebase Intelligence</h3>
+                <p className="text-gray-400 text-sm mt-2">
+                  AI analyzes your project structure, learns your patterns, and suggests context-aware solutions instantly.
+                </p>
+                <div className="mt-4">
+                  <Image
+                    src="/images/card01.png"
+                    alt="Smart Codebase Intelligence"
+                    width={90}
+                    height={60}
+                    className="ml-auto"
+                  />
+                </div>
+              </div>
+              <div className="mt-4">
+                <Image
+                  src="/images/bento01.png"
+                  alt="Codebase visualization"
+                  width={1200}
+                  height={600}
+                  className="w-full h-auto rounded-lg"
+                />
+              </div>
+              <BorderBeam duration={8} size={100} />
             </div>
 
-            <BorderBeam duration={8} size={100} />
-          </div>
-
-          {/* Card 2 */}
-          <div className="col-span-5 col-start-7 space-y-4 ">
+            {/* Card 2 - Mobile */}
             <div className="bg-gray-900 rounded-2xl p-6 flex flex-col gap-4 relative">
               <div>
                 <Image
                   src="/images/card02-line.png"
-                  alt="mage2 "
+                  alt="Mobile coding illustration"
                   width={100}
                   height={100}
                 />
               </div>
-              <div className="flex lg:flex-row flex-col item-start pl-[4vw]">
-                <div className="mt-10">
-                  <h3 className="text-xl md:text-3xl ">Code on the go</h3>
-
-                  <p className="text-gray-400 text-sm mt-2 max-w-sm">
-                    Write code using natural language instructions with
-                    nCoder.ai on mobile.
+              <div className="flex flex-col gap-4">
+                <div>
+                  <h3 className="text-xl md:text-3xl">Code on the go</h3>
+                  <p className="text-gray-400 text-sm mt-2">
+                    Write code using natural language instructions with nCoder.ai on mobile.
                   </p>
                 </div>
-                <div className="relative ">
+                <div className="relative">
                   <Image
                     src="/images/bento02.png"
-                    alt="bento2"
+                    alt="Mobile coding interface"
                     width={200}
                     height={200}
-                    className="w-full h-auto"
+                    className="w-full h-auto rounded-lg"
                   />
                 </div>
               </div>
               <BorderBeam duration={8} size={100} />
             </div>
 
-            {/* Card 3 */}
-
-            <div className="bg-gray-900 rounded-2xl p-6 flex flex-col gap-4 pt-[4vw] pl-[4vw]  relative">
-              <div className="relative ">
+            {/* Card 3 - Mobile */}
+            <div className="bg-gray-900 rounded-2xl p-6 flex flex-col gap-4 relative">
+              <div className="relative">
                 <span className="bg-gray-700 text-xs uppercase px-2 py-1 rounded">
                   Collaborate
                 </span>
-                <Image
-                  src="/images/card03-line.png"
-                  alt="image1"
-                  width={100}
-                  height={50}
-                  className="absolute right-0 -top-20"
-                />
+                <div className="mt-4">
+                  <Image
+                    src="/images/card03-line.png"
+                    alt="Collaboration illustration"
+                    width={100}
+                    height={50}
+                    className="ml-auto"
+                  />
+                </div>
               </div>
-              <h3 className="text-xl md:text-3xl  max-w-md">
+              <h3 className="text-xl md:text-3xl">
                 Use nCoder.ai's editor, shell and browser
               </h3>
-              <p className="text-gray-400 text-sm max-w-md">
-                Take over and run commands, edit code, or use the browser for
-                nCoder.ai at any time.
+              <p className="text-gray-400 text-sm">
+                Full development environment with real-time editing, terminal access, and instant preview - all in one platform.
               </p>
-              <div className="relative">
+              <div className="relative mt-4">
                 <Image
                   src="/images/bento03.png"
-                  alt="bento2"
+                  alt="Development environment"
                   width={200}
                   height={200}
-                  className="w-full h-auto"
+                  className="w-full h-auto rounded-lg"
                 />
               </div>
               <BorderBeam duration={8} size={100} />
+            </div>
+          </div>
+
+          {/* Desktop Layout: Original Complex Grid */}
+          <div className="hidden md:block">
+            <div className="grid grid-cols-12 relative">
+              {/* Card 1 - Desktop */}
+              <div className="absolute top-1/3 bg-gray-900 rounded-2xl pt-[4vw] pl-[4vw] flex flex-col gap-5 col-span-5 col-start-2 w-full right-4">
+                <div className="w-full relative">
+                  <h3 className="text-xl md:text-3xl">Smart Codebase Intelligence</h3>
+                  <p className="text-gray-400 text-sm mt-2 max-w-sm">
+                    AI analyzes your project structure, learns your patterns, and suggests context-aware solutions instantly.
+                  </p>
+                  <Image
+                    src="/images/card01.png"
+                    alt="Smart Codebase Intelligence"
+                    width={90}
+                    height={60}
+                    className="absolute right-0 -top-20"
+                  />
+                </div>
+                <div className="mt-13">
+                  <Image
+                    src="/images/bento01.png"
+                    alt="Codebase visualization"
+                    width={1200}
+                    height={600}
+                    className="w-full h-auto"
+                  />
+                </div>
+                <BorderBeam duration={8} size={100} />
+              </div>
+
+              {/* Cards 2 & 3 - Desktop */}
+              <div className="col-span-5 col-start-7 space-y-4">
+                {/* Card 2 - Desktop */}
+                <div className="bg-gray-900 rounded-2xl p-6 flex flex-col gap-4 relative">
+                  <div>
+                    <Image
+                      src="/images/card02-line.png"
+                      alt="Mobile coding illustration"
+                      width={100}
+                      height={100}
+                    />
+                  </div>
+                  <div className="flex lg:flex-row flex-col item-start pl-[4vw]">
+                    <div className="mt-10">
+                      <h3 className="text-xl md:text-3xl">Code on the go</h3>
+                      <p className="text-gray-400 text-sm mt-2 max-w-sm">
+                        Write code using natural language instructions with nCoder.ai on mobile.
+                      </p>
+                    </div>
+                    <div className="relative">
+                      <Image
+                        src="/images/bento02.png"
+                        alt="Mobile coding interface"
+                        width={200}
+                        height={200}
+                        className="w-full h-auto"
+                      />
+                    </div>
+                  </div>
+                  <BorderBeam duration={8} size={100} />
+                </div>
+
+                {/* Card 3 - Desktop */}
+                <div className="bg-gray-900 rounded-2xl p-6 flex flex-col gap-4 pt-[4vw] pl-[4vw] relative">
+                  <div className="relative">
+                    <span className="bg-gray-700 text-xs uppercase px-2 py-1 rounded">
+                      Collaborate
+                    </span>
+                    <Image
+                      src="/images/card03-line.png"
+                      alt="Collaboration illustration"
+                      width={100}
+                      height={50}
+                      className="absolute right-0 -top-20"
+                    />
+                  </div>
+                  <h3 className="text-xl md:text-3xl max-w-md">
+                    Use nCoder.ai's editor, shell and browser
+                  </h3>
+                  <p className="text-gray-400 text-sm max-w-md">
+                    Full development environment with real-time editing, terminal access, and instant preview - all in one platform.
+                  </p>
+                  <div className="relative">
+                    <Image
+                      src="/images/bento03.png"
+                      alt="Development environment"
+                      width={200}
+                      height={200}
+                      className="w-full h-auto"
+                    />
+                  </div>
+                  <BorderBeam duration={8} size={100} />
+                </div>
+              </div>
             </div>
           </div>
         </div>
