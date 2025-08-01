@@ -227,25 +227,9 @@
 
 import Image from "next/image";
 import React from "react";
+import { BorderBeam } from "../magicui/border-beam";
 
-// Simplified BorderBeam component since the original isn't available
-const BorderBeam = ({ duration = 8, size = 100 }) => (
-  <div className="absolute inset-0 rounded-2xl overflow-hidden pointer-events-none">
-    <div 
-      className="absolute inset-0 rounded-2xl border-2 border-transparent bg-gradient-to-r from-blue-400 via-teal-400 to-blue-400 opacity-50"
-      style={{
-        background: 'linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.3), transparent)',
-        animation: `beam ${duration}s linear infinite`,
-      }}
-    />
-    <style jsx>{`
-      @keyframes beam {
-        0% { transform: translateX(-100%); }
-        100% { transform: translateX(100%); }
-      }
-    `}</style>
-  </div>
-);
+
 
 export default function MobileResponsiveBento() {
   return (
