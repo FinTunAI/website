@@ -17,6 +17,7 @@ import { GoogleGeminiEffect } from "@/components/homepage/google-gemini-effect";
 import CompetitiveAdvantages from "@/components/homepage/adv";
 import TestimonialSection from "@/components/homepage/testimonials";
 import { AITransformationFlow } from "@/components/homepage/ai-transformation-flow";
+import Component from "@/components/homepage/mobile-responsive-network"
 
 
 
@@ -48,7 +49,8 @@ export default function HomePage() {
       {/* <div className="min-h-screen bg-black w-full dark:border dark:border-white/[0.1] rounded-md relative pt-40 overflow-clip">
         <GoogleGeminiEffect />
       </div> */}
-      <AITransformationFlow />
+      {/* <AITransformationFlow /> */}
+      <Component />
 
      
 
