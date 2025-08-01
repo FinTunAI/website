@@ -141,7 +141,7 @@
 //             </div>
 //             <div className="mt-13 ">
 //               <Image
-//                 src="/images/bento01.png"
+//                 src="/images/ncoder-1.jpg"
 //                 alt="bento1"
 //                 width={1200}
 //                 height={600}
@@ -173,7 +173,7 @@
 //                 </div>
 //                 <div className="relative ">
 //                   <Image
-//                     src="/images/bento02.png"
+//                     src="/images/ncoder2.jpg"
 //                     alt="bento2"
 //                     width={200}
 //                     height={200}
@@ -207,7 +207,7 @@
 //               </p>
 //               <div className="relative">
 //                 <Image
-//                   src="/images/bento03.png"
+//                   src="/images/ncoder-1.jpg"
 //                   alt="bento2"
 //                   width={200}
 //                   height={200}
@@ -290,7 +290,7 @@ export default function MobileResponsiveBento() {
               </div>
               <div className="mt-4">
                 <Image
-                  src="/images/bento01.png"
+                  src="/images/ncoder-1.jpg"
                   alt="Codebase visualization"
                   width={1200}
                   height={600}
@@ -319,7 +319,7 @@ export default function MobileResponsiveBento() {
                 </div>
                 <div className="relative">
                   <Image
-                    src="/images/bento02.png"
+                    src="/images/ncoder2.jpg"
                     alt="Mobile coding interface"
                     width={200}
                     height={200}
@@ -354,7 +354,7 @@ export default function MobileResponsiveBento() {
               </p>
               <div className="relative mt-4">
                 <Image
-                  src="/images/bento03.png"
+                  src="/images/ncoder-1.jpg"
                   alt="Development environment"
                   width={200}
                   height={200}
@@ -385,7 +385,7 @@ export default function MobileResponsiveBento() {
                 </div>
                 <div className="mt-13">
                   <Image
-                    src="/images/bento01.png"
+                    src="/images/ncoder-1.jpg"
                     alt="Codebase visualization"
                     width={1200}
                     height={600}
@@ -416,7 +416,7 @@ export default function MobileResponsiveBento() {
                     </div>
                     <div className="relative">
                       <Image
-                        src="/images/bento02.png"
+                        src="/images/ncoder2.jpg"
                         alt="Mobile coding interface"
                         width={200}
                         height={200}
@@ -449,7 +449,7 @@ export default function MobileResponsiveBento() {
                   </p>
                   <div className="relative">
                     <Image
-                      src="/images/bento03.png"
+                      src="/images/ncoder-1.jpg"
                       alt="Development environment"
                       width={200}
                       height={200}
