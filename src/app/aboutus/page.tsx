@@ -86,12 +86,12 @@ export default function EnhancedAboutUs() {
         <div className="max-w-7xl mx-auto text-center relative z-10">
           <div className="space-y-8">
             {/* Floating Badge */}
-            <div className="flex justify-center animate-float">
+            {/* <div className="flex justify-center animate-float">
               <Badge className="bg-white/80 backdrop-blur-sm text-gray-700 border border-gray-200 px-8 py-4 text-base font-medium shadow-2xl shadow-gray-200/50 rounded-full animate-bounce">
                 <Star className="w-4 h-4 mr-2" />
                 About nCoder.ai
               </Badge>
-            </div>
+            </div> */}
 
             {/* Main Headlines with Enhanced Typography */}
             <h1 className="text-5xl md:text-7xl font-black leading-[0.9] tracking-tight">
@@ -118,10 +118,10 @@ export default function EnhancedAboutUs() {
               <div className="absolute inset-0 bg-gray-900 rounded-3xl blur-2xl opacity-5"></div>
               <div className="relative backdrop-blur-xl bg-white/60 p-12 rounded-3xl border border-gray-200/80 shadow-2xl shadow-gray-200/50">
                 <div className="flex items-center justify-center mb-8">
-                  <div className="relative group">
+                  {/* <div className="relative group">
                     <Sparkles className="w-12 h-12 text-gray-700 group-hover:scale-110 transition-transform duration-300" />
                     <div className="absolute inset-0 bg-gray-700 blur-lg opacity-20 group-hover:opacity-30 transition-opacity duration-300"></div>
-                  </div>
+                  </div> */}
                   <h3 className="text-3xl font-bold ml-6 text-gray-900">Our Mission</h3>
                 </div>
                 <p className="text-xl text-gray-700 font-light leading-relaxed">
@@ -144,10 +144,10 @@ export default function EnhancedAboutUs() {
         <div className="max-w-7xl mx-auto relative">
           <div className="text-center mb-20">
             <div className="flex items-center justify-center mb-8">
-              <div className="relative group">
+              {/* <div className="relative group">
                 <AlertTriangle className="w-12 h-12 text-gray-700 group-hover:scale-110 transition-transform duration-300" />
                 <div className="absolute inset-0 bg-gray-700 blur-lg opacity-20 group-hover:opacity-30 transition-opacity duration-300"></div>
-              </div>
+              </div> */}
               <h2 className="text-4xl md:text-6xl font-bold ml-6 text-gray-900">The Legacy Crisis</h2>
             </div>
             <p className="text-xl text-gray-600 max-w-4xl mx-auto font-light">
@@ -303,9 +303,9 @@ export default function EnhancedAboutUs() {
                 <Card className="relative p-8 bg-white/80 backdrop-blur-xl border border-gray-200/80 hover:border-gray-300 transition-all duration-700 hover:scale-105 hover:-translate-y-2 h-full shadow-xl shadow-gray-200/50 hover:shadow-2xl hover:shadow-gray-300/50 rounded-3xl">
                   <CardContent className="p-0">
                     <div className="flex items-start mb-6">
-                      <div className="w-16 h-16 bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl flex items-center justify-center text-white mr-4 shadow-xl shadow-gray-400/30 group-hover:scale-110 transition-transform duration-300 flex-shrink-0">
+                      {/* <div className="w-16 h-16 bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl flex items-center justify-center text-white mr-4 shadow-xl shadow-gray-400/30 group-hover:scale-110 transition-transform duration-300 flex-shrink-0">
                         {item.icon}
-                      </div>
+                      </div> */}
                       <h3 className="text-xl font-bold text-gray-900 group-hover:text-gray-800 transition-colors duration-300 leading-tight">
                         {item.title}
                       </h3>
@@ -327,10 +327,10 @@ export default function EnhancedAboutUs() {
         <div className="max-w-5xl mx-auto text-center relative z-10">
           <div className="space-y-12">
             <div className="flex items-center justify-center mb-10">
-              <div className="relative group">
+              {/* <div className="relative group">
                 <Sparkles className="w-16 h-16 text-white group-hover:scale-110 transition-transform duration-300" />
                 <div className="absolute inset-0 bg-white blur-lg opacity-20 group-hover:opacity-30 transition-opacity duration-300"></div>
-              </div>
+              </div> */}
               <h2 className="text-4xl md:text-6xl font-bold text-white ml-8">Ready to Transform?</h2>
             </div>
             <p className="text-xl text-gray-300 font-light leading-relaxed max-w-4xl mx-auto">

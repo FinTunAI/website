@@ -11,13 +11,14 @@ import StackedSlider from "@/components/homepage/StackedSlider";
 import { LogoMarqueeSection } from "@/components/homepage/SlidingLogos";
 import ServiceCards from "@/components/homepage/ServiceCards";
 import DevWorkspace from "@/components/homepage/DevWorkspace";
-import DevinUIPreview from "@/components/homepage/DevUI";
+
 import { useScroll, useTransform } from "motion/react";
 import { GoogleGeminiEffect } from "@/components/homepage/google-gemini-effect";
 import CompetitiveAdvantages from "@/components/homepage/adv";
 import TestimonialSection from "@/components/homepage/testimonials";
 import { AITransformationFlow } from "@/components/homepage/ai-transformation-flow";
 import Component from "@/components/homepage/mobile-responsive-network"
+import { MobileResponsiveDevinUI } from "@/components/homepage/DevUI";
 
 
 
@@ -50,17 +51,28 @@ export default function HomePage() {
         <GoogleGeminiEffect />
       </div> */}
       {/* <AITransformationFlow /> */}
-      <Component />
+      <section data-nav-theme="dark">
+    <Component /> {/* or some hero section */}
+  </section>
 
      
 
-      <StackedSlider />
-      <ServiceCards />
-      <DevWorkspace />
+       <section data-nav-theme="white">
+    <StackedSlider />
+  </section>
+      <section data-nav-theme="white">
+    <ServiceCards />
+  </section>
+      <section data-nav-theme="dark">
+    <DevWorkspace />
+  </section>
       {/* <CompetitiveAdvantages /> */}
-      <DevinUIPreview />
+      {/* <DevinUIPreview /> */}
+      <section data-nav-theme="white">
+      <MobileResponsiveDevinUI />
+      </section>
       {/* <LogoMarqueeSection /> */}
-      <TestimonialSection />
+      {/* <TestimonialSection /> */}
       
       
       

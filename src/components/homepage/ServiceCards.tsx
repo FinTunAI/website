@@ -361,10 +361,10 @@ export default function ServiceCards() {
         {/* Section Header */}
         <div className="text-center mb-12 sm:mb-16 lg:mb-20">
           <div className="flex items-center justify-center mb-6 sm:mb-8">
-            <div className="relative group">
+            {/* <div className="relative group">
               <Sparkles className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 text-gray-700 group-hover:scale-110 transition-transform duration-300" />
               <div className="absolute inset-0 bg-gray-700 blur-lg opacity-20 group-hover:opacity-30 transition-opacity duration-300" />
-            </div>
+            </div> */}
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-bold ml-3 sm:ml-4 lg:ml-6 text-gray-900">
               Our Core Services
             </h2>
@@ -390,13 +390,13 @@ export default function ServiceCards() {
                   {/* Mobile: Icon and Title Side by Side, Desktop: Icon on Top */}
                   <div className="flex sm:block items-center sm:items-start mb-4 sm:mb-6">
                     {/* Icon */}
-                    <div
+                    {/* <div
                       className={`w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 bg-gradient-to-r ${service.gradient} rounded-xl sm:rounded-2xl flex items-center justify-center text-white shadow-xl shadow-gray-400/30 group-hover:scale-110 transition-transform duration-300 flex-shrink-0 mr-4 sm:mr-0 sm:mb-4 lg:mb-6`}
                     >
                       <div className="w-5 h-5 sm:w-6 sm:h-6">
                         {service.icon}
                       </div>
-                    </div>
+                    </div> */}
 
                     {/* Title - Next to icon on mobile, below icon on larger screens */}
                     <h3 className="text-lg sm:text-xl font-bold text-gray-900 group-hover:text-gray-800 transition-colors duration-300 leading-tight flex-1 sm:flex-none">

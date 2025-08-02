@@ -1297,12 +1297,12 @@ export default function ImprovedMobileSlider() {
         <div className="max-w-lg mx-auto relative">
           {/* Section Header */}
           <div className="text-center mb-8">
-            <div className="flex justify-center mb-4">
+            {/* <div className="flex justify-center mb-4">
               <Badge className="bg-white/80 backdrop-blur-sm text-gray-700 border border-gray-200 px-4 py-2 text-xs font-medium shadow-lg shadow-gray-200/50 rounded-full">
                 <Sparkles className="w-3 h-3 mr-1" />
                 Our Solutions
               </Badge>
-            </div>
+            </div> */}
 
             <h1 className="text-2xl font-black leading-tight tracking-tight mb-4">
               <span className="block text-gray-900">AI-Native Platform</span>
@@ -1341,11 +1341,11 @@ export default function ImprovedMobileSlider() {
                     aria-controls={`slide-content-${slideIndex}`}
                   >
                     <div className="flex items-center space-x-3">
-                      <div className="w-10 h-10 bg-white/20 backdrop-blur-xl rounded-lg flex items-center justify-center text-white shadow-lg flex-shrink-0">
+                      {/* <div className="w-10 h-10 bg-white/20 backdrop-blur-xl rounded-lg flex items-center justify-center text-white shadow-lg flex-shrink-0">
                         <div className="w-5 h-5">
                           {slide.icon}
                         </div>
-                      </div>
+                      </div> */}
                       <h2 className="text-lg font-bold leading-tight">{slide.title}</h2>
                     </div>
                     <ChevronDown 
@@ -1483,12 +1483,12 @@ export default function ImprovedMobileSlider() {
       <div className="max-w-7xl mx-auto relative">
         {/* Section Header */}
         <div className="text-center mb-16 lg:mb-20">
-          <div className="flex justify-center mb-6 lg:mb-8">
+          {/* <div className="flex justify-center mb-6 lg:mb-8">
             <Badge className="bg-white/80 backdrop-blur-sm text-gray-700 border border-gray-200 px-6 lg:px-8 py-3 lg:py-4 text-sm lg:text-base font-medium shadow-2xl shadow-gray-200/50 rounded-full">
               <Sparkles className="w-4 h-4 mr-2" />
               Our Solutions
             </Badge>
-          </div>
+          </div> */}
 
           <h1 className="text-4xl md:text-5xl lg:text-7xl font-black leading-[0.9] tracking-tight mb-6 lg:mb-8">
             <span className="block text-gray-900">AI-Native Platform</span>
@@ -1559,9 +1559,9 @@ export default function ImprovedMobileSlider() {
                         {/* Content Side */}
                         <div className="text-white space-y-6 lg:space-y-8">
                           <div className="flex items-center space-x-3 lg:space-x-4 mb-4 lg:mb-6">
-                            <div className="w-12 h-12 lg:w-16 lg:h-16 bg-white/20 backdrop-blur-xl rounded-xl lg:rounded-2xl flex items-center justify-center text-white shadow-xl">
+                            {/* <div className="w-12 h-12 lg:w-16 lg:h-16 bg-white/20 backdrop-blur-xl rounded-xl lg:rounded-2xl flex items-center justify-center text-white shadow-xl">
                               {slide.icon}
-                            </div>
+                            </div> */}
                             <h2 className="text-2xl lg:text-3xl xl:text-4xl font-bold leading-tight">{slide.title}</h2>
                           </div>
 
@@ -1581,12 +1581,12 @@ export default function ImprovedMobileSlider() {
                           </ul>
 
                           {/* CTA Button */}
-                          <div className="pt-4 lg:pt-6">
+                          {/* <div className="pt-4 lg:pt-6">
                             <Button className="bg-white/20 backdrop-blur-xl text-white hover:bg-white/30 font-semibold px-6 lg:px-8 py-2.5 lg:py-3 rounded-xl lg:rounded-2xl transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl border border-white/20">
                               Learn More
                               <ArrowRight className="w-4 h-4 ml-2" />
                             </Button>
-                          </div>
+                          </div> */}
                         </div>
 
                         {/* Preview Side */}

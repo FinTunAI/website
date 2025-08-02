@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react"
 import { motion } from "framer-motion"
-import { Bot, Sparkles, Zap } from "lucide-react"
+import { Bot, Braces, Sparkles, Zap } from "lucide-react"
 import { Badge } from "@/components/ui/badge"
 
 export default function Component() {
@@ -155,14 +155,14 @@ export default function Component() {
             animate={{ opacity: 1, y: 0 }}
             className="flex flex-col items-center justify-center gap-3 mb-6"
           >
-            <div className="flex items-center gap-2 sm:gap-3 mb-4">
+            {/* <div className="flex items-center gap-2 sm:gap-3 mb-4">
               <Sparkles className="w-6 h-6 sm:w-10 sm:h-10 text-blue-400" />
               <Badge className="bg-white/10 backdrop-blur-sm text-white border border-white/20 px-3 py-2 sm:px-6 sm:py-3 text-sm sm:text-base font-medium shadow-2xl rounded-full">
                 <Bot className="w-3 h-3 sm:w-4 sm:h-4 mr-2" />
                 AI-Powered Transformation
               </Badge>
               <Zap className="w-6 h-6 sm:w-10 sm:h-10 text-purple-400" />
-            </div>
+            </div> */}
             <h1 className="text-3xl sm:text-5xl md:text-7xl font-black leading-[0.9] tracking-tight text-white mb-4 sm:mb-6">
               <span className="block text-white mb-2 sm:mb-4">Transform Legacy Systems</span>
               <span className="block bg-gradient-to-r from-[#446dcd] via-[#4bb6d3] to-[#6ef2cc] bg-clip-text text-transparent">
@@ -238,7 +238,7 @@ export default function Component() {
               transition={{ duration: 2, ease: "easeInOut" }}
             >
               <div className="w-24 h-24 bg-gradient-to-br from-purple-500 to-blue-500 rounded-full flex items-center justify-center shadow-2xl border-4 border-purple-300/50">
-                <Zap className="w-10 h-10 text-white" />
+                <Braces className="w-10 h-10 text-white" />
               </div>
               {isAnimating && (
                 <motion.div
@@ -423,7 +423,7 @@ export default function Component() {
                 transition={{ duration: 2, ease: "easeInOut" }}
               >
                 <div className="w-20 h-20 bg-gradient-to-br from-purple-500 to-blue-500 rounded-full flex items-center justify-center shadow-2xl border-4 border-purple-300/50 relative">
-                  <Zap className="w-8 h-8 text-white" />
+                  <Braces className="w-8 h-8 text-white" />
                   {/* Pulsing rings */}
                   {isAnimating && (
                     <>

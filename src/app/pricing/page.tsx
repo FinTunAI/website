@@ -1347,6 +1347,7 @@ import {
   Globe,
   ChevronDown,
 } from "lucide-react"
+import Link from "next/link"
 
 
 export default function Pricing() {
@@ -1532,12 +1533,12 @@ export default function Pricing() {
         <div className="absolute inset-0 bg-gradient-to-b from-gray-50/50 to-transparent" />
         <div className="max-w-7xl mx-auto text-center relative z-10">
           <div className="space-y-8">
-            <div className="flex justify-center animate-float">
+            {/* <div className="flex justify-center animate-float">
               <Badge className="bg-white/80 backdrop-blur-sm text-gray-700 border border-gray-200 px-8 py-4 text-base font-medium shadow-2xl shadow-gray-200/50 rounded-full animate-bounce">
                 <Star className="w-4 h-4 mr-2" />
                 Pricing Plans
               </Badge>
-            </div>
+            </div> */}
 
             <h1 className="text-5xl md:text-7xl font-black leading-[0.9] tracking-tight">
               <span className="block text-gray-900 animate-fade-in-up">Choose Your</span>
@@ -1634,11 +1635,11 @@ export default function Pricing() {
                       )}
 
                       <CardHeader className="text-center pb-4">
-                        <div
+                        {/* <div
                           className={`w-16 h-16 mx-auto mb-6 rounded-2xl bg-gradient-to-r ${plan.gradient} flex items-center justify-center text-white shadow-2xl shadow-gray-400/30 group-hover:scale-110 transition-transform duration-300`}
                         >
                           {plan.icon}
-                        </div>
+                        </div> */}
                         <CardTitle className="text-2xl font-bold text-gray-900">{plan.name}</CardTitle>
                         <div className="mt-6">
                           <div className="flex items-center justify-center">
@@ -1664,16 +1665,21 @@ export default function Pricing() {
                             </li>
                           ))}
                         </ul>
-                        <Button
-                          className={`w-full text-lg font-semibold ${
-                            plan.popular
-                              ? "bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700"
-                              : "bg-gray-900 hover:bg-gray-800"
-                          } py-6 rounded-2xl transform hover:scale-105 transition-all duration-200`}
-                        >
-                          {plan.cta}
-                          <ArrowRight className="w-5 h-5 ml-3" />
-                        </Button>
+                        <Button asChild>
+  <Link
+    href="https://form.typeform.com/to/oBvSWfqF"
+    target="_blank"
+    rel="noopener noreferrer"
+    className={`w-full text-lg font-semibold py-6 rounded-2xl transform hover:scale-105 transition-all duration-200 cursor-pointer ${
+      plan.popular
+        ? "bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700"
+        : "bg-gray-900 hover:bg-gray-800"
+    }`}
+  >
+    {plan.cta}
+    <ArrowRight className="w-5 h-5 ml-3" />
+  </Link>
+</Button>
                       </CardContent>
                     </Card>
                   </div>
@@ -1684,10 +1690,10 @@ export default function Pricing() {
             <TabsContent value="coding" className="animate-fade-in">
               <div className="text-center mb-20">
                 <div className="flex items-center justify-center mb-8">
-                  <div className="relative group">
+                  {/* <div className="relative group">
                     <Code className="w-12 h-12 text-gray-700 group-hover:scale-110 transition-transform duration-300" />
                     <div className="absolute inset-0 bg-gray-700 blur-lg opacity-20 group-hover:opacity-30 transition-opacity duration-300" />
-                  </div>
+                  </div> */}
                   <h2 className="text-4xl md:text-6xl font-bold ml-6 text-gray-900">AI-Augmented Development</h2>
                 </div>
                 <p className="text-xl text-gray-600 max-w-4xl mx-auto font-light">
@@ -1718,11 +1724,11 @@ export default function Pricing() {
                       )}
 
                       <CardHeader className="text-center pb-4">
-                        <div
+                        {/* <div
                           className={`w-16 h-16 mx-auto mb-6 rounded-2xl bg-gradient-to-r ${plan.gradient} flex items-center justify-center text-white shadow-2xl shadow-gray-400/30 group-hover:scale-110 transition-transform duration-300`}
                         >
                           {plan.icon}
-                        </div>
+                        </div> */}
                         <CardTitle className="text-2xl font-bold text-gray-900">{plan.name}</CardTitle>
                         <div className="mt-6">
                           <div className="flex items-center justify-center">
@@ -1748,16 +1754,22 @@ export default function Pricing() {
                             </li>
                           ))}
                         </ul>
-                        <Button
-                          className={`w-full text-lg font-semibold ${
-                            plan.popular
-                              ? "bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700"
-                              : "bg-gray-900 hover:bg-gray-800"
-                          } py-6 rounded-2xl transform hover:scale-105 transition-all duration-200`}
-                        >
-                          {plan.cta}
-                          <ArrowRight className="w-5 h-5 ml-3" />
-                        </Button>
+                        <Button asChild>
+  <Link
+    href="https://form.typeform.com/to/oBvSWfqF"
+    target="_blank"
+    rel="noopener noreferrer"
+    className={`w-full text-lg font-semibold py-6 rounded-2xl transform hover:scale-105 transition-all duration-200 cursor-pointer ${
+      plan.popular
+        ? "bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700"
+        : "bg-gray-900 hover:bg-gray-800"
+    }`}
+  >
+    {plan.cta}
+    <ArrowRight className="w-5 h-5 ml-3" />
+  </Link>
+</Button>
+
                       </CardContent>
                     </Card>
                   </div>
@@ -1773,10 +1785,10 @@ export default function Pricing() {
         <div className="max-w-7xl mx-auto relative">
           <div className="text-center mb-20">
             <div className="flex items-center justify-center mb-8">
-              <div className="relative group">
+              {/* <div className="relative group">
                 <Sparkles className="w-12 h-12 text-gray-700 group-hover:scale-110 transition-transform duration-300" />
                 <div className="absolute inset-0 bg-gray-700 blur-lg opacity-20 group-hover:opacity-30 transition-opacity duration-300" />
-              </div>
+              </div> */}
               <h2 className="text-4xl md:text-6xl font-bold ml-6 text-gray-900">Premium Add-Ons</h2>
             </div>
             <p className="text-xl text-gray-600 max-w-4xl mx-auto font-light">
@@ -1794,9 +1806,9 @@ export default function Pricing() {
                 <div className="absolute inset-0 bg-gray-900 rounded-3xl blur-3xl opacity-0 group-hover:opacity-5 transition-all duration-700" />
                 <Card className="relative p-8 bg-white/80 backdrop-blur-xl border border-gray-200/80 hover:border-gray-300 transition-all duration-700 hover:scale-105 hover:-translate-y-2 h-full shadow-xl shadow-gray-200/50 hover:shadow-2xl hover:shadow-gray-300/50 rounded-3xl">
                   <CardHeader className="text-center pb-4">
-                    <div className="w-16 h-16 mx-auto mb-6 rounded-2xl bg-gradient-to-r from-indigo-400 to-purple-600 flex items-center justify-center text-white shadow-2xl shadow-gray-400/30 group-hover:scale-110 transition-transform duration-300">
+                    {/* <div className="w-16 h-16 mx-auto mb-6 rounded-2xl bg-gradient-to-r from-indigo-400 to-purple-600 flex items-center justify-center text-white shadow-2xl shadow-gray-400/30 group-hover:scale-110 transition-transform duration-300">
                       {addon.icon}
-                    </div>
+                    </div> */}
                     <CardTitle className="text-xl font-bold text-gray-900 group-hover:text-gray-800 transition-colors duration-300">
                       {addon.name}
                     </CardTitle>
@@ -1827,10 +1839,10 @@ export default function Pricing() {
         <div className="max-w-7xl mx-auto relative">
           <div className="text-center mb-20">
             <div className="flex items-center justify-center mb-8">
-              <div className="relative group">
+              {/* <div className="relative group">
                 <Star className="w-12 h-12 text-gray-700 group-hover:scale-110 transition-transform duration-300" />
                 <div className="absolute inset-0 bg-gray-700 blur-lg opacity-20 group-hover:opacity-30 transition-opacity duration-300" />
-              </div>
+              </div> */}
               <h2 className="text-4xl md:text-6xl font-bold ml-6 text-gray-900">Why Choose nCoder.ai?</h2>
             </div>
           </div>
@@ -1870,11 +1882,11 @@ export default function Pricing() {
                 <div className="absolute inset-0 bg-gray-900 rounded-3xl blur-3xl opacity-0 group-hover:opacity-5 transition-all duration-700" />
                 <Card className="relative p-8 bg-white/80 backdrop-blur-xl border border-gray-200/80 hover:border-gray-300 transition-all duration-700 hover:scale-105 hover:-translate-y-2 h-full shadow-xl shadow-gray-200/50 hover:shadow-2xl hover:shadow-gray-300/50 rounded-3xl">
                   <CardContent className="p-0 text-center">
-                    <div
+                    {/* <div
                       className={`w-16 h-16 mx-auto mb-6 rounded-2xl bg-gradient-to-r ${item.gradient} flex items-center justify-center shadow-2xl shadow-gray-400/30 group-hover:scale-110 transition-transform duration-300`}
                     >
                       {item.icon}
-                    </div>
+                    </div> */}
                     <h3 className="text-xl font-bold text-gray-900 mb-4 group-hover:text-gray-800 transition-colors duration-300">
                       {item.title}
                     </h3>
@@ -1892,10 +1904,10 @@ export default function Pricing() {
         <div className="max-w-4xl mx-auto relative">
           <div className="text-center mb-20">
             <div className="flex items-center justify-center mb-8">
-              <div className="relative group">
+              {/* <div className="relative group">
                 <Sparkles className="w-12 h-12 text-gray-700 group-hover:scale-110 transition-transform duration-300" />
                 <div className="absolute inset-0 bg-gray-700 blur-lg opacity-20 group-hover:opacity-30 transition-opacity duration-300" />
-              </div>
+              </div> */}
               <h2 className="text-4xl md:text-6xl font-bold ml-6 text-gray-900">Frequently Asked Questions</h2>
             </div>
           </div>
@@ -2019,10 +2031,10 @@ export default function Pricing() {
         <div className="space-y-16">
           {/* Header Section */}
           <div className="flex flex-col md:flex-row items-center justify-center mb-12 gap-6">
-            <div className="relative group">
+            {/* <div className="relative group">
               <Sparkles className="w-20 h-20 text-white group-hover:scale-110 transition-transform duration-300" />
               <div className="absolute inset-0 bg-white blur-lg opacity-20 group-hover:opacity-30 transition-opacity duration-300" />
-            </div>
+            </div> */}
             <h2 className="text-5xl md:text-7xl font-bold text-white leading-tight">
               Ready to Transform?
             </h2>
@@ -2034,62 +2046,75 @@ export default function Pricing() {
           </p>
           
           {/* Two Card Grid - Optimized Layout */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            {[
-              {
-                icon: <Users className="w-14 h-14 text-white" />,
-                title: "Schedule a Demo",
-                description: "See how nCoder.ai can transform your legacy systems with personalized insights and real-world examples",
-                cta: "Book Demo",
-                buttonStyle: "border-2 border-white text-white hover:bg-white hover:text-gray-900 bg-transparent",
-                highlight: "bg-gradient-to-br from-purple-600/20 to-blue-600/20",
-              },
-              {
-                icon: <Building className="w-14 h-14 text-white" />,
-                title: "Enterprise Consultation",
-                description: "Get custom pricing, implementation strategies, and dedicated support for your organization",
-                cta: "Contact Sales",
-                buttonStyle: "bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white shadow-lg",
-                highlight: "bg-gradient-to-br from-blue-600/20 to-purple-600/20",
-              },
-            ].map((item, index) => (
-              <div
-                key={index}
-                className="group relative animate-fade-in-up"
-                style={{ animationDelay: `${index * 200}ms` }}
-              >
-                {/* Glow effect */}
-                <div className="absolute inset-0 bg-white rounded-3xl blur-3xl opacity-0 group-hover:opacity-10 transition-all duration-700" />
-                
-                {/* Card */}
-                <Card className={`relative p-10 ${item.highlight} backdrop-blur-sm border border-white/30 hover:border-white/50 transition-all duration-700 hover:scale-105 hover:-translate-y-3 shadow-2xl shadow-gray-900/50 hover:shadow-gray-800/60 rounded-3xl h-full`}>
-                  <CardContent className="p-0 text-center flex flex-col h-full">
-                    {/* Icon */}
-                    <div className="relative mx-auto mb-8">
-                      <div className="p-4 rounded-2xl bg-white/10 backdrop-blur-sm">
-                        {item.icon}
-                      </div>
-                      <div className="absolute inset-0 bg-white blur-lg opacity-20 group-hover:opacity-40 transition-opacity duration-300 rounded-2xl" />
-                    </div>
-                    
-                    {/* Content */}
-                    <h3 className="text-2xl font-bold text-white mb-6">{item.title}</h3>
-                    <p className="text-gray-300 font-light mb-8 leading-relaxed flex-grow text-lg">
-                      {item.description}
-                    </p>
-                    
-                    {/* Button */}
-                    <Button
-                      className={`w-full text-lg font-semibold ${item.buttonStyle} py-4 px-8 rounded-2xl transform hover:scale-105 transition-all duration-300 hover:shadow-xl`}
-                      variant={item.buttonStyle.includes("border-") ? "outline" : "default"}
-                    >
-                      {item.cta}
-                    </Button>
-                  </CardContent>
-                </Card>
-              </div>
-            ))}
+         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-4xl mx-auto">
+  {[
+    {
+      icon: <Users className="w-14 h-14 text-white" />,
+      title: "Schedule a Demo",
+      description: "See how nCoder.ai can transform your legacy systems with personalized insights and real-world examples",
+      cta: "Book A Call",
+      buttonStyle: "border-2 border-white text-white hover:bg-white hover:text-gray-900 bg-transparent",
+      highlight: "bg-gradient-to-br from-purple-600/20 to-blue-600/20",
+      link: "https://calendly.com/fintunaidev/30min",
+    },
+    {
+      icon: <Building className="w-14 h-14 text-white" />,
+      title: "Enterprise Consultation",
+      description: "Get custom pricing, implementation strategies, and dedicated support for your organization",
+      cta: "Contact Sales",
+      buttonStyle: "bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white shadow-lg",
+      highlight: "bg-gradient-to-br from-blue-600/20 to-purple-600/20",
+      link: "https://form.typeform.com/to/oBvSWfqF",
+    },
+  ].map((item, index) => (
+    <div
+      key={index}
+      className="group relative animate-fade-in-up"
+      style={{ animationDelay: `${index * 200}ms` }}
+    >
+      {/* Glow effect */}
+      <div className="absolute inset-0 bg-white rounded-3xl blur-3xl opacity-0 group-hover:opacity-10 transition-all duration-700" />
+
+      {/* Card */}
+      <Card
+        className={`relative p-10 ${item.highlight} backdrop-blur-sm border border-white/30 hover:border-white/50 transition-all duration-700 hover:scale-105 hover:-translate-y-3 shadow-2xl shadow-gray-900/50 hover:shadow-gray-800/60 rounded-3xl h-full`}
+      >
+        <CardContent className="p-0 text-center flex flex-col h-full">
+          {/* Icon */}
+          <div className="relative mx-auto mb-8">
+            <div className="p-4 rounded-2xl bg-white/10 backdrop-blur-sm">
+              {item.icon}
+            </div>
+            <div className="absolute inset-0 bg-white blur-lg opacity-20 group-hover:opacity-40 transition-opacity duration-300 rounded-2xl" />
           </div>
+
+          {/* Content */}
+          <h3 className="text-2xl font-bold text-white mb-6">{item.title}</h3>
+          <p className="text-gray-300 font-light mb-8 leading-relaxed flex-grow text-lg">
+            {item.description}
+          </p>
+
+          {/* Button with dynamic link */}
+          <Button
+            asChild
+            className={`w-full text-lg font-semibold ${item.buttonStyle} py-4 px-8 rounded-2xl transform hover:scale-105 transition-all duration-300 hover:shadow-xl`}
+            variant={item.buttonStyle.includes("border-") ? "outline" : "default"}
+          >
+            <Link
+              href={item.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="cursor-pointer"
+            >
+              {item.cta}
+            </Link>
+          </Button>
+        </CardContent>
+      </Card>
+    </div>
+  ))}
+</div>
+
           
           {/* Bottom accent */}
           <div className="flex justify-center pt-8">

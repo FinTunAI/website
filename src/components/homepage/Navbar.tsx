@@ -792,7 +792,6 @@
 // }
 
 
-
 "use client"
 
 import { useState, useEffect, useCallback, useRef } from "react"
@@ -802,6 +801,7 @@ import Image from "next/image"
 import { cn } from "@/lib/utils"
 import { SECTION_CONFIG, getSectionBoundaries } from "@/lib/navbar-config"
 import { useRouter } from "next/navigation"
+import Link from "next/link"
 
 interface NavigationItem {
   name: string
@@ -830,24 +830,14 @@ export default function Navbar() {
   const router = useRouter()
 
   useEffect(() => {
-    let lastScrollY = window.scrollY
-
     function checkVisibleSectionsAndSetTheme() {
       const sections = document.querySelectorAll("section[data-nav-theme]")
-      const scrollDown = window.scrollY > lastScrollY
-      lastScrollY = window.scrollY
+      const threshold = 50
 
       for (const section of sections) {
         const rect = section.getBoundingClientRect()
-        const topTouchesTop = rect.top >= 0 && rect.top <= 50
-        const bottomTouchesTop = rect.bottom >= 0 && rect.bottom <= 50
-
-        if (scrollDown && topTouchesTop) {
-          const theme = section.getAttribute("data-nav-theme") as "white" | "dark"
-          setActiveTheme(theme)
-          break
-        }
-        if (!scrollDown && bottomTouchesTop) {
+        // Check if the section spans the threshold line near the top of viewport
+        if (rect.top <= threshold && rect.bottom > threshold) {
           const theme = section.getAttribute("data-nav-theme") as "white" | "dark"
           setActiveTheme(theme)
           break
@@ -937,40 +927,32 @@ export default function Navbar() {
   }, [])
 
   const isDark = activeTheme === "dark"
-  console.log(activeTheme, isDark)
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen)
   }
 
   const handleNavClick = (itemName: string, href: string, e: React.MouseEvent<HTMLAnchorElement>) => {
-    e.preventDefault() // Prevent default behavior early
-    console.log(`Nav clicked: ${itemName}, href: ${href}`) // Debugging log
-
+    e.preventDefault()
     setActiveItem(itemName)
 
-    // Handle hash links with smooth scroll
     if (href.startsWith("#")) {
       const element = document.querySelector(href)
       if (element) {
         element.scrollIntoView({ behavior: "smooth" })
         window.history.pushState(null, "", href)
       }
-      // Close mobile menu after smooth scroll
       if (isMobileMenuOpen) {
-        setTimeout(() => setIsMobileMenuOpen(false), 300) // Delay to allow scroll
+        setTimeout(() => setIsMobileMenuOpen(false), 300)
       }
     } else {
-      // Handle regular page navigation with Next.js router
       try {
         router.push(href)
-        console.log(`Navigating to: ${href}`) // Debugging log
       } catch (error) {
-        console.error(`Navigation error: ${error}`) // Error handling
+        console.error(`Navigation error: ${error}`)
       }
-      // Close mobile menu after navigation
       if (isMobileMenuOpen) {
-        setTimeout(() => setIsMobileMenuOpen(false), 300) // Delay to ensure navigation
+        setTimeout(() => setIsMobileMenuOpen(false), 300)
       }
     }
   }
@@ -982,7 +964,7 @@ export default function Navbar() {
         <a
           href={item.href}
           onClick={(e) => handleNavClick(item.name, item.href, e)}
-          onTouchStart={(e) => handleNavClick(item.name, item.href, e)} // Add touch event
+          onTouchStart={(e) => handleNavClick(item.name, item.href, e)}
           className={cn(
             "flex items-center space-x-2 px-4 py-2 rounded-full text-sm font-semibold transition-all duration-300 relative overflow-hidden",
             "hover:scale-105 active:scale-95",
@@ -993,8 +975,8 @@ export default function Navbar() {
                 ? "bg-white/20 backdrop-blur-xl text-white shadow-lg"
                 : "text-white/80 hover:text-white hover:bg-white/10"
               : isActive
-                ? "bg-black/10 backdrop-blur-xl text-gray-900 shadow-lg"
-                : "text-gray-600 hover:text-gray-900 hover:bg-black/5"
+              ? "bg-black/10 backdrop-blur-xl text-gray-900 shadow-lg"
+              : "text-gray-600 hover:text-gray-900 hover:bg-black/5"
           )}
           aria-current={isActive ? "page" : undefined}
         >
@@ -1072,7 +1054,14 @@ export default function Navbar() {
                   aria-label="Book a consultation call"
                 >
                   <Phone className="w-4 h-4 mr-2 transition-transform group-hover/btn:rotate-12" />
-                  <span className="relative z-10">Book a Call</span>
+                  <Link
+                    href="https://calendly.com/fintunaidev/30min"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="relative z-10 cursor-pointer"
+                  >
+                    Book a Call
+                  </Link>
                   <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover/btn:translate-x-full transition-transform duration-700" />
                 </Button>
               </div>
@@ -1109,9 +1098,11 @@ export default function Navbar() {
             </div>
           </div>
         </div>
+
+        {/* Updated mobile menu container with fixed positioning */}
         <div
           className={cn(
-            "md:hidden absolute top-20 left-4 right-4 transition-all duration-500 transform-gpu",
+            "md:hidden fixed inset-x-4 top-20 transition-all duration-500 transform-gpu",
             isMobileMenuOpen
               ? "opacity-100 translate-y-0 scale-100"
               : "opacity-0 -translate-y-4 scale-95 pointer-events-none"
@@ -1119,7 +1110,7 @@ export default function Navbar() {
         >
           <div
             className={cn(
-              "px-6 py-6 border border-white/10 rounded-3xl backdrop-blur-xl shadow-2xl",
+              "px-6 py-6 border border-white/10 rounded-3xl backdrop-blur-xl shadow-2xl overflow-y-auto max-h-[calc(100vh-5rem)]",
               isDark ? "bg-gray-900/40" : "bg-white/40"
             )}
           >
@@ -1152,7 +1143,14 @@ export default function Navbar() {
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   <Phone className="w-4 h-4 mr-2 transition-transform group-hover/btn:rotate-12" />
-                  <span className="relative z-10">Book a Call</span>
+                  <Link
+                    href="https://calendly.com/fintunaidev/30min"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="relative z-10 cursor-pointer"
+                  >
+                    Book a Call
+                  </Link>
                   <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover/btn:translate-x-full transition-transform duration-700" />
                 </Button>
               </div>
@@ -1178,4 +1176,3 @@ export default function Navbar() {
     </>
   )
 }
-

@@ -75,7 +75,6 @@ const Footer: React.FC = () => {
   return (
     <footer className="w-full bg-white text-black border-t py-12 px-4 sm:px-6 md:px-12">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-start gap-8">
-        
         {/* Left: Headline */}
         <div className="w-full md:w-1/3">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold leading-tight tracking-tight mb-4">
@@ -94,73 +93,46 @@ const Footer: React.FC = () => {
               <p className="text-gray-700 text-base sm:text-lg mb-4 sm:mb-6">
                 Join the waitlist to access nCoder.ai before anyone else and unlock the future of autonomous software engineering.
               </p>
-              <form className="flex flex-col sm:flex-row items-center gap-3 sm:gap-4">
+              <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-4">
                 <input
                   type="email"
                   placeholder="Enter your email"
                   className="w-full px-3 py-2 sm:px-4 sm:py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 transition text-sm sm:text-base"
+                  disabled
                 />
-                <button
-                  type="submit"
+                <a
+                  href="https://form.typeform.com/to/oBvSWfqF"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-4 py-2 sm:px-6 sm:py-3 bg-gradient-to-r from-blue-600 to-teal-500 text-white rounded-md font-semibold hover:from-blue-700 hover:to-teal-600 transition-all shadow-md text-sm sm:text-base"
                 >
                   Join the Waitlist
                   <ArrowRight size={14} className="sm:size-[16px]" />
-                </button>
-              </form>
+                </a>
+              </div>
             </div>
           </div>
         </div>
       </div>
 
       {/* Bottom Footer Links */}
-      <div className="mt-12 pt-6 flex flex-col items-center md:flex-row md:justify-between text-sm text-gray-500 space-y-6 md:space-y-0">
-        {/* Left: Legal Links */}
-        <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6">
-          <Link href="/privacy-policy" className="hover:underline">
-            Privacy Policy
-          </Link>
-          <Link href="/terms-of-service" className="hover:underline">
-            Terms of Service
-          </Link>
-        </div>
-
-        {/* Middle: Social Links */}
-        <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6">
-          <a
-            href="https://linkedin.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:underline"
-          >
-            LinkedIn↗
+      <div className="mt-12 pt-6 flex flex-col md:flex-row items-center justify-between text-sm text-gray-500 space-y-4 md:space-y-0">
+        {/* Left: Contact Info */}
+        <div className="flex items-center gap-2 md:gap-4">
+          <Mail size={14} className="text-gray-400" />
+          <a href="mailto:support@ncoder.ai" className="hover:underline">
+            info@ncoder.ai
           </a>
-          <a
-            href="https://twitter.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:underline"
-          >
-            X (Twitter)↗
-          </a>
+          {/* <div className="flex items-center gap-2">
+            <Phone size={14} className="text-gray-400" />
+            <a href="tel:+1234567890" className="hover:underline">
+              +1 (234) 567-890
+            </a>
+          </div> */}
         </div>
-
-        {/* Right: Contact Info */}
-        <div className="flex flex-col items-center space-y-2 text-sm">
-          <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-4">
-            <div className="flex items-center gap-2">
-              <Mail size={14} className="text-gray-400" />
-              <a href="mailto:support@ncoder.ai" className="hover:underline">
-                support@ncoder.ai
-              </a>
-            </div>
-            <div className="flex items-center gap-2">
-              <Phone size={14} className="text-gray-400" />
-              <a href="tel:+1234567890" className="hover:underline">
-                +1 (234) 567-890
-              </a>
-            </div>
-          </div>
+        {/* Right: Copyright */}
+        <div className="text-gray-400 text-xs text-center md:text-right">
+          © 2025 nCoder.ai. All rights reserved.
         </div>
       </div>
     </footer>
