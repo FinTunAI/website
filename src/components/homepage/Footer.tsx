@@ -106,7 +106,7 @@ const Footer: React.FC = () => {
                   rel="noopener noreferrer"
                   className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-4 py-2 sm:px-6 sm:py-3 bg-gradient-to-r from-blue-600 to-teal-500 text-white rounded-md font-semibold hover:from-blue-700 hover:to-teal-600 transition-all shadow-md text-sm sm:text-base"
                 >
-                  Join the Waitlist
+                  Join the Waitlist for Exclusive Access
                   <ArrowRight size={14} className="sm:size-[16px]" />
                 </a>
               </div>

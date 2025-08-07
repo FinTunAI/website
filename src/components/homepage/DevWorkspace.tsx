@@ -239,9 +239,9 @@ export default function MobileResponsiveBento() {
         <div className="grid grid-cols-12">
           <div className="col-span-12 md:col-span-5 md:col-start-2">
             <h2 className="text-4xl md:text-5xl lg:text-7xl mb-4">
-              Learn & work <br />
+              How We Integrate   <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-teal-400">
-                together
+                into Your Workflow
               </span>
             </h2>
             <p className="text-lg text-gray-400 max-w-[30ch]">
@@ -258,14 +258,14 @@ export default function MobileResponsiveBento() {
             {/* Card 1 - Mobile */}
             <div className="bg-gray-900 rounded-2xl p-6 flex flex-col gap-5 relative">
               <div className="w-full relative">
-                <h3 className="text-xl md:text-3xl">Smart Codebase Intelligence</h3>
+                <h3 className="text-xl md:text-3xl">Autonomous Code Intelligence</h3>
                 <p className="text-gray-400 text-sm mt-2">
                   AI analyzes your project structure, learns your patterns, and suggests context-aware solutions instantly.
                 </p>
                 <div className="mt-4">
                   <Image
                     src="/images/card01.png"
-                    alt="Smart Codebase Intelligence"
+                    alt="Autonomous Code Intelligence"
                     width={90}
                     height={60}
                     className="ml-auto"
@@ -296,9 +296,9 @@ export default function MobileResponsiveBento() {
               </div>
               <div className="flex flex-col gap-4">
                 <div>
-                  <h3 className="text-xl md:text-3xl">Code on the go</h3>
+                  <h3 className="text-xl md:text-3xl">Collaborate from Anywhere</h3>
                   <p className="text-gray-400 text-sm mt-2">
-                    Write code using natural language instructions with nCoder.ai on mobile.
+                    Leverage AI to troubleshoot issues, review code, or generate solutions using natural language from any device. Stay connected to your team and codebase without being tied to a desk. 
                   </p>
                 </div>
                 <div className="relative">
@@ -331,10 +331,10 @@ export default function MobileResponsiveBento() {
                 </div>
               </div>
               <h3 className="text-xl md:text-3xl">
-                Use nCoder.ai's editor, shell and browser
+                The Unified Enterprise Dev Environment
               </h3>
               <p className="text-gray-400 text-sm">
-                Full development environment with real-time editing, terminal access, and instant preview - all in one platform.
+                A single, AI-native platform that eliminates context switching. Access real-time editing, a powerful GUI, and instant previews—all connected to your codebase intelligence. Simplify your workflow and accelerate development like never before. 
               </p>
               <div className="relative mt-4">
                 <Image
@@ -355,9 +355,9 @@ export default function MobileResponsiveBento() {
               {/* Card 1 - Desktop */}
               <div className="absolute top-1/3 bg-gray-900 rounded-2xl pt-[4vw] pl-[4vw] flex flex-col gap-5 col-span-5 col-start-2 w-full right-4">
                 <div className="w-full relative">
-                  <h3 className="text-xl md:text-3xl">Smart Codebase Intelligence</h3>
+                  <h3 className="text-xl md:text-3xl">Autonomous Code Intelligence</h3>
                   <p className="text-gray-400 text-sm mt-2 max-w-sm">
-                    AI analyzes your project structure, learns your patterns, and suggests context-aware solutions instantly.
+                    Our AI engine understands your codebase faster, and it proactively identifies dependencies, suggests optimizations, and writes context-aware solutions before you even ask. Spend less time untangling legacy code, and more time building. 
                   </p>
                   <Image
                     src="/images/card01.png"
@@ -393,9 +393,9 @@ export default function MobileResponsiveBento() {
                   </div>
                   <div className="flex lg:flex-row flex-col item-start pl-[4vw]">
                     <div className="mt-10">
-                      <h3 className="text-xl md:text-3xl">Code on the go</h3>
+                      <h3 className="text-xl md:text-3xl">Collaborate from Anywhere</h3>
                       <p className="text-gray-400 text-sm mt-2 max-w-sm">
-                        Write code using natural language instructions with nCoder.ai on mobile.
+                        Leverage AI to troubleshoot issues, review code, or generate solutions using natural language from any device. Stay connected to your team and codebase without being tied to a desk.
                       </p>
                     </div>
                     <div className="relative">
@@ -426,10 +426,10 @@ export default function MobileResponsiveBento() {
                     />
                   </div>
                   <h3 className="text-xl md:text-3xl max-w-md">
-                    Use nCoder.ai's editor, shell and browser
+                    The Unified Enterprise Dev Environment
                   </h3>
                   <p className="text-gray-400 text-sm max-w-md">
-                    Full development environment with real-time editing, terminal access, and instant preview - all in one platform.
+                    A single, AI-native platform that eliminates context switching. Access real-time editing, a powerful GUI, and instant previews—all connected to your codebase intelligence. Simplify your workflow and accelerate development like never before. 
                   </p>
                   <div className="relative">
                     <Image

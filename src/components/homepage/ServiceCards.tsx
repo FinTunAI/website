@@ -288,7 +288,7 @@ import { Card, CardContent } from "@/components/ui/card"
 const services = [
   {
     id: 1,
-    title: "Zero-Friction Developer Experience",
+    title: "Advanced Agentic AI Architecture” with “Unprecedented Accuracy & Context-Aware Solutions",
     icon: <Zap className="w-6 h-6" />,
     gradient: "from-blue-400 to-cyan-500",
     items: [

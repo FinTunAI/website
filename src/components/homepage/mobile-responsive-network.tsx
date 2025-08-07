@@ -9,12 +9,12 @@ export default function Component() {
   const [activeBeams, setActiveBeams] = useState<number[]>([])
   const [isAnimating, setIsAnimating] = useState(false)
 
-  const leftLabels = ["S-Controls", "VF pages", "Workflow Rules", "Error Messages", "Formula Errors", "Custom Objects"]
+  const leftLabels = ["S-Controls", "VF pages", "Workflow Rules", "Process Builder", "Formula Errors", "Custom Objects"]
 
   const rightLabels = [
     "Lightning",
     "LWC",
-    "Process Builders",
+    "Flows",
     "Trigger Frameworks",
     "Documentation",
     "Optimized Schema",
@@ -171,7 +171,8 @@ export default function Component() {
             </h1>
           </motion.div>
           <p className="text-blue-200 text-base sm:text-xl px-4">
-            From Salesforce to Enterprise Applications - Unlock the Future of Your Business
+            {/* From Salesforce to Enterprise Applications - Unlock the Future of Your Business */}
+          ncoder.ai: The intelligence to modernize. The power to innovate.
           </p>
         </div>
 

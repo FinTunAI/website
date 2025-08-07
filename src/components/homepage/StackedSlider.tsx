@@ -1154,7 +1154,7 @@ const slides: Slide[] = [
     icon: <Zap className="w-8 h-8" />,
     items: [
       {
-        title: "Legacy System Modernization",
+        title: "Accelerate Legacy Modernization.",
         description: "Transform outdated applications into AI-native platforms",
       },
       {
@@ -1172,7 +1172,7 @@ const slides: Slide[] = [
     ],
     gradient: "from-purple-600 to-blue-600",
     placeholder: {
-      title: "migrate music repo to Python",
+      title: "Migrate Apex Trigger Frameworks to an Efficient Asynchronous Model",
       user: "Dev",
       time: "Aug 15, 2024, 4:01 PM",
       message:
@@ -1187,11 +1187,11 @@ const slides: Slide[] = [
     items: [
       {
         title: "AI-Augmented Development",
-        description: "Context-aware code generation and multi-agent workflows",
+        description: "Our AI analyzes and generates context-aware solutions across multi-agent workflows, transforming your codebase automatically",
       },
       {
         title: "Low-Code/No-Code Interfaces",
-        description: "Streamlined development for all skill levels",
+        description: "Empowering All Developers. Our AI interprets and refactors complex low-code configurations and declarative logic, extending the power to everyone",
       },
       {
         title: "Real-Time Collaboration",
@@ -1204,11 +1204,11 @@ const slides: Slide[] = [
     ],
     gradient: "from-indigo-600 to-purple-600",
     placeholder: {
-      title: "build a collaborative IDE",
-      user: "Dev",
+      title: "AI-powered development",
+      user: "Refactor the OpportunityTriggerHandler Apex class to be more performant and follow bulk best practices.",
       time: "Sep 10, 2024, 10:22 AM",
       message:
-        "Create a collaborative web IDE that integrates AI-driven code suggestions and supports multiple users editing simultaneously.",
+        "Processing complete. I've identified several opportunities for optimization. Would you like me to generate a pull request with the recommended changes?",
       avatar: "D",
     },
   },

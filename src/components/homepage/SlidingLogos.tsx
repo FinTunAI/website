@@ -36,7 +36,7 @@ export function LogoMarqueeSection() {
           Trusted by Industry Leaders
         </p> */}
         <h1 className="text-4xl sm:text-6xl lg:text-7xl my-4 font-bold">
-          <span>Tools we work with </span>
+          <span>Our Domain Expertise </span>
           {/* <span className="bg-gradient-to-r from-blue-400 to-green-400 bg-clip-text text-transparent">
             nCoder.ai 
           </span> */}
