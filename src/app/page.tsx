@@ -19,6 +19,7 @@ import TestimonialSection from "@/components/homepage/testimonials";
 import { AITransformationFlow } from "@/components/homepage/ai-transformation-flow";
 import Component from "@/components/homepage/mobile-responsive-network"
 import { MobileResponsiveDevinUI } from "@/components/homepage/DevUI";
+import { ArchitectureDiagram } from "@/components/homepage/architecture-diagram";
 
 
 
@@ -65,6 +66,9 @@ export default function HomePage() {
   </section>
       <section data-nav-theme="dark">
     <DevWorkspace />
+  </section>
+  <section data-nav-theme="white">
+    <ArchitectureDiagram />
   </section>
       {/* <CompetitiveAdvantages /> */}
       {/* <DevinUIPreview /> */}
