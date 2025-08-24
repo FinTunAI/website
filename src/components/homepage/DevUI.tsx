@@ -1617,9 +1617,364 @@
 //   )
 // }
 
+// "use client"
+
+// import { useState, useRef, useEffect, useMemo } from "react"
+// import { Code, Bug, Cpu } from 'lucide-react'
+// import { motion, AnimatePresence } from "framer-motion"
+// import { Button } from "@/components/ui/button"
+
+// // Sticky header text
+// export function StackedText({ isVisible }: { isVisible: boolean }) {
+//   return (
+//     <motion.h1
+//       initial={{ opacity: 1, y: 0 }}
+//       animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : -20 }}
+//       transition={{ duration: 0.5, ease: "easeOut" }}
+//       className="
+//         sticky top-20 md:top-40
+//         text-2xl md:text-4xl lg:text-6xl text-center text-black/90
+//         pointer-events-none max-w-xl mx-auto px-4 z-30 {/* Added z-30 here */}
+//       "
+//     >
+//       Our Domain Expertise
+//     </motion.h1>
+//   )
+// }
+
+// // Labels for the 7 columns
+// const columnLabels = [
+//   "Custom Code & Logic",
+//   "Data & Integration",
+//   "Low-Code & Automation",
+//   "Core Cloud Products",
+//   "LLMs",
+//   "Fine-tuning",
+//   "Agentic Framework",
+// ]
+
+// // Cards content per column
+// const cardsPerColumn: Record<string, string[]> = {
+//   "Custom Code & Logic": ["Apex", "Lightning Web Components", "Aura Components", "Visualforce"],
+//   "Data & Integration": ["MuleSoft", "Tableau", "Data Cloud", "Salesforce Connect"],
+//   "Low-Code & Automation": ["Flow", "OmniStudio", "Einstein AI", "Process Builder"],
+//   "Core Cloud Products": ["Sales Cloud", "Service Cloud", "Marketing Cloud", "Commerce Cloud"],
+//   "LLMs": ["OpenAI", "Claude", "Gemini", "Olama"],
+//   "Fine-tuning": ["RLHF", "Evaluation", "Custom Training", "Prompt Engineering"],
+//   "Agentic Framework": ["In-built Agents", "Build Agents", "Automation Scripts", "Bot Framework"],
+// }
+
+// function GridCards({ triggerRef, revealed }: { triggerRef: React.RefObject<HTMLDivElement>; revealed: boolean }) {
+//   return (
+//     <div ref={triggerRef} className="relative z-10 pt-20 md:pt-40 min-h-[80vh] md:min-h-[120vh] bg-black pb-20">
+//       {/* Desktop Grid */}
+//       <div className="hidden md:grid grid-cols-7 gap-4 px-6 pt-16">
+//         {columnLabels.map((label, colIdx) => (
+//           <div key={label} className="flex flex-col gap-4">
+//             <h3 className="text-center font-semibold text-lg mb-2">{label}</h3>
+//             {cardsPerColumn[label].map((cardText, idx) => (
+//               <motion.div
+//                 key={idx}
+//                 initial={{ opacity: 0, y: 20 }}
+//                 animate={revealed ? { opacity: 1, y: 0 } : {}}
+//                 transition={{ delay: revealed ? (colIdx * 0.05 + idx * 0.03) : 0, duration: 0.5 }}
+//                 whileHover={{ scale: 1.03, y: -5 }}
+//                 className="h-[120px] flex items-center justify-center text-center border border-gray-300 rounded-md shadow-sm bg-slate-100 hover:bg-gradient-to-r hover:from-blue-500 hover:to-teal-400 transition-all duration-500 cursor-pointer"
+//               >
+//                 <span className="text-gray-700 font-medium group-hover:text-white px-2">{cardText}</span>
+//               </motion.div>
+//             ))}
+//           </div>
+//         ))}
+//       </div>
+//       {/* Mobile Grid */}
+//       <div className="block md:hidden grid grid-cols-2 gap-4 px-4 pt-12">
+//         {columnLabels.map((label, colIdx) => (
+//           <div key={label} className="flex flex-col gap-2">
+//             <h3 className="text-center font-semibold text-base mb-1">{label}</h3>
+//             {cardsPerColumn[label].map((cardText, idx) => (
+//               <motion.div
+//                 key={idx}
+//                 initial={{ opacity: 0, y: 20 }}
+//                 animate={revealed ? { opacity: 1, y: 0 } : {}}
+//                 transition={{ delay: revealed ? (colIdx * 0.05 + idx * 0.03) : 0, duration: 0.5 }}
+//                 whileHover={{ scale: 1.03, y: -5 }}
+//                 className="h-[80px] flex items-center justify-center text-center border border-gray-300 rounded-md shadow-sm bg-slate-100 hover:bg-gradient-to-r hover:from-blue-500 hover:to-teal-400 transition-all duration-500 cursor-pointer"
+//               >
+//                 <span className="text-gray-700 font-medium group-hover:text-white px-2">{cardText}</span>
+//               </motion.div>
+//             ))}
+//           </div>
+//         ))}
+//       </div>
+//     </div>
+//   )
+// }
+
+// // Slides for the slider below the grid
+// const slides = [
+//   {
+//     id: 1,
+//     title: "Data Engineering + Analysis",
+//     items: ["Data warehouse migrations", "ETL development", "Data cleaning and preprocessing"],
+//     gradient: "from-blue-500 to-teal-400",
+//     placeholder: {
+//       title: "Price Visualization + Analysis",
+//       user: "nCoder.ai",
+//       time: "Aug 21, 2024, 7:01 AM",
+//       message: "I have completed the requested visualizations",
+//       avatar: "N",
+//     },
+//   },
+//   {
+//     id: 2,
+//     title: "Code Migration + Refactors",
+//     items: ["Language migrations", "Version upgrades", "Codebase restructuring"],
+//     gradient: "from-purple-500 to-blue-400",
+//     placeholder: {
+//       title: "Migrate Apex Trigger Frameworks",
+//       user: "Dev",
+//       time: "Aug 15, 2024, 4:01 PM",
+//       message: "Migrate music generation repo from Java 8 to Python 3.11",
+//       avatar: "D",
+//     },
+//   },
+//   {
+//     id: 3,
+//     title: "Bugs + Backlog Work",
+//     items: ["Ticket resolution", "CI/CD", "Backlog PR creation"],
+//     gradient: "from-blue-600 to-indigo-400",
+//     placeholder: {
+//       title: "Invalid auto-triage link",
+//       user: "nCoder.ai",
+//       time: "May 28, 2024, 10:23 AM",
+//       message: "Investigating invalid auto-triage link and exceptions.",
+//       avatar: "N",
+//     },
+//   },
+// ]
+
+// function MobileVerticalSlider({ revealed }: { revealed: boolean }) {
+//   if (!revealed) return null
+//   return (
+//     <div className="block md:hidden relative bg-black pb-20 z-20">
+//       <div className="space-y-4 px-4">
+//         {slides.map((slide, idx) => (
+//           <motion.div
+//             key={slide.id}
+//             initial={{ opacity: 0, y: 50 }}
+//             animate={{ opacity: 1, y: 0 }}
+//             transition={{ delay: idx * 0.2, duration: 0.6 }}
+//             className={`bg-gradient-to-r ${slide.gradient} rounded-2xl overflow-hidden transition-all duration-300`}
+//           >
+//             <div className="p-6">
+//               <h2 className="text-xl font-light text-white mb-4">{slide.title}</h2>
+//               <ul className="space-y-2 mb-6">
+//                 {slide.items.map((item, i) => (
+//                   <li key={i} className="text-white/90 text-sm flex items-center space-x-2">
+//                     <span className="w-1.5 h-1.5 bg-white rounded-full inline-block" />
+//                     <span>{item}</span>
+//                   </li>
+//                 ))}
+//               </ul>
+//               <div className="bg-white rounded-lg shadow-lg p-4">
+//                 <div className="flex items-center justify-between mb-3">
+//                   <h3 className="font-medium text-sm text-gray-900">{slide.placeholder.title}</h3>
+//                 </div>
+//                 <div className="space-y-3">
+//                   <div className="flex items-start space-x-2">
+//                     <div className="w-6 h-6 bg-blue-500 rounded-full text-white text-xs flex items-center justify-center">
+//                       {slide.placeholder.avatar}
+//                     </div>
+//                     <div className="flex-1">
+//                       <div className="text-xs text-gray-500 mb-1 flex space-x-2">
+//                         <span>{slide.placeholder.user}</span>
+//                         <span>{slide.placeholder.time}</span>
+//                       </div>
+//                       <p className="text-sm text-gray-700 leading-relaxed">{slide.placeholder.message}</p>
+//                     </div>
+//                   </div>
+//                 </div>
+//                 <Button className="w-full mt-4 bg-blue-500 hover:bg-blue-600 text-white text-xs sm:text-sm">
+//                   Start conversation with nCoder.ai
+//                 </Button>
+//               </div>
+//             </div>
+//           </motion.div>
+//         ))}
+//       </div>
+//     </div>
+//   )
+// }
+
+// function DesktopOverlay({ revealed, scrollProgress }: { revealed: boolean; scrollProgress: number }) {
+//   const [hovered, setHovered] = useState<number | null>(null)
+//   const showSlides = revealed && scrollProgress > 0.3
+
+//   return (
+//     <AnimatePresence>
+//       {revealed && (
+//         <div className="hidden md:block relative bg-black pb-20 min-h-screen">
+//           <div className="sticky top-20 left-0 right-0 z-30 flex justify-center mx-auto gap-4 pointer-events-auto h-[60vh] max-w-6xl">
+//             {showSlides ? (
+//               <motion.div
+//                 initial={{ opacity: 0, scale: 0.8 }}
+//                 animate={{ opacity: 1, scale: 1 }}
+//                 exit={{ opacity: 0, scale: 0.8 }}
+//                 transition={{ duration: 0.6, ease: "easeOut" }}
+//                 className="flex gap-4 w-full"
+//               >
+//                 {slides.map((slide, idx) => {
+//                   const isHovered = hovered === idx || (hovered === null && idx === 1)
+//                   return (
+//                     <motion.div
+//                       key={slide.id}
+//                       initial={{ opacity: 0, y: -50 }}
+//                       animate={{ opacity: 1, y: 0 }}
+//                       transition={{ delay: idx * 0.1, duration: 0.6 }}
+//                       className={`bg-gradient-to-r ${slide.gradient} rounded-2xl transition-all duration-500 ease-in-out cursor-pointer overflow-hidden flex-shrink-0 flex flex-col ${
+//                         isHovered ? "flex-[3]" : "flex-[1]"
+//                       } min-h-[400px]`}
+//                       onMouseEnter={() => setHovered(idx)}
+//                       onMouseLeave={() => setHovered(null)}
+//                     >
+//                       {isHovered ? (
+//                         <div className="p-6 flex flex-col justify-between h-full">
+//                           <div>
+//                             <h2 className="text-2xl font-light text-white mb-3">{slide.title}</h2>
+//                             <ul className="space-y-1">
+//                               {slide.items.map((item, i) => (
+//                                 <li key={i} className="text-white/90 text-base flex items-center space-x-2">
+//                                   <span className="w-2 h-2 bg-white rounded-full inline-block" />
+//                                   <span>{item}</span>
+//                                 </li>
+//                               ))}
+//                             </ul>
+//                           </div>
+//                           <div className="bg-white rounded-lg shadow-lg p-3 mt-4">
+//                             <div className="flex items-center justify-between mb-2">
+//                               <h3 className="font-medium text-sm text-gray-900">{slide.placeholder.title}</h3>
+//                             </div>
+//                             <div className="space-y-2">
+//                               <div className="flex items-start space-x-2">
+//                                 <div className="w-6 h-6 bg-blue-500 rounded-full text-white text-xs flex items-center justify-center">
+//                                   {slide.placeholder.avatar}
+//                                 </div>
+//                                 <div className="flex-1">
+//                                   <div className="text-xs text-gray-500 mb-1 flex space-x-2">
+//                                     <span>{slide.placeholder.user}</span>
+//                                     <span>{slide.placeholder.time}</span>
+//                                   </div>
+//                                   <p className="text-sm text-gray-700 leading-relaxed">{slide.placeholder.message}</p>
+//                                 </div>
+//                               </div>
+//                             </div>
+//                             <Button className="w-full mt-3 bg-blue-500 hover:bg-blue-600 text-white text-xs sm:text-sm">
+//                               Start conversation with nCoder.ai
+//                             </Button>
+//                           </div>
+//                         </div>
+//                       ) : (
+//                         <div className="flex items-center justify-center h-full">
+//                           <h2 className="text-white text-lg font-light px-2 text-center">{slide.title}</h2>
+//                         </div>
+//                       )}
+//                     </motion.div>
+//                   )
+//                 })}
+//               </motion.div>
+//             ) : (
+//               <motion.div
+//                 initial={{ opacity: 0, scale: 0.8 }}
+//                 animate={{ opacity: 1, scale: 1 }}
+//                 exit={{ opacity: 0, scale: 0.8 }}
+//                 transition={{ duration: 0.6, ease: "easeOut" }}
+//                 className="flex gap-4 justify-center items-center"
+//               >
+//                 <motion.div
+//                   initial={{ opacity: 0, scale: 0.8 }}
+//                   animate={{ opacity: 1, scale: 1 }}
+//                   transition={{ delay: 0.1, duration: 0.5 }}
+//                   className="w-48 h-48 group flex items-center justify-center border border-white rounded-md shadow-lg bg-slate-100 hover:bg-gradient-to-r hover:from-blue-500 hover:to-teal-400 transition-all duration-500"
+//                 >
+//                   <Code className="w-12 h-12 text-slate-400 group-hover:text-white transition-colors duration-500" />
+//                 </motion.div>
+//                 <motion.div
+//                   initial={{ opacity: 0, scale: 0.8 }}
+//                   animate={{ opacity: 1, scale: 1 }}
+//                   transition={{ delay: 0.2, duration: 0.5 }}
+//                   className="w-64 h-48 group flex items-center justify-center border border-white rounded-md shadow-lg bg-slate-100 hover:bg-gradient-to-r hover:from-blue-500 hover:to-teal-400 transition-all duration-500"
+//                 >
+//                   <Cpu className="w-12 h-12 text-slate-400 group-hover:text-white transition-colors duration-500" />
+//                 </motion.div>
+//                 <motion.div
+//                   initial={{ opacity: 0, scale: 0.8 }}
+//                   animate={{ opacity: 1, scale: 1 }}
+//                   transition={{ delay: 0.3, duration: 0.5 }}
+//                   className="w-48 h-48 group flex items-center justify-center border border-white rounded-md shadow-lg bg-slate-100 hover:bg-gradient-to-r hover:from-blue-500 hover:to-teal-400 transition-all duration-500"
+//                 >
+//                   <Bug className="w-12 h-12 text-slate-400 group-hover:text-white transition-colors duration-500" />
+//                 </motion.div>
+//               </motion.div>
+//             )}
+//           </div>
+//         </div>
+//       )}
+//     </AnimatePresence>
+//   )
+// }
+
+// // Main Page Component
+// export function MobileResponsiveDevinUI() {
+//   const [revealed, setRevealed] = useState(false) // For card animations
+//   const [isHeaderVisible, setIsHeaderVisible] = useState(true) // For text visibility
+//   const [scrollProgress, setScrollProgress] = useState(0)
+//   const triggerRef = useRef<HTMLDivElement>(null) // Ref for GridCards section
+
+//   useEffect(() => {
+//     const handler = () => {
+//       if (!triggerRef.current) return
+
+//       const rect = triggerRef.current.getBoundingClientRect()
+//       const windowHeight = window.innerHeight
+//       const documentHeight = document.documentElement.scrollHeight
+//       const scrollTop = window.scrollY
+
+//       // Calculate scroll progress for the entire document
+//       const progress = scrollTop / (documentHeight - windowHeight)
+//       setScrollProgress(progress)
+
+//       // Logic for card animations (when GridCards section is in view)
+//       const triggerTopAbsolute = scrollTop + rect.top;
+//       const isCardsRevealed = scrollTop + windowHeight / 2 > triggerTopAbsolute;
+//       setRevealed(isCardsRevealed);
+
+//       // Logic for header text visibility
+//       // The stickyTextOffset corresponds to the 'top-20' (80px) or 'top-40' (160px) of the sticky header.
+//       const stickyTextOffset = window.innerWidth < 768 ? 80 : 160;
+//       // The header should be visible if the top of the GridCards is below the sticky header's position.
+//       const shouldHeaderBeVisible = rect.top > stickyTextOffset;
+//       setIsHeaderVisible(shouldHeaderBeVisible);
+//     }
+
+//     window.addEventListener("scroll", handler, { passive: true })
+//     handler() // Call handler once to set initial state
+//     return () => window.removeEventListener("scroll", handler)
+//   }, [])
+
+//   return (
+//     <section data-nav-theme="white" id="devui" className="relative bg-white pt-[120px] md:pt-[180px]"> {/* Added padding-top here */}
+//       <StackedText isVisible={isHeaderVisible} />
+//       <GridCards triggerRef={triggerRef} revealed={revealed} />
+//       <MobileVerticalSlider revealed={revealed} />
+//       <DesktopOverlay revealed={revealed} scrollProgress={scrollProgress} />
+//     </section>
+//   )
+// }
+
 "use client"
 
-import { useState, useRef, useEffect, useMemo } from "react"
+import { useState, useRef, useEffect } from "react"
 import { Code, Bug, Cpu } from 'lucide-react'
 import { motion, AnimatePresence } from "framer-motion"
 import { Button } from "@/components/ui/button"
@@ -1633,8 +1988,8 @@ export function StackedText({ isVisible }: { isVisible: boolean }) {
       transition={{ duration: 0.5, ease: "easeOut" }}
       className="
         sticky top-20 md:top-40
-        text-2xl md:text-4xl lg:text-6xl text-center text-black/90
-        pointer-events-none max-w-xl mx-auto px-4 z-30 {/* Added z-30 here */}
+        text-2xl md:text-4xl lg:text-6xl text-center text-white
+        pointer-events-none max-w-xl mx-auto px-4 z-30
       "
     >
       Our Domain Expertise
@@ -1666,12 +2021,12 @@ const cardsPerColumn: Record<string, string[]> = {
 
 function GridCards({ triggerRef, revealed }: { triggerRef: React.RefObject<HTMLDivElement>; revealed: boolean }) {
   return (
-    <div ref={triggerRef} className="relative z-10 pt-20 md:pt-40 min-h-[80vh] md:min-h-[120vh] bg-white pb-20">
+    <div ref={triggerRef} className="relative z-10 pt-20 md:pt-40 min-h-[80vh] md:min-h-[120vh] bg-black pb-20">
       {/* Desktop Grid */}
       <div className="hidden md:grid grid-cols-7 gap-4 px-6 pt-16">
         {columnLabels.map((label, colIdx) => (
           <div key={label} className="flex flex-col gap-4">
-            <h3 className="text-center font-semibold text-lg mb-2">{label}</h3>
+            <h3 className="text-center font-semibold text-lg mb-2 text-white">{label}</h3>
             {cardsPerColumn[label].map((cardText, idx) => (
               <motion.div
                 key={idx}
@@ -1679,7 +2034,7 @@ function GridCards({ triggerRef, revealed }: { triggerRef: React.RefObject<HTMLD
                 animate={revealed ? { opacity: 1, y: 0 } : {}}
                 transition={{ delay: revealed ? (colIdx * 0.05 + idx * 0.03) : 0, duration: 0.5 }}
                 whileHover={{ scale: 1.03, y: -5 }}
-                className="h-[120px] flex items-center justify-center text-center border border-gray-300 rounded-md shadow-sm bg-slate-100 hover:bg-gradient-to-r hover:from-blue-500 hover:to-teal-400 transition-all duration-500 cursor-pointer"
+                className="group h-[120px] flex items-center justify-center text-center border border-gray-300 rounded-md shadow-sm bg-slate-100 hover:bg-blue-600 transition-all duration-500 cursor-pointer"
               >
                 <span className="text-gray-700 font-medium group-hover:text-white px-2">{cardText}</span>
               </motion.div>
@@ -1691,7 +2046,7 @@ function GridCards({ triggerRef, revealed }: { triggerRef: React.RefObject<HTMLD
       <div className="block md:hidden grid grid-cols-2 gap-4 px-4 pt-12">
         {columnLabels.map((label, colIdx) => (
           <div key={label} className="flex flex-col gap-2">
-            <h3 className="text-center font-semibold text-base mb-1">{label}</h3>
+            <h3 className="text-center font-semibold text-base mb-1 text-white">{label}</h3>
             {cardsPerColumn[label].map((cardText, idx) => (
               <motion.div
                 key={idx}
@@ -1699,7 +2054,7 @@ function GridCards({ triggerRef, revealed }: { triggerRef: React.RefObject<HTMLD
                 animate={revealed ? { opacity: 1, y: 0 } : {}}
                 transition={{ delay: revealed ? (colIdx * 0.05 + idx * 0.03) : 0, duration: 0.5 }}
                 whileHover={{ scale: 1.03, y: -5 }}
-                className="h-[80px] flex items-center justify-center text-center border border-gray-300 rounded-md shadow-sm bg-slate-100 hover:bg-gradient-to-r hover:from-blue-500 hover:to-teal-400 transition-all duration-500 cursor-pointer"
+                className="group h-[80px] flex items-center justify-center text-center border border-gray-300 rounded-md shadow-sm bg-slate-100 hover:bg-blue-600 transition-all duration-500 cursor-pointer"
               >
                 <span className="text-gray-700 font-medium group-hover:text-white px-2">{cardText}</span>
               </motion.div>
@@ -1717,7 +2072,7 @@ const slides = [
     id: 1,
     title: "Data Engineering + Analysis",
     items: ["Data warehouse migrations", "ETL development", "Data cleaning and preprocessing"],
-    gradient: "from-blue-500 to-teal-400",
+    gradient: "from-blue-600 to-blue-700",
     placeholder: {
       title: "Price Visualization + Analysis",
       user: "nCoder.ai",
@@ -1730,7 +2085,7 @@ const slides = [
     id: 2,
     title: "Code Migration + Refactors",
     items: ["Language migrations", "Version upgrades", "Codebase restructuring"],
-    gradient: "from-purple-500 to-blue-400",
+    gradient: "from-blue-600 to-blue-700",
     placeholder: {
       title: "Migrate Apex Trigger Frameworks",
       user: "Dev",
@@ -1743,7 +2098,7 @@ const slides = [
     id: 3,
     title: "Bugs + Backlog Work",
     items: ["Ticket resolution", "CI/CD", "Backlog PR creation"],
-    gradient: "from-blue-600 to-indigo-400",
+    gradient: "from-blue-600 to-blue-700",
     placeholder: {
       title: "Invalid auto-triage link",
       user: "nCoder.ai",
@@ -1757,7 +2112,7 @@ const slides = [
 function MobileVerticalSlider({ revealed }: { revealed: boolean }) {
   if (!revealed) return null
   return (
-    <div className="block md:hidden relative bg-white pb-20 z-20">
+    <div className="block md:hidden relative bg-black pb-20 z-20">
       <div className="space-y-4 px-4">
         {slides.map((slide, idx) => (
           <motion.div
@@ -1814,7 +2169,7 @@ function DesktopOverlay({ revealed, scrollProgress }: { revealed: boolean; scrol
   return (
     <AnimatePresence>
       {revealed && (
-        <div className="hidden md:block relative bg-white pb-20 min-h-screen">
+        <div className="hidden md:block relative bg-black pb-20 min-h-screen">
           <div className="sticky top-20 left-0 right-0 z-30 flex justify-center mx-auto gap-4 pointer-events-auto h-[60vh] max-w-6xl">
             {showSlides ? (
               <motion.div
@@ -1895,7 +2250,7 @@ function DesktopOverlay({ revealed, scrollProgress }: { revealed: boolean; scrol
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ delay: 0.1, duration: 0.5 }}
-                  className="w-48 h-48 group flex items-center justify-center border border-white rounded-md shadow-lg bg-slate-100 hover:bg-gradient-to-r hover:from-blue-500 hover:to-teal-400 transition-all duration-500"
+                  className="w-48 h-48 group flex items-center justify-center border border-white rounded-md shadow-lg bg-slate-100 hover:bg-blue-600 transition-all duration-500"
                 >
                   <Code className="w-12 h-12 text-slate-400 group-hover:text-white transition-colors duration-500" />
                 </motion.div>
@@ -1903,7 +2258,7 @@ function DesktopOverlay({ revealed, scrollProgress }: { revealed: boolean; scrol
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ delay: 0.2, duration: 0.5 }}
-                  className="w-64 h-48 group flex items-center justify-center border border-white rounded-md shadow-lg bg-slate-100 hover:bg-gradient-to-r hover:from-blue-500 hover:to-teal-400 transition-all duration-500"
+                  className="w-64 h-48 group flex items-center justify-center border border-white rounded-md shadow-lg bg-slate-100 hover:bg-blue-600 transition-all duration-500"
                 >
                   <Cpu className="w-12 h-12 text-slate-400 group-hover:text-white transition-colors duration-500" />
                 </motion.div>
@@ -1911,7 +2266,7 @@ function DesktopOverlay({ revealed, scrollProgress }: { revealed: boolean; scrol
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ delay: 0.3, duration: 0.5 }}
-                  className="w-48 h-48 group flex items-center justify-center border border-white rounded-md shadow-lg bg-slate-100 hover:bg-gradient-to-r hover:from-blue-500 hover:to-teal-400 transition-all duration-500"
+                  className="w-48 h-48 group flex items-center justify-center border border-white rounded-md shadow-lg bg-slate-100 hover:bg-blue-600 transition-all duration-500"
                 >
                   <Bug className="w-12 h-12 text-slate-400 group-hover:text-white transition-colors duration-500" />
                 </motion.div>
@@ -1950,20 +2305,18 @@ export function MobileResponsiveDevinUI() {
       setRevealed(isCardsRevealed);
 
       // Logic for header text visibility
-      // The stickyTextOffset corresponds to the 'top-20' (80px) or 'top-40' (160px) of the sticky header.
       const stickyTextOffset = window.innerWidth < 768 ? 80 : 160;
-      // The header should be visible if the top of the GridCards is below the sticky header's position.
       const shouldHeaderBeVisible = rect.top > stickyTextOffset;
       setIsHeaderVisible(shouldHeaderBeVisible);
     }
 
     window.addEventListener("scroll", handler, { passive: true })
-    handler() // Call handler once to set initial state
+    handler() // initial
     return () => window.removeEventListener("scroll", handler)
   }, [])
 
   return (
-    <section data-nav-theme="white" id="devui" className="relative bg-white pt-[120px] md:pt-[180px]"> {/* Added padding-top here */}
+    <section data-nav-theme="white" id="devui" className="relative bg-black pt-[120px] md:pt-[180px]">
       <StackedText isVisible={isHeaderVisible} />
       <GridCards triggerRef={triggerRef} revealed={revealed} />
       <MobileVerticalSlider revealed={revealed} />

@@ -61,18 +61,18 @@ export default function HomePage() {
        <section data-nav-theme="white">
     <StackedSlider />
   </section>
-      <section data-nav-theme="white">
+      <section data-nav-theme="dark">
     <ServiceCards />
   </section>
-      <section data-nav-theme="dark">
+      {/* <section data-nav-theme="dark">
     <DevWorkspace />
-  </section>
+  </section> */}
   <section data-nav-theme="white">
     <ArchitectureDiagram />
   </section>
       {/* <CompetitiveAdvantages /> */}
       {/* <DevinUIPreview /> */}
-      <section data-nav-theme="white">
+      <section data-nav-theme="dark">
       <MobileResponsiveDevinUI />
       </section>
       {/* <LogoMarqueeSection /> */}

@@ -356,7 +356,7 @@ const services = [
 
 export default function ServiceCards() {
   return (
-    <section className="py-16 sm:py-24 lg:py-32 px-4 sm:px-6 lg:px-8 relative bg-gradient-to-br from-gray-50 via-white to-gray-50">
+    <section className="py-16 sm:py-24 lg:py-32 px-4 sm:px-6 lg:px-8 relative bg-black">
       <div className="max-w-7xl mx-auto relative">
         {/* Section Header */}
         <div className="text-center mb-12 sm:mb-16 lg:mb-20">
@@ -365,11 +365,11 @@ export default function ServiceCards() {
               <Sparkles className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 text-gray-700 group-hover:scale-110 transition-transform duration-300" />
               <div className="absolute inset-0 bg-gray-700 blur-lg opacity-20 group-hover:opacity-30 transition-opacity duration-300" />
             </div> */}
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-bold ml-3 sm:ml-4 lg:ml-6 text-gray-900">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-bold ml-3 sm:ml-4 lg:ml-6 text-white">
               Our Core Services
             </h2>
           </div>
-          <p className="text-base sm:text-lg lg:text-xl text-gray-600 max-w-4xl mx-auto font-light px-4">
+          <p className="text-base sm:text-lg lg:text-xl text-white max-w-4xl mx-auto font-light px-4">
             Six foundational pillars that power our AI-driven modernization platform and deliver exceptional results.
           </p>
         </div>

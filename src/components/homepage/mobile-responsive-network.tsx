@@ -143,7 +143,8 @@ export default function Component() {
   )
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-purple-900 flex items-center justify-center p-4 sm:p-8 relative overflow-hidden">
+    // <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-purple-900 flex items-center justify-center p-4 sm:p-8 relative overflow-hidden">
+    <div className="min-h-screen bg-black flex items-center justify-center p-4 sm:p-8 relative overflow-hidden">
       {/* Background Grid */}
       <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:30px_30px] sm:bg-[size:50px_50px] opacity-20"></div>
 
@@ -197,6 +198,7 @@ export default function Component() {
                   activeBeams.includes(index) ? "border-blue-400 shadow-blue-400/50 bg-blue-500/30" : ""
                 }`}
               >
+             
                 <div className="flex items-center gap-3">
                   <motion.div
                     className="w-3 h-3 bg-blue-400 rounded-full"

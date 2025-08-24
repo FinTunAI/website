@@ -1170,7 +1170,7 @@ const slides: Slide[] = [
         description: "30–50% faster modernization cycles",
       },
     ],
-    gradient: "from-purple-600 to-blue-600",
+    gradient: "from-indigo-600 to-indigo-700",
     placeholder: {
       title: "Migrate Apex Trigger Frameworks to an Efficient Asynchronous Model",
       user: "Dev",
@@ -1202,7 +1202,7 @@ const slides: Slide[] = [
         description: "3x faster development cycles, 60% fewer bugs",
       },
     ],
-    gradient: "from-indigo-600 to-purple-600",
+    gradient: "from-indigo-600 to-indigo-700",
     placeholder: {
       title: "AI-powered development",
       user: "Refactor the OpportunityTriggerHandler Apex class to be more performant and follow bulk best practices.",
@@ -1306,9 +1306,12 @@ export default function ImprovedMobileSlider() {
 
             <h1 className="text-2xl font-black leading-tight tracking-tight mb-4">
               <span className="block text-gray-900">AI-Native Platform</span>
-              <span className="block bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
-                for Enterprise Modernization
-              </span>
+              {/* <span className="block bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent"> */}
+              {/* blue */}
+                <span className="block bg-blue-600 bg-clip-text text-transparent">
+  for Enterprise Modernization
+</span>
+
             </h1>
 
             <p className="text-sm text-gray-600 leading-relaxed font-light px-2">
@@ -1396,7 +1399,7 @@ export default function ImprovedMobileSlider() {
                           {/* Simplified Chat Message */}
                           <div className="space-y-2 mb-3">
                             <div className="flex items-start space-x-2">
-                              <div className="w-5 h-5 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full text-white flex items-center justify-center font-semibold text-xs flex-shrink-0">
+                              <div className="w-5 h-5 bg-blue-600 rounded-full text-white flex items-center justify-center font-semibold text-xs flex-shrink-0">
                                 {slide.placeholder.avatar}
                               </div>
                               <div className="flex-1 min-w-0">
@@ -1415,7 +1418,8 @@ export default function ImprovedMobileSlider() {
                           {/* Compact Preview Area */}
                           <div className="bg-gradient-to-br from-gray-50 to-gray-100 rounded-md p-3 flex items-center justify-center h-20 mb-3">
                             <div className="text-center text-gray-600">
-                              <div className="w-8 h-8 mx-auto mb-1 bg-gradient-to-r from-purple-600 to-blue-600 rounded-md flex items-center justify-center">
+                              {/* <div className="w-8 h-8 mx-auto mb-1 bg-gradient-to-r from-purple-600 to-blue-600 rounded-md flex items-center justify-center"> */}
+                                <div className="w-8 h-8 mx-auto mb-1 bg-blue-600 rounded-md flex items-center justify-center">
                                 <CheckCircle className="w-4 h-4 text-white" />
                               </div>
                               <p className="text-xs font-semibold text-gray-900">AI Preview</p>
@@ -1432,7 +1436,8 @@ export default function ImprovedMobileSlider() {
                           </div>
 
                           {/* Responsive CTA Button */}
-                          <Button className="w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white text-xs font-semibold py-2 rounded-md transition-all duration-300 active:scale-[0.98]">
+                          {/* <Button className="w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white text-xs font-semibold py-2 rounded-md transition-all duration-300 active:scale-[0.98]"> */}
+                            <Button className="w-full bg-blue-600 hover:to-blue-700 text-white text-xs font-semibold py-2 rounded-md transition-all duration-300 active:scale-[0.98]">
                             <span className="inline sm:hidden">Try Now</span>
                             <span className="hidden sm:inline">Start with nCoder.ai</span>
                             <ExternalLink className="w-3 h-3 ml-1" />
@@ -1465,7 +1470,7 @@ export default function ImprovedMobileSlider() {
                 onClick={() => setExpandedMobileSlide(index)}
                 className={`w-2 h-2 rounded-full transition-all duration-300 ${
                   index === expandedMobileSlide 
-                    ? 'bg-purple-600 w-6' 
+                    ? 'bg-blue-600 w-6' 
                     : 'bg-gray-300 hover:bg-gray-400'
                 }`}
                 aria-label={`Go to ${slides[index].title}`}
@@ -1492,9 +1497,11 @@ export default function ImprovedMobileSlider() {
 
           <h1 className="text-4xl md:text-5xl lg:text-7xl font-black leading-[0.9] tracking-tight mb-6 lg:mb-8">
             <span className="block text-gray-900">AI-Native Platform</span>
-            <span className="block bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
-              for Enterprise Modernization
-            </span>
+            {/* <span className="block bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent"> */}
+           <span className="block bg-blue-600 bg-clip-text text-transparent">
+  for Enterprise Modernization
+</span>
+
           </h1>
 
           <p className="text-lg md:text-xl lg:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed font-light">
@@ -1606,7 +1613,8 @@ export default function ImprovedMobileSlider() {
                               {/* Chat Message */}
                               <div className="space-y-3 lg:space-y-4 mb-4 lg:mb-6">
                                 <div className="flex items-start space-x-2 lg:space-x-3">
-                                  <div className="w-6 h-6 lg:w-8 lg:h-8 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full text-white flex items-center justify-center font-semibold text-xs lg:text-sm">
+                                  {/* <div className="w-6 h-6 lg:w-8 lg:h-8 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full text-white flex items-center justify-center font-semibold text-xs lg:text-sm"> */}
+                                    <div className="w-6 h-6 lg:w-8 lg:h-8 bg-blue-600 rounded-full text-white flex items-center justify-center font-semibold text-xs lg:text-sm">
                                     {slide.placeholder.avatar}
                                   </div>
                                   <div className="flex-1">
@@ -1624,7 +1632,8 @@ export default function ImprovedMobileSlider() {
                               {/* Preview Area */}
                               <div className="bg-gradient-to-br from-gray-50 to-gray-100 rounded-lg lg:rounded-xl p-4 lg:p-6 flex items-center justify-center h-32 lg:h-48 mb-3 lg:mb-4">
                                 <div className="text-center text-gray-600">
-                                  <div className="w-12 h-12 lg:w-16 lg:h-16 mx-auto mb-2 lg:mb-3 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg lg:rounded-xl flex items-center justify-center">
+                                  {/* <div className="w-12 h-12 lg:w-16 lg:h-16 mx-auto mb-2 lg:mb-3 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg lg:rounded-xl flex items-center justify-center"> */}
+                                   <div className="w-12 h-12 lg:w-16 lg:h-16 mx-auto mb-2 lg:mb-3 bg-blue-600 rounded-lg lg:rounded-xl flex items-center justify-center">
                                     <svg
                                       className="w-6 h-6 lg:w-8 lg:h-8 text-white"
                                       fill="none"
@@ -1654,7 +1663,7 @@ export default function ImprovedMobileSlider() {
                               </div>
 
                               {/* CTA Button */}
-                              <Button className="w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white text-xs lg:text-sm font-semibold py-2 lg:py-3 rounded-lg lg:rounded-xl transition-all duration-300 hover:scale-105">
+                              <Button className="w-full bg-blue-600 hover:from-purple-700 hover:to-blue-700 text-white text-xs lg:text-sm font-semibold py-2 lg:py-3 rounded-lg lg:rounded-xl transition-all duration-300 hover:scale-105">
                                 Start a new conversation with nCoder.ai
                               </Button>
                             </CardContent>
